@@ -69,10 +69,12 @@ div.footer_container>div.foo_right {
 div.foo_left>ul {
     list-style: none;
     padding: 0;
+    line-height: 2;
 }
 div.foo_right>ul {
     list-style: none;
     padding: 0;
+    line-height: 2;
 }
 
 div.foo_center>small {
