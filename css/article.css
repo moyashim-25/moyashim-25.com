@@ -50,10 +50,11 @@ nav.topic_path>ol>li {
     display: inline;
 }
 
-nav.topic_path object {
+nav.topic_path>ol>li:not(:last-of-type)::after {
+    content: ">";
+    margin: 0 0.6em;
+    color: gray;
     user-select: none;
-    height: 0.5em;
-    margin: 0 0.25em;
 }
 
 nav.right-nav>h1 {
@@ -86,30 +87,47 @@ article {
     line-height: 1.75;
 }
 
-article > h1 {
+article>h1 {
     margin: 1em 0 0.5em;
     font-weight: normal;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
-article > h2 {
+article>h2 {
     margin: 1em 0 0.5em;
     font-weight: normal;
     font-size: 1.5rem;
 }
 
-article > h3 {
-    margin: 0.5em 0  0.25em;
+article>h3 {
+    margin: 0.5em 0 0.25em;
     font-weight: normal;
     font-size: 1.25rem;
+}
+
+article a{
+    color: rgb(0, 0, 228);
+}
+
+dl {
+    margin: 0.5rem 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    padding-left: 2em;
 }
 
 @media screen and (max-width: 768px) {
     div.container {
         display: block;
-        padding: 2rem;
+        padding: 1rem 2rem;
     }
-    nav.right-nav{
+
+    nav.right-nav {
         display: none;
     }
 
