@@ -1,7 +1,21 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'LINESeedJPStd';
+    src: local("LINE Seed JP_OTF Regular"),url(../fonts/LINESeedJP_OTF_Rg.woff2) format('woff2'),url(../fonts/LINESeedJP_OTF_Rg.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LINESeedJPStd';
+    src: local("LINE Seed JP_OTF Bold"),url(../fonts/LINESeedJP_OTF_Bd.woff2) format('woff2'),url(../fonts/LINESeedJP_OTF_Bd.woff) format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
 * {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'LINESeedJPStd', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -71,6 +85,7 @@ div.foo_left>ul {
     padding: 0;
     line-height: 2;
 }
+
 div.foo_right>ul {
     list-style: none;
     padding: 0;
@@ -89,7 +104,8 @@ div.foo_center>small {
         display: block;
         padding: 2rem;
     }
-    div.footer_container > div{
+
+    div.footer_container>div {
         padding: 0.25rem 0;
     }
 }
