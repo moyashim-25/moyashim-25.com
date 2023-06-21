@@ -8,6 +8,14 @@
     <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="../fonts/LINESeedJP_OTF_Bd.woff2">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/article.css">
+    <script>
+        (function(theme) {
+            if(localStorage.getItem("darktheme")) {
+                theme.document.documentElement.classList.add("dark");
+            }
+        })(this);
+    </script>
+    <script src="../js/theme.js" charset="UTF-8" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
@@ -18,6 +26,7 @@
     <div class="container">
         <header>
             <h1><a href="../">もやしくん.com</a></h1>
+            <span id="dark_switch"><img src="../img/dark_swich.svg" alt="テーマの切り替え" height="32" width="32"></span>
         </header>
         <nav class="topic_path">
             <ol>
@@ -31,7 +40,7 @@
                 <li><a href="#copyright">著作権</a></li>
                 <li><a href="#fonts">フォント</a></li>
                 <li><a href="#thanks">サイト制作の道標</a></li>
-                <li><a href="#who-are-you">制作者の情報</a></li>
+                <li><a href="#who-are-you">制作者について</a></li>
             </ul>
         </nav>
         <main>
@@ -54,15 +63,17 @@
                     <dt><a href="https://www.htmq.com/" target="_blank">HTMLクイックリファレンス</a></dt>
                     <dd>HTML、CSSをいじり始めた初期から、基礎知識の定着や確認に度々使用。</dd>
                     <dt><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></dt>
-                    <dd>HTML、CSS JavaScriptのより詳細なリファレンスとして使用。</dd>
+                    <dd>HTML、CSS、JavaScriptのより詳細なリファレンスとして使用。</dd>
                     <dt><a href="https://www.digital.go.jp/" target="_blank">デジタル庁</a></dt>
                     <dd>CSSのグリッドレイアウトの実用使用例として参考にした。</dd>
                     <dt><a href="https://kusaremkn.com/" target="_blank">KusaReMKN.com</a></dt>
                     <dd>フォントやスタイルの例として使用。</dd>
+                    <dt><a href="https://zenn.dev/k1350/articles/2e0c165d0cf943" target="_blank">個人サイトにダークモード（ダークテーマ）を実装する</a></dt>
+                    <dd>k1350さんの記事。ダークモードの実装の際に参考にした。</dd>
                 </dl>
 
-                <h2 id="who-are-you">制作者の情報</h2>
-                <p>制作者「もやしくん」の情報は<a href="../profile/">もやしくんとは</a>をご覧ください。</p>
+                <h2 id="who-are-you">制作者について</h2>
+                <p>制作者「もやしくん」については<a href="../profile/">もやしくんとは</a>をご覧ください。</p>
             </article>
         </main>
     </div>

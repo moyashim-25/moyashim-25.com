@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,14 @@
     <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="../fonts/LINESeedJP_OTF_Bd.woff2">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/article.css">
+    <script>
+        (function(theme) {
+            if(localStorage.getItem("darktheme")) {
+                theme.document.documentElement.classList.add("dark");
+            }
+        })(this);
+    </script>
+    <script src="../js/theme.js" charset="UTF-8" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
@@ -18,6 +26,7 @@
     <div class="container">
         <header>
             <h1><a href="../">もやしくん.com</a></h1>
+            <span id="dark_switch"><img src="../img/dark_swich.svg" alt="テーマの切り替え" height="32" width="32"></span>
         </header>
         <nav class="topic_path">
             <ol>

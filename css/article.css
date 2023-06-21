@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+html {
+    --a-color: rgb(0, 0, 228);
+}
+
+html.dark {
+    --a-color: rgb(70, 170, 255);
+}
+
 div.container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -106,7 +114,7 @@ article>h3 {
 }
 
 article a{
-    color: rgb(0, 0, 228);
+    color: var(--a-color);
 }
 
 dl {
