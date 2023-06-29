@@ -19,7 +19,7 @@ body {
 
 @font-face {
     font-family: 'LINESeedJPStd';
-    src: local("LINE Seed JP_OTF Regular"), url(../fonts/LINESeedJP_OTF_Rg.woff2) format('woff2'), url(../fonts/LINESeedJP_OTF_Rg.woff) format('woff');
+    src: local("LINE Seed JP_OTF Regular"), url(/fonts/LINESeedJP_OTF_Rg.woff2) format('woff2'), url(/fonts/LINESeedJP_OTF_Rg.woff) format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -27,7 +27,7 @@ body {
 
 @font-face {
     font-family: 'LINESeedJPStd';
-    src: local("LINE Seed JP_OTF Bold"), url(../fonts/LINESeedJP_OTF_Bd.woff2) format('woff2'), url(../fonts/LINESeedJP_OTF_Bd.woff) format('woff');
+    src: local("LINE Seed JP_OTF Bold"), url(/fonts/LINESeedJP_OTF_Bd.woff2) format('woff2'), url(/fonts/LINESeedJP_OTF_Bd.woff) format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: block;
