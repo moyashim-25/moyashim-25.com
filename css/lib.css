@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+article h3 {
+    border-bottom: 1px gray solid;
+    border-left: 0.5em gray solid;
+    padding-left: 0.5em;
+}
+
+article section div dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 1.5em;
+    align-items: center;
+}
+
+article section div dl dt {
+    text-align-last: right;
+}
+
+article section div dl dd {
+    padding: 0;
+}

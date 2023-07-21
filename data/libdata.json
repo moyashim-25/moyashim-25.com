@@ -1,0 +1,79 @@
+{
+    "databaseName": "MyLibrary",
+    "lastModified": "2023-07-06T09:04",
+    "category": [
+        {
+            "categoryName": "数学",
+            "categoryID": "math",
+            "data": [
+                {
+                    "title": "フーリエ解析",
+                    "author": "大石進一",
+                    "series": "理工系の数学入門コース",
+                    "publisher": "岩波書店",
+                    "edition": "新装版",
+                    "year": 2019,
+                    "numberOfPages": 218,
+                    "ISBN": "978-4-00-029888-9",
+                    "comment": false
+                },
+                {
+                    "title": "要点がわかるベクトル解析",
+                    "author": "丸山武男, 石井望",
+                    "series": false,
+                    "publisher": "コロナ社",
+                    "edition": "初版",
+                    "year": 2007,
+                    "numberOfPages": 174,
+                    "ISBN": "978-4-339-06093-5",
+                    "comment": false
+                }
+            ]
+        },
+        {
+            "categoryName": "プログラミング",
+            "categoryID": "programing",
+            "data": [
+                {
+                    "title": "独習C++",
+                    "author": "Schildt, Herbert",
+                    "series": false,
+                    "publisher": "翔泳社",
+                    "edition": "第3版",
+                    "year": 2002,
+                    "numberOfPages": 557,
+                    "ISBN": "978-4-7981-0318-1",
+                    "comment": "Cをある程度知ったあとにC++を学ぶひとにとっては良い本。"
+                },
+                {
+                    "title": "やさしく学べるC言語入門",
+                    "author": "皆本晃弥",
+                    "series": "UNIX & Information Science",
+                    "publisher": "サイエンス社",
+                    "edition": "第2版",
+                    "year": 2015,
+                    "numberOfPages": 259,
+                    "ISBN": "978-4-7819-1359-9",
+                    "comment": false
+                }
+            ]
+        },
+        {
+            "categoryName": "力学",
+            "categoryID": "dynamics",
+            "data": [
+                {
+                    "title": "機械力学（増補）",
+                    "author": "青木繁",
+                    "series": "機械系 教科書シリーズ",
+                    "publisher": "コロナ社",
+                    "edition": "初版",
+                    "year": 2004,
+                    "numberOfPages": 204,
+                    "ISBN": "978-4-339-04484-3",
+                    "comment": false
+                }
+            ]
+        }
+    ]
+}
