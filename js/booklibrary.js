@@ -16,6 +16,7 @@ async function populate() {
 function populateBook(obj) {
     const dataarea = document.getElementById('dataarea');
     const navarea = document.getElementById('libindex');
+    const bookTemplate = document.getElementById('bookTemplate');
     const lib = obj.category;
 
     for (const category of lib) {
@@ -37,27 +38,18 @@ function populateBook(obj) {
 
         const book = category.data;
         for (const bookData of book) {
-            const bookdiv = document.createElement('div');
-            const bookTitle = document.createElement('h3');
-            const bookInfo = document.createElement('dl');
-            const bookTitleDT = document.createElement('dt');
-            const bookTitleDD = document.createElement('dd');
-            const bookAuthorDT = document.createElement('dt');
-            const bookAuthorDD = document.createElement('dd');
-            const bookSeriesDT = document.createElement('dt');
-            const bookSeriesDD = document.createElement('dd');
-            const bookPublisherDT = document.createElement('dt');
-            const bookPublisherDD = document.createElement('dd');
-            const bookEditionDT = document.createElement('dt');
-            const bookEditionDD = document.createElement('dd');
-            const bookYearDT = document.createElement('dt');
-            const bookYearDD = document.createElement('dd');
-            const bookPageDT = document.createElement('dt');
-            const bookPageDD = document.createElement('dd');
-            const bookISBNDT = document.createElement('dt');
-            const bookISBNDD = document.createElement('dd');
-            const bookCommentDT = document.createElement('dt');
-            const bookCommentDD = document.createElement('dd');
+            const bookdiv = bookTemplate.content.firstElementChild.cloneNode(true);
+            const [ bookTitle ] = bookdiv.getElementsByClassName('bookTitle');
+            const [ bookInfo ] = bookdiv.getElementsByClassName('bookInfo');
+            const [ bookTitleDT, bookTitleDD ] = bookInfo.getElementsByClassName('bookTitle');
+            const [ bookAuthorDT, bookAuthorDD ] = bookInfo.getElementsByClassName('bookAuthor');
+            const [ bookSeriesDT, bookSeriesDD ] = bookInfo.getElementsByClassName('bookSeries');
+            const [ bookPublisherDT, bookPublisherDD ] = bookInfo.getElementsByClassName('bookPublisher');
+            const [ bookEditionDT, bookEditionDD ] = bookInfo.getElementsByClassName('bookEdition');
+            const [ bookYearDT, bookYearDD ] = bookInfo.getElementsByClassName('bookYear');
+            const [ bookPageDT, bookPageDD ] = bookInfo.getElementsByClassName('bookPage');
+            const [ bookISBNDT, bookISBNDD ] = bookInfo.getElementsByClassName('bookISBN');
+            const [ bookCommentDT, bookCommentDD ] = bookInfo.getElementsByClassName('bookComment');
 
             const navbookli = document.createElement('li');
             const navbooka = document.createElement('a');
@@ -70,48 +62,25 @@ function populateBook(obj) {
 
             bookTitleDD.textContent = bookData.title;
             bookAuthorDD.textContent = bookData.author;
-            if (bookData.series) bookSeriesDD.textContent = bookData.series;
+            if (bookData.series) {
+                bookSeriesDD.textContent = bookData.series;
+            } else {
+                bookSeriesDT.parentElement.removeChild(bookSeriesDT);
+                bookSeriesDD.parentElement.removeChild(bookSeriesDD);
+            }
             bookPublisherDD.textContent = bookData.publisher;
             bookEditionDD.textContent = bookData.edition;
             bookYearDD.textContent = bookData.year;
             bookPageDD.textContent = bookData.numberOfPages;
             bookISBNDD.textContent = bookData.ISBN;
-            if (bookData.comment) bookCommentDD.textContent = bookData.comment;
-
-            bookTitleDT.textContent = '書名';
-            bookAuthorDT.textContent = '著者';
-            if (bookData.series) bookSeriesDT.textContent = 'シリーズ';
-            bookPublisherDT.textContent = '出版社';
-            bookEditionDT.textContent = '版';
-            bookYearDT.textContent = '出版年';
-            bookPageDT.textContent = 'ページ数';
-            bookISBNDT.textContent = 'ISBN';
-            if (bookData.comment) bookCommentDT.textContent = 'コメント';
-
-            bookInfo.appendChild(bookTitleDT);
-            bookInfo.appendChild(bookTitleDD);
-            bookInfo.appendChild(bookAuthorDT);
-            bookInfo.appendChild(bookAuthorDD);
-            bookInfo.appendChild(bookSeriesDT);
-            bookInfo.appendChild(bookSeriesDD);
-            bookInfo.appendChild(bookPublisherDT);
-            bookInfo.appendChild(bookPublisherDD);
-            bookInfo.appendChild(bookEditionDT);
-            bookInfo.appendChild(bookEditionDD);
-            bookInfo.appendChild(bookYearDT);
-            bookInfo.appendChild(bookYearDD);
-            bookInfo.appendChild(bookPageDT);
-            bookInfo.appendChild(bookPageDD);
-            bookInfo.appendChild(bookISBNDT);
-            bookInfo.appendChild(bookISBNDD);
-            bookInfo.appendChild(bookCommentDT);
-            bookInfo.appendChild(bookCommentDD);
-
+            if (bookData.comment) {
+                bookCommentDD.textContent = bookData.comment;
+            } else {
+                bookCommentDT.parentElement.removeChild(bookCommentDT);
+                bookCommentDD.parentElement.removeChild(bookCommentDD);
+            }
             navbookli.appendChild(navbooka);
             navcategoryul.appendChild(navbookli);
-
-            bookdiv.appendChild(bookTitle);
-            bookdiv.appendChild(bookInfo);
 
             categorysection.appendChild(bookdiv);
         }
