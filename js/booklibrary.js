@@ -34,7 +34,6 @@ function populateBook(obj) {
 
         categorysection.appendChild(categoryh2);
         navcategoryli.appendChild(navcategorya);
-        navarea.appendChild(navcategoryli);
 
         const book = category.data;
         for (const bookData of book) {
@@ -85,7 +84,8 @@ function populateBook(obj) {
             categorysection.appendChild(bookdiv);
         }
         dataarea.appendChild(categorysection);
-        navarea.appendChild(navcategoryul);
+        navcategoryli.appendChild(navcategoryul);
+        navarea.appendChild(navcategoryli);
     }
 }
 
