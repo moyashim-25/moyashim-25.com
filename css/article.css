@@ -2,10 +2,12 @@
 
 html {
     --a-color: rgb(0, 0, 228);
+    --gray-color: rgb(89 89 89);
 }
 
 html.dark {
     --a-color: rgb(70, 170, 255);
+    --gray-color: rgb(173 173 173);
 }
 
 div.container {
@@ -87,7 +89,8 @@ nav.right-nav>ul ul {
     padding: 0.5em 0 0 1.5em;
 }
 
-ul {
+ul,
+ol {
     padding-left: 1.5rem;
 }
 
@@ -99,8 +102,11 @@ article {
     line-height: 1.75;
 }
 
-article>h1 {
-    margin: 1em 0 0.5em;
+article>div.art-head {
+    margin: 2rem 0 1rem;
+}
+
+article>div.art-head h1 {
     font-weight: normal;
     font-size: 2rem;
 }
@@ -131,6 +137,19 @@ dt {
 
 dd {
     padding-left: 2em;
+}
+
+p.art-date {
+    font-size: 80%;
+    color: var(--gray-color);
+    text-align: right;
+}
+
+p.small-title {
+    color: var(--gray-color);
+}
+p.small-title a {
+    color: var(--gray-color);
 }
 
 @media screen and (max-width: 768px) {
