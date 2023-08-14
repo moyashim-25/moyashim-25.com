@@ -123,8 +123,16 @@ article h3 {
     font-size: 1.25rem;
 }
 
+article h4 {
+    margin: 0.25em 0 0.25em;
+    font-weight: normal;
+    text-decoration: underline;
+    font-size: 1.15rem;
+}
+
 article a {
     color: var(--a-color);
+    cursor: pointer;
 }
 
 dl {
@@ -140,7 +148,7 @@ dd {
 }
 
 p.art-date {
-    font-size: 80%;
+    font-size: 0.8em;
     color: var(--gray-color);
     text-align: right;
 }
@@ -150,6 +158,11 @@ p.small-title {
 }
 p.small-title a {
     color: var(--gray-color);
+}
+
+span.ftup {
+    font-size: 0.8em;
+    vertical-align: top;
 }
 
 @media screen and (max-width: 768px) {

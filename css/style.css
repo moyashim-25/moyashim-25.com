@@ -3,13 +3,13 @@
 html {
     --body-BGcolor: white;
     --text-normal: black;
-    --footer-BGcolor: rgb(233, 233, 233);
+    --footer-BGcolor: rgb(249, 249, 249);
 }
 
 html.dark {
     --body-BGcolor: rgb(10, 10, 10);
     --text-normal: white;
-    --footer-BGcolor: rgb(30, 30, 30);
+    --footer-BGcolor: rgb(46, 46, 46);
 }
 
 body {
@@ -37,7 +37,9 @@ body {
     font-family: 'LINESeedJPStd', 'Noto Sans JP', 'Noto Sans CJK JP', -apple-system, blinkmacsystemfont, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
     margin: 0;
     padding: 0;
-    transition: background-color 250ms ease-in-out;
+    transition-property: border-color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
 }
 
 main {
@@ -53,7 +55,7 @@ header {
 }
 
 header>h1 {
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: bold;
 }
 
