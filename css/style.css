@@ -3,7 +3,7 @@
 html {
     --body-BGcolor: white;
     --text-normal: black;
-    --footer-BGcolor: rgb(249, 249, 249);
+    --footer-BGcolor: rgb(240, 240, 240);
 }
 
 html.dark {
