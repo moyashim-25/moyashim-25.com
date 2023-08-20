@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="もやしくん">
+    <meta name="description" content="エレクトーンとMIDI関する記事。XGやELモードによる楽器操作、ソングデータの仕組みなどを解説します。">
+    <title>エレクトーンとMIDI - もやしくん.com</title>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@moyashiM_25">
+    <meta property="og:title" content="エレクトーンとMIDI">
+    <meta property="og:site_name" content="もやしくん.com">
+    <meta property="og:url" content="ttps://moyashim-25.com/article/20230820/">
+    <meta property="og:description" content="エレクトーンとMIDI関する記事。XGやELモードによる楽器操作、ソングデータの仕組みなどを解説します。">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
+    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Rg.woff2">
+    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Bd.woff2">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/article.css">
+    <link rel="icon" href="/img/favicon.ico">
+    <script>
+        (function (theme) {
+            if (localStorage.getItem("darktheme")) {
+                theme.document.documentElement.classList.add("dark");
+            }
+        })(this);
+    </script>
+    <script src="/js/theme.js" charset="UTF-8" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="/">もやしくん.com</a></h1>
+            <span id="dark_switch"><img src="/img/dark_swich.svg" alt="テーマの切り替え" height="32" width="32"></span>
+        </header>
+        <nav class="topic_path">
+            <ol><li><a href="/">ホーム</a></li><li><a href="/article/">記事一覧</a></li><li>エレクトーンとMIDI</li></ol>
+        </nav>
+        <nav class="right-nav">
+            <h1>もくじ</h1>
+            <ul class="no-marker">
+                <li><a href="#intro">はじめに</a>
+                    <ul>
+                        <li>
+                            <a href="#midi">MIDIとは</a>
+                        </li>
+                        <li>
+                            <a href="#mg">GM、GM2、XG、GSとは</a>
+                        </li>
+                        <li>
+                            <a href="#stylefile">スタイルファイルフォーマットとは</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#elmidi">エレクトーンにおけるMIDI</a>
+                <ul>
+                    <li><a href="elxg">ELモードとXGモードの切り替え</a></li>
+                </ul></li>
+                <li><a href="#elfile">エレクトーンのソングデータ解剖</a></li>
+                <li><a href="#footnote">参考文献・引用元、脚注</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <div class="art-head">
+                    <h1>エレクトーンとMIDI</h1>
+                    <p class="art-date">公開日: <time datetime="2023-08-21">2023/08/21</time></p>
+                    <p class="art-date">更新日: <time datetime="2023-08-21">2023/08/21</time></p>
+                </div>
+                <p>この記事では、エレクトーン、特にエレクトーンステージア（ELSシリーズ）のMIDIに関する基礎的な情報を記していきます。記事において、ことわりなく「エレクトーン」が「エレクトーンステージア」を指す場合があります。
+                </p>
+                <p>この記事や、この記事に関連したもやしくんの執筆する記事には、<strong>独自の調査や非公式な出典などに基づく、真実とは異なる情報がある可能性があります</strong>。</p>
+                <p>記事内の会社名及び商品名等は、各社の登録商標または商標です。</p>
+                <h2 id="intro">はじめに</h2>
+                <h3 id="midi">MIDIとは</h3>
+                <p><b>MIDI</b>とは、<span style="font-weight: bold;">M</span>iusical <span
+                        style="font-weight: bold;">I</span>nstrument <span style="font-weight: bold;">D</span>gital
+                    <span style="font-weight: bold;">I</span>nterface
+                    の略称で、電子楽器やコンピュータ等のメーカーや機種に関わらず音楽の演奏情報を効率良く伝達するための統一規格です<span class="ftup"><a
+                            href="#ftn01">[1]</a></span>。MIDIは携帯電話の着信音源やカラオケ音源、DTM（デスクトップミュージック）などでMIDI規格は活用されています。また、様々な電子楽器がMIDIを採用しており、エレクトーンも例外ではありません。
+                </p>
+                <h3 id="gm">GM、GM2、XG、GSとは</h3>
+                <p><b>GM</b>とは、<span style="font-weight: bold;">G</span>eneral <span
+                        style="font-weight: bold;">M</span>IDIの略称で、「メーカーや機種が異なった音源でも、ほぼ同じ系統の音色で演奏が再現されることを目的に設けられた、音源の音色配列やMIDI機能に関する一定の基準のこと」<span
+                        class="ftup"><a href="#ftn02">[2]</a></span>です。<b>GM2</b>はGMに対し機能をさらに拡張し規定したものです<span
+                        class="ftup"><a
+                            href="#ftn02">[2]</a></span>。GMやGM2に対応している機器同士であれば、MIDI音源について、ある程度の互換性をもって演奏を再現することができます（実際の再現度は音源によってまちまちです）。
+                </p>
+                <p>
+                    <b>XG</b>とは、ヤマハが規定しているGMの独自拡張規格です。GMに比べ、より豊富な拡張音源があります。XGの軽量（簡易）版の<b>XGLite</b>というのもあります。音源モジュール（MU2000など）や楽器によって、搭載している音源について差があるようです<span
+                        class="ftup"><a
+                            href="#ftn03">[3]</a></span>。XGはエレクトーンにおいて、アカンパニメントやドラムセット、XGサポートの音源などに使用されています。なお、米国スタンフォード大学とヤマハが所有する物理モデル音源特許のライセンスの<b>SONDIUS-XG</b>は、MIDI規格のXGとは異なるものです<span
+                        class="ftup"><a href="#ftn04">[脚注4]</a></span>。
+                </p>
+                <p>
+                    <b>GS</b>とは、ローランド株式会社が規定しているGMの独自拡張規格です。エレクトーンステージアはGSに対応しています<span class="ftup"><a
+                            href="#ftn02">[2]</a></span>。
+                </p>
+
+                <h3 id="stylefile">スタイルファイルフォーマットとは</h3>
+                <p>
+                    <b>スタイルファイルフォーマット（SFF）</b>とは、ヤマハ独自の自動伴奏機能の伴奏スタイルに関するフォーマットです<span class="ftup"><a
+                            href="#ftn02">[2]</a></span>。エレクトーンの他に、クラビノーバなどの電子ピアノにも搭載されているものがあり、対応している機器同士でスタイルのインポート・エクスポートができます。また、各種MIDIエディタ（<a
+                        href="https://takabosoft.com/domino" target="_blank">Domino</a>など）でスタイルファイルを自作することができます<span
+                        class="ftup"><a href="#ftn05">[参考5]</a></span>。
+                </p>
+                <h2 id="elmidi">エレクトーンにおけるMIDI</h2>
+                <figure><a href="/article/20230820/img/el01.webp" target="img"><img
+                            src="/article/20230820/img/el01.webp" alt="ステージアにおけるMIDIの活用例" loading="lazy"></a>
+                    <figcaption>ステージアにおけるMIDIの活用例</figcaption>
+                </figure>
+                <p>前項でも紹介したように、エレクトーンはGM2、XG、SFFなどに対応しており、その技術の根底にあるのはMIDI規格です。XGソングやSFFは、いわゆる音符を並べているので、なんとなくMIDIに基づいているのは想像に難くないでしょう。エレクトーンはさらに、<strong>楽器の操作自体もMIDI通信によって行なえます</strong>。つまり、PCとエレクトーンをMIDIで繋げば、PC一つで、エクスプレッションペダルやニーレバー、鍵盤の間接的操作によるAWM音源の演奏などもできてしまうのです。
+                </p>
+                <p>エレクトーンにおけるMIDI通信において、楽器自体を操作できるモードを<b>ELモード</b>、XG音源としてのみ使用するモードを<b>XGモード</b>と区別しています。このモードの切り替えや、他MIDI通信については、取扱説明書（ELS-01系）<span
+                        class="ftup"><a
+                            href="#ftn02">[2]</a></span>や別冊（ELS-02系）に記された「<b>MIDIデータフォーマット</b>」に基づいた信号の送受信によって行われています。つまり、MIDIデータフォーマットに基づいた信号を楽器に送信することで、楽器に触れることなく、操作をすることが可能になるのです。
+                </p>
+                <h3 id="elxg">ELモードとXGモードの切り替え</h3>
+                <p>外部機器とエレクトーンを接続したときの、はじめのエレクトーンの状態はELモードです。これは、例えば、外部のキーボードをエレクトーンとMIDI接続したときに、特別な操作をせずにクローンの鍵盤（ELモードの外部からのノート操作）として使用できるようにするためのものと思われます。この状態からXGモードにしたい場合は、外部機器からエレクトーンに、「GM
+                    ON」または「GM2 ON」のメッセージを送信する必要があります。また、XGモードからELモードにしたい場合は「EL
+                    ON」のメッセージを送信する必要があります。「EL ON」を送信したとき、エレクトーンが再起動します。おそらく、エレクトーンの状態をリセットするためのものと思われます。</p>
+                <h2 id="elfile">エレクトーンのソングデータ解剖</h2>
+                <p><strong>プロテクトソングの含まれるメモリをコンピュータ上で扱うと利用できなくなる可能性があります</strong>。ソングデータは取扱説明書などを参照し、適切に扱ってください。以下は、プロテクトソングでないものを扱います。</p>
+                <p>MDRでエレクトーンでの演奏を保存すると、次のようなファイルが作成されます。</p>
+                <dl>
+                    <dt>ELS_SONG.NAM</dt>
+                    <dd>ソングの管理ファイル。ソングの名前や、ソングに関連するデータ（レジストレーションデータや演奏データ）を指定している。
+                    </dd>
+                    <dt>MDR_xxx.MID（xxxは任意の値）</dt>
+                    <dd>フォルダ「SONG_yyy」（yyyは任意の値）内に作成される、演奏データ。ただのMIDIファイルなのでパソコンでも再生自体は可能だが、MIDIメッセージがELモードで書かれているので、期待するような再生はできない。MIDI編集ソフトがあれば、自身で変更が可能。
+                    </dd>
+                    <dt>REG_zzz.B00（zzzは任意の値）</dt>
+                    <dd>フォルダ「SONG_yyy」（yyyは任意の値）内に作成される、レジストレーションなどのデータ。ボイスの設定やリズムシーケンスなどのソングデータが記録されている。自身で編集がほぼ不可能（<a
+                            href="http://inst.s58.xrea.com/el/style1/" target="_blank">バイナリエディタを使ってスタイルの抽出はできるらしい</a>）。
+                    </dd>
+                </dl>
+                <p>ここで注目したいのは、MDR_xxx.MIDが<strong>ELモードで書かれている</strong>ことです。つまり、このファイルをELモードの規定に基づいて編集することで、ソングデータの演奏データを、MIDIの打ち込みによって作成することができるのです<span
+                        class="ftup"><a href="#ftn06">[脚注6]</a></span>。</p>
+                <h2 id="footnote">参考文献・引用元、脚注</h2>
+                <ol>
+                    <li id="ftn01"><a href="https://www.amei.or.jp/midi2020.html" target="_blank">一般社団法人音楽電子事業協会.
+                            (2020?). MIDIとは.
+                        </a></li>
+                    <li id="ftn02"><a
+                            href="https://jp.yamaha.com/files/download/other_assets/8/315768/els01x_ja_om_h0.pdf"
+                            target="_blank">ヤマハ株式会社. (2019?). ELS-01/01C/01X 取扱説明書.
+                        </a></li>
+                    <li id="ftn03"><a href="https://www.comcom2.com/lib/els_ext_xg_voice_list.html"
+                            target="_blank">音楽制作会社コムコム. (2016?). ELS XG拡張ボイスリスト.
+                        </a></li>
+                    <li id="ftn04">脚注: おそらく、SONDIUS-XGはELS-01C/01X (02C/02X) のVA音源に使用されている。</li>
+                    <li id="ftn05">参考: <a href="http://els01stylefile.music.coocan.jp/Stagea_Style/Stagea_Style.htm"
+                            target="_blank">Ruboto.
+                            (2004-2012). スタイル入門講座 for Electone ELS-01 ステージア.</a>
+                        SFFに関する情報が豊富すぎる、すべてを綴っていると言っても過言ではない。ためになるサイト。</li>
+                    <li id="ftn06">脚注:
+                        MIDIファイル以外のNAMファイルやB00ファイルは、エレクトーン実機であらかじめ作成しておく必要がある。また、場合によっては、ELS_SONG.NAMの書き換えが必要になることもある。これらの操作には経験と慣れが必要だろう。
+                    </li>
+                </ol>
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer_container">
+            <div class="foo_title">
+                <h1>もやしくん.com</h1>
+            </div>
+            <div class="foo_left">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/links/">リンク集</a></li>
+                    <li><a href="/about/">サイトについて</a></li>
+                </ul>
+            </div>
+            <div class="foo_right">
+                <ul>
+                    <li><a href="https://x.com/moyashiM_25" target="_blank">X</a></li>
+                    <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram</a></li>
+                    <li><a href="https://github.com/moyashim-25" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="foo_center">
+                <small>&copy; 2023 もやしくん</small>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

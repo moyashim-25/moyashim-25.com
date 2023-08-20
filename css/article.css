@@ -102,6 +102,10 @@ article {
     line-height: 1.75;
 }
 
+article p+p {
+    margin-top: 0.5rem;
+}
+
 article>div.art-head {
     margin: 2rem 0 1rem;
 }
@@ -151,11 +155,13 @@ p.art-date {
     font-size: 0.8em;
     color: var(--gray-color);
     text-align: right;
+    margin: 0;
 }
 
 p.small-title {
     color: var(--gray-color);
 }
+
 p.small-title a {
     color: var(--gray-color);
 }
@@ -164,6 +170,25 @@ span.ftup {
     font-size: 0.8em;
     vertical-align: top;
 }
+
+article figure img {
+    width: 100%;
+}
+
+figure {
+    margin: 0.5rem 0;
+}
+
+figcaption::before {
+    content: "図: ";
+}
+
+figcaption {
+    text-align: center;
+    font-size: 80%;
+    color: var(--gray-color);
+}
+
 
 @media screen and (max-width: 768px) {
     div.container {
@@ -177,5 +202,32 @@ span.ftup {
 
     main {
         margin-bottom: 3rem;
+    }
+}
+
+@media print {
+    div.container {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    /* nav.right-nav {
+        display: none;
+    } */
+
+    main {
+        margin-bottom: 3rem;
+    }
+
+    nav.topic_path {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    span#dark_switch {
+        display: none;
     }
 }
