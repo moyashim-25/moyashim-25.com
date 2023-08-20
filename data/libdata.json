@@ -1,6 +1,6 @@
 {
     "databaseName": "MyLibrary",
-    "lastModified": "2023-07-06T09:04",
+    "lastModified": "2023-08-21T01:10",
     "category": [
         {
             "categoryName": "数学",
@@ -34,17 +34,6 @@
             "categoryName": "プログラミング",
             "categoryID": "programing",
             "data": [
-                {
-                    "title": "独習C++",
-                    "author": "Schildt, Herbert",
-                    "series": false,
-                    "publisher": "翔泳社",
-                    "edition": "第3版",
-                    "year": 2002,
-                    "numberOfPages": 557,
-                    "ISBN": "978-4-7981-0318-1",
-                    "comment": "Cをある程度知ったあとにC++を学ぶひとにとっては良い本。"
-                },
                 {
                     "title": "やさしく学べるC言語入門",
                     "author": "皆本晃弥",
