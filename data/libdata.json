@@ -7,6 +7,61 @@
             "categoryID": "math",
             "data": [
                 {
+                    "title": "初歩からの微分積分",
+                    "author": "後藤和雄, 小島政利",
+                    "series": false,
+                    "publisher": "共立出版",
+                    "edition": "初版",
+                    "year": 2005,
+                    "numberOfPages": 300,
+                    "ISBN": "978-4-320-01799-3",
+                    "comment": false
+                },
+                {
+                    "title": "微分積分学講義",
+                    "author": "野村隆昭",
+                    "series": false,
+                    "publisher": "共立出版",
+                    "edition": "初版",
+                    "year": 2013,
+                    "numberOfPages": 264,
+                    "ISBN": "978-4-320-11049-6",
+                    "comment": false
+                },
+                {
+                    "title": "基本例解テキスト線形代数",
+                    "author": "寺田文行, 坂田泩",
+                    "series": "ライブラリ基本例解テキスト",
+                    "publisher": "サイエンス社",
+                    "edition": "初版",
+                    "year": 2008,
+                    "numberOfPages": 168,
+                    "ISBN": "978-4-7819-1203-5",
+                    "comment": "誤表記が散見される上に、正誤表が見当たらない"
+                },
+                {
+                    "title": "複素関数論の基礎",
+                    "author": "山本直樹",
+                    "series": false,
+                    "publisher": "裳華房",
+                    "edition": "第4版",
+                    "year": 2019,
+                    "numberOfPages": 200,
+                    "ISBN": "978-4-7853-1565-8",
+                    "comment": false
+                },
+                {
+                    "title": "解析学概論",
+                    "author": "矢野健太郎, 石原繁",
+                    "series": false,
+                    "publisher": "裳華房",
+                    "edition": "新装第2版",
+                    "year": 2022,
+                    "numberOfPages": 358,
+                    "ISBN": "978-4-7853-1584-9",
+                    "comment": "微分方程式、ベクトル解析、複素数の関数、フーリエ級数・ラプラス変換についてが1冊にまとめられている"
+                },
+                {
                     "title": "フーリエ解析",
                     "author": "大石進一",
                     "series": "理工系の数学入門コース",
@@ -27,6 +82,190 @@
                     "numberOfPages": 174,
                     "ISBN": "978-4-339-06093-5",
                     "comment": false
+                },
+                {
+                    "title": "問題集 微分積分",
+                    "author": "矢野健太郎, 石原繁 他",
+                    "series": false,
+                    "publisher": "裳華房",
+                    "edition": "第2版",
+                    "year": 2020,
+                    "numberOfPages": 96,
+                    "ISBN": "978-4-7853-1554-2",
+                    "comment": "教科書「微分積分（改訂版）」（978-4-7853-1071-4）の演習問題と解答を収録した問題集"
+                },
+                {
+                    "title": "問題集 線形代数",
+                    "author": "矢野健太郎, 石原繁 他",
+                    "series": false,
+                    "publisher": "裳華房",
+                    "edition": "第19版",
+                    "year": 2021,
+                    "numberOfPages": 80,
+                    "ISBN": "978-4-7853-1065-3",
+                    "comment": "教科書「線形代数（改訂改題）」（978-4-7853-1062-2）の併用問題集"
+                }
+            ]
+        },
+        {
+            "categoryName": "理科",
+            "categoryID": "science",
+            "data": [
+                {
+                    "title": "基礎からの物理学",
+                    "author": "山本貴博",
+                    "series": false,
+                    "publisher": "裳華房",
+                    "edition": "第4版",
+                    "year": 2021,
+                    "numberOfPages": 272,
+                    "ISBN": "978-4-7853-2252-6",
+                    "comment": "力学、熱力学、電磁気学が収録"
+                },
+                {
+                    "title": "大学生の化学",
+                    "author": "大野惇吉",
+                    "series": false,
+                    "publisher": "三共出版",
+                    "edition": "新版第2版",
+                    "year": 2019,
+                    "numberOfPages": 270,
+                    "ISBN": "978-4-7827-0780-7",
+                    "comment": false
+                },
+                {
+                    "title": "電気磁気学基礎論",
+                    "author": "一般社団法人 電気学会",
+                    "series": "電気学会大学講座",
+                    "publisher": "一般社団法人 電気学会",
+                    "edition": "初版",
+                    "year": 1988,
+                    "numberOfPages": 228,
+                    "ISBN": "978-4-88686-208-2",
+                    "comment": false
+                }
+            ]
+        },
+        {
+            "categoryName": "機械・機構",
+            "categoryID": "maschine",
+            "data": [
+                {
+                    "title": "工業力学入門",
+                    "author": "伊藤勝悦",
+                    "series": false,
+                    "publisher": "森北出版",
+                    "edition": "第3版",
+                    "year": 2014,
+                    "numberOfPages": 240,
+                    "ISBN": "978-4-627-66253-7",
+                    "comment": false
+                },
+                {
+                    "title": "機械力学（増補）",
+                    "author": "青木繁",
+                    "series": "機械系 教科書シリーズ",
+                    "publisher": "コロナ社",
+                    "edition": "初版",
+                    "year": 2004,
+                    "numberOfPages": 204,
+                    "ISBN": "978-4-339-04484-3",
+                    "comment": false
+                },
+                {
+                    "title": "機構学",
+                    "author": "森田鈞",
+                    "series": "エンジニアリングライブラリ基礎機械工学",
+                    "publisher": "サイエンス社",
+                    "edition": "初版",
+                    "year": 1984,
+                    "numberOfPages": 160,
+                    "ISBN": "978-4-7819-0380-4",
+                    "comment": false
+                },
+                {
+                    "title": "初心者のための機械製図",
+                    "author": "藤本元, 御牧拓郎 他",
+                    "series": false,
+                    "publisher": "森北出版",
+                    "edition": "第5版",
+                    "year": 2020,
+                    "numberOfPages": 240,
+                    "ISBN": "978-4-627-66435-7",
+                    "comment": false
+                }
+            ]
+        },
+        {
+            "categoryName": "電気・電子回路",
+            "categoryID": "elcircuits",
+            "data": [
+                {
+                    "title": "電気回路を理解する",
+                    "author": "小澤孝夫",
+                    "series": false,
+                    "publisher": "森北出版",
+                    "edition": "第2版",
+                    "year": 2015,
+                    "numberOfPages": 208,
+                    "ISBN": "978-4-627-71212-6",
+                    "comment": false
+                },
+                {
+                    "title": "等価回路でしっかり理解！詳解 電子回路",
+                    "author": "吉河武文, 三木拓司",
+                    "series": false,
+                    "publisher": "オーム社",
+                    "edition": "初版",
+                    "year": 2021,
+                    "numberOfPages": 288,
+                    "ISBN": "978-4-274-22734-9",
+                    "comment": false
+                }
+            ]
+        },
+        {
+            "categoryName": "制御",
+            "categoryID": "control",
+            "data": [
+                {
+                    "title": "古典制御論",
+                    "author": "吉川恒夫",
+                    "series": false,
+                    "publisher": "コロナ社",
+                    "edition": "初版",
+                    "year": 2014,
+                    "numberOfPages": 288,
+                    "ISBN": "978-4-339-03211-6",
+                    "comment": false
+                },
+                {
+                    "title": "イラストで学ぶロボット工学",
+                    "author": "木野仁 他",
+                    "series": "イラストで学ぶ",
+                    "publisher": "講談社",
+                    "edition": "初版",
+                    "year": 2017,
+                    "numberOfPages": 224,
+                    "ISBN": "978-4-06-153834-4",
+                    "comment": false
+                }
+            ]
+        },
+        {
+            "categoryName": "論理回路",
+            "categoryID": "logiccircuit",
+            "data": [
+                {
+                    "title": "論理回路入門",
+                    "author": "浜辺隆二",
+                    "series": false,
+                    "publisher": "森北出版",
+                    "edition": "第4版",
+                    "year": 2021,
+                    "numberOfPages": 169,
+                    "ISBN": "978-4-627-82364-8",
+                    "comment": false
                 }
             ]
         },
@@ -44,23 +283,167 @@
                     "numberOfPages": 259,
                     "ISBN": "978-4-7819-1359-9",
                     "comment": false
+                },
+                {
+                    "title": "明快入門 C",
+                    "author": "林晴比古",
+                    "series": "林 晴比古実用マスターシリーズ",
+                    "publisher": "SBクリエイティブ",
+                    "edition": "初版",
+                    "year": 2013,
+                    "numberOfPages": 288,
+                    "ISBN": "978-4-7973-7326-4",
+                    "comment": "身内からのお下がり"
                 }
             ]
         },
         {
-            "categoryName": "力学",
-            "categoryID": "dynamics",
+            "categoryName": "コンピュータ",
+            "categoryID": "computer",
             "data": [
                 {
-                    "title": "機械力学（増補）",
-                    "author": "青木繁",
-                    "series": "機械系 教科書シリーズ",
+                    "title": "基礎からわかる情報リテラシー",
+                    "author": "奥村晴彦, 森本尚之",
+                    "series": false,
+                    "publisher": "技術評論社",
+                    "edition": "改訂第4版",
+                    "year": 2020,
+                    "numberOfPages": 192,
+                    "ISBN": "978-4-297-11710-8",
+                    "comment": false
+                },
+                {
+                    "title": "理工系のコンピュータ基礎学",
+                    "author": "稲垣耕作",
+                    "series": false,
                     "publisher": "コロナ社",
                     "edition": "初版",
-                    "year": 2004,
-                    "numberOfPages": 204,
-                    "ISBN": "978-4-339-04484-3",
+                    "year": 2006,
+                    "numberOfPages": 240,
+                    "ISBN": "978-4-339-02413-5",
                     "comment": false
+                }
+            ]
+        },
+        {
+            "categoryName": "信号処理",
+            "categoryID": "signalprocessing",
+            "data": [
+                {
+                    "title": "Pythonではじめる音のプログラミング",
+                    "author": "青木直史",
+                    "series": false,
+                    "publisher": "オーム社",
+                    "edition": "初版",
+                    "year": 2022,
+                    "numberOfPages": 302,
+                    "ISBN": "978-4-274-22899-5",
+                    "comment": "－コンピュータミュージックの信号処理－"
+                }
+            ]
+        },
+        {
+            "categoryName": "高校教科書等",
+            "categoryID": "highschool",
+            "data": [
+                {
+                    "title": "改訂版 高等学校 数学I",
+                    "author": "岡部恒治 他",
+                    "series": "高等学校シリーズ",
+                    "publisher": "数研出版",
+                    "edition": "改訂版",
+                    "year": 2019,
+                    "numberOfPages": 200,
+                    "ISBN": "978-4-410-80203-4",
+                    "comment": "数I/328"
+                },
+                {
+                    "title": "改訂版 高等学校 数学II",
+                    "author": "岡部恒治 他",
+                    "series": "高等学校シリーズ",
+                    "publisher": "数研出版",
+                    "edition": "改訂版",
+                    "year": 2019,
+                    "numberOfPages": 232,
+                    "ISBN": "978-4-410-80213-3",
+                    "comment": "数II/328"
+                },
+                {
+                    "title": "改訂版 高等学校 数学III",
+                    "author": "岡部恒治 他",
+                    "series": "高等学校シリーズ",
+                    "publisher": "数研出版",
+                    "edition": "改訂版",
+                    "year": 2021,
+                    "numberOfPages": 272,
+                    "ISBN": "978-4-410-80223-2",
+                    "comment": "数III/323"
+                },
+                {
+                    "title": "改訂版 高等学校 数学A",
+                    "author": "岡部恒治 他",
+                    "series": "高等学校シリーズ",
+                    "publisher": "数研出版",
+                    "edition": "改訂版",
+                    "year": 2019,
+                    "numberOfPages": 168,
+                    "ISBN": "978-4-410-80207-2",
+                    "comment": "数A/328"
+                },
+                {
+                    "title": "改訂版 高等学校 数学B",
+                    "author": "岡部恒治 他",
+                    "series": "高等学校シリーズ",
+                    "publisher": "数研出版",
+                    "edition": "改訂版",
+                    "year": 2020,
+                    "numberOfPages": 168,
+                    "ISBN": "978-4-410-80217-1",
+                    "comment": "数B/326"
+                },
+                {
+                    "title": "改訂版 教科書傍用 クリアー 数学I+A",
+                    "author": "数研出版編集部",
+                    "series": "クリアーシリーズ",
+                    "publisher": "数研出版",
+                    "edition": "改訂版",
+                    "year": 2016,
+                    "numberOfPages": 208,
+                    "ISBN": "978-4-410-21106-5",
+                    "comment": "別冊解答編（978-4-410-60297-9）も所有"
+                },
+                {
+                    "title": "改訂版 教科書傍用 クリアー 数学II+B",
+                    "author": "数研出版編集部",
+                    "series": "クリアーシリーズ",
+                    "publisher": "数研出版",
+                    "edition": "改訂版",
+                    "year": 2017,
+                    "numberOfPages": 208,
+                    "ISBN": "978-4-410-21196-6",
+                    "comment": "数学Bについてはベクトル、数列が収録。別冊解答編（978-4-410-60326-6）も所有"
+                },
+                {
+                    "title": "改訂版 総合物理1",
+                    "author": "國友正和 他",
+                    "series": "改訂版 総合物理シリーズ",
+                    "publisher": "数研出版",
+                    "edition": "改訂版",
+                    "year": 2020,
+                    "numberOfPages": 256,
+                    "ISBN": "978-4-410-81203-3",
+                    "comment": "物理/314、シリーズ1巻、「力と運動・熱」を収録"
+                },
+                {
+                    "title": "改訂版 総合物理2",
+                    "author": "國友正和 他",
+                    "series": "改訂版 総合物理シリーズ",
+                    "publisher": "数研出版",
+                    "edition": "改訂版",
+                    "year": 2020,
+                    "numberOfPages": 344,
+                    "ISBN": "978-4-410-81213-2",
+                    "comment": "物理/315、シリーズ2巻、「波・電気と磁気・原子」を収録"
                 }
             ]
         }
