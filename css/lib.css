@@ -10,11 +10,11 @@ article section div dl {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 0 1.5em;
-    align-items: center;
+    align-items: start;
 }
 
 article section div dl dt {
-    text-align-last: right;
+    text-align: right;
 }
 
 article section div dl dd {
