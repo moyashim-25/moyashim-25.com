@@ -19,7 +19,7 @@ body {
 
 @font-face {
     font-family: 'LINESeedJPStd';
-    src: local("LINE Seed JP_OTF Regular"), url(/fonts/LINESeedJP_OTF_Rg.woff2) format('woff2'), url(/fonts/LINESeedJP_OTF_Rg.woff) format('woff');
+    src: local("LINE Seed JP_OTF Regular"), url(/fonts/LINESeedJP_OTF_Rg.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -27,14 +27,14 @@ body {
 
 @font-face {
     font-family: 'LINESeedJPStd';
-    src: local("LINE Seed JP_OTF Bold"), url(/fonts/LINESeedJP_OTF_Bd.woff2) format('woff2'), url(/fonts/LINESeedJP_OTF_Bd.woff) format('woff');
+    src: local("LINE Seed JP_OTF Bold"), url(/fonts/LINESeedJP_OTF_Bd.woff2) format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: block;
 }
 
 * {
-    font-family: 'LINESeedJPStd', 'Noto Sans JP', 'Noto Sans CJK JP', -apple-system, blinkmacsystemfont, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+    font-family: 'LINESeedJPStd', 'Noto Sans', 'Noto Sans JP', 'Noto Sans CJK JP', -apple-system, blinkmacsystemfont, 'Hiragino Kaku Gothic ProN', 'Segoe UI', 'Meiryo', sans-serif;
     margin: 0;
     padding: 0;
     transition-property: border-color, background-color;
@@ -65,6 +65,7 @@ header>#dark_switch {
     margin-left: auto;
     user-select: none;
 }
+
 header>#dark_switch:hover {
     cursor: pointer;
 }
