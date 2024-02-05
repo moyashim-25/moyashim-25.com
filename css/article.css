@@ -113,6 +113,7 @@ article>div.art-head {
 article>div.art-head h1 {
     font-weight: normal;
     font-size: 2rem;
+    border-bottom: 1px var(--gray-color) dashed;
 }
 
 article h2 {
@@ -189,7 +190,6 @@ figcaption {
     color: var(--gray-color);
 }
 
-
 @media screen and (max-width: 768px) {
     div.container {
         display: block;
@@ -206,6 +206,10 @@ figcaption {
 }
 
 @media print {
+    header {
+        padding: 0;
+    }
+
     div.container {
         display: block;
         padding: 1rem 2rem;
@@ -216,7 +220,7 @@ figcaption {
     } */
 
     main {
-        margin-bottom: 3rem;
+        margin-bottom: 0;
     }
 
     nav.topic_path {
@@ -224,6 +228,22 @@ figcaption {
     }
 
     footer {
+        background-color: white;
+    }
+
+    footer .footer_container{
+        padding: 0;
+    }
+
+    footer .foo_title {
+        display: none;
+    }
+
+    footer .foo_left {
+        display: none;
+    }
+
+    footer .foo_right {
         display: none;
     }
 
