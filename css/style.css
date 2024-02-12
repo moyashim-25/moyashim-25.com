@@ -77,7 +77,7 @@ header>#dark_switch>img {
 }
 
 /* footer */
-footer {
+body > footer {
     background-color: var(--footer-BGcolor);
 }
 

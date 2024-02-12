@@ -19,6 +19,7 @@
     <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Bd.woff2">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/article.css">
+    <link rel="stylesheet" href="/css/profile.css">
     <link rel="icon" href="/img/favicon.ico">
     <script>
         (function (theme) {
@@ -49,17 +50,12 @@
             <ul class="no-marker">
                 <li><a href="#name">名前</a></li>
                 <li><a href="#affiliation">所属</a></li>
-                <li><a href="#introduction">紹介</a></li>
-                <li><a href="#license">免許資格</a></li>
+                <li><a href="#links">主要リンク</a></li>
+                <li><a href="#lang">できるかも言語</a></li>
+                <li><a href="#license">免許・資格</a></li>
                 <li><a href="#subject">履修した専門科目</a></li>
-                <li><a href="#favorite">好きなもの</a>
-                    <ul>
-                        <li><a href="#food">食べもの</a></li>
-                        <li><a href="#drink">飲みもの</a></li>
-                    </ul>
-                </li>
-                <li><a href="#motto">座右の銘</a></li>
                 <li><a href="#goal">目標</a></li>
+                <li><a href="#motto">座右の銘</a></li>
             </ul>
         </nav>
         <main>
@@ -67,66 +63,95 @@
                 <div class="art-head">
                     <h1>もやしくんとは</h1>
                     <p class="art-date">公開日: <time datetime="2023-06-20">2023/06/20</time></p>
-                    <p class="art-date">更新日: <time datetime="2024-02-09">2024/02/09</time></p>
+                    <p class="art-date">更新日: <time datetime="2024-02-12">2024/02/12</time></p>
                 </div>
-                <p>「もやしくん」は、実在する人物のニックネーム。公立大学工学部に所属する。なお、もやしくんが用いるアイコンのそれは「りーぜんとくん」であり、もやしくんではない。</p>
-                <p>もやしくんの各種アカウントは<a href="/links/">リンク集</a>からアクセスできます。</p>
-
-                <h2 id="name">名前</h2>
-                <p>もやしくん</p>
-
-                <h2 id="affiliation">所属</h2>
-                <ul>
-                    <li>富山県立大学工学部知能ロボット工学科（<time datetime="2022-04">2022/04</time> - ）
-                        <ul>
-                            <li>同大学アカペラサークル（<time datetime="2022-04">2022/04</time> - ）</li>
-                        </ul>
-                    </li>
-                    <li>宮城県の高校（<time datetime="2019-04">2019/04</time> - <time datetime="2022-03">2022/03</time>）
-
-                        <ul>
-                            <li>同高等学校吹奏楽部（<time datetime="2019-04">2019/04</time> - <time
-                                    datetime="2021-07">2021/07</time>）
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <h2 id="introduction">紹介</h2>
-                <p>工学部の大学生。HTML5、CSS3とJavaScriptを中学生頃から独学でいじいじする。C言語を大学でちゃんと学ぶ。幼少期からエレクトーンを、中学・高校時代はトロンボーンを嗜んだ。音や聴覚に関する分野（特に工学系）に興味がある。</p>
-
-                <h2 id="license">免許資格</h2>
-                <ul>
-                    <li>実用英語技能検定 準2級（<time datetime="2019-11-08">2019/11/08</time>）</li>
-                    <li>ヤマハ音楽能力検定 エレクトーン演奏グレード7級（ヤマハエレクトーン総合演奏力上級1認定）（<time datetime="2018-11-25">2018/11/25</time>）
-                    </li>
-                </ul>
+                <div class="prof-grid">
+                    <figure class="prof-fig">
+                        <img src="/img/cardicon.png" alt="りーぜんとくん" width="160" height="160">
+                        <!-- <figcaption>もやしくんのアイコンで使用されるりーぜんとくん</figcaption> -->
+                    </figure>
+                    <div class="prof-main">
+                        <p>こんにちは。ごく普通の工学部生、<span style="font-weight: bold;">もやしくん</span>だよ！ HTMLとCSSは趣味でやっているよ。音楽とか音に興味があるよ。</p>
+                        <p>もやしくんが使うアイコンのそれは「りーぜんとくん」であって、もやしくんではないよ。</p>
+                    </div>
+                    <dl class="prof-info">
+                        <div>
+                            <dt id="name">名前</dt>
+                            <dd>もやしくん</dd>
+                        </div>
+                        <div>
+                            <dt id="affiliation">所属</dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        富山県立大学知能ロボット工学科（<time datetime="2022-04-01">2022/04</time>–）
+                                        <ul>
+                                            <li>同大学アカペラサークル（<time datetime="2022-04-01">2022/04</time>–）</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        宮城県の高等学校普通科（<time datetime="2019-04-01">2019/04</time>–<time datetime="2022-03-01">2022/03</time>）
+                                        <ul>
+                                            <li>同高等学校吹奏楽部（<time datetime="2019-04-01">2019/04</time>–<time datetime="2021-07-01">2021/07</time>）</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt id="links">主要リンク</dt>
+                            <dd>
+                                <ul>
+                                    <li><a href="https://x.com/moyashiM_25" target="_blank">X</a></li>
+                                    <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram</a></li>
+                                    <li><a href="https://github.com/moyashim-25" target="_blank">GitHub</a></li>
+                                </ul>
+                                その他のリンクは<a href="/links/">リンク集</a>へ
+                            </dd>
+                        </div>
+                        <div>
+                            <dt id="lang">できるかも言語</dt>
+                            <dd>
+                                <ul>
+                                    <li>HTML5/CSS</li>
+                                    <li>C言語</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt id="license">資格・免許</dt>
+                            <dd>
+                                <ul>
+                                    <li>ヤマハ音楽能力検定 エレクトーン演奏グレード7級<br>（ヤマハエレクトーン総合演奏力上級1認定）（<time datetime="2018-11-25">2018/11/25</time>）</li>
+                                </ul>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt id="subject">履修した専門科目</dt>
+                            <dd><a href="/about/profile/subject.html">ここ</a>から確認できるよ</dd>
+                        </div>
+                        <div>
+                            <dt id="goal">目標</dt>
+                            <dd><a href="/about/profile/goal.html">ここ</a>から確認できるよ</dd>
+                        </div>
+                        <div>
+                            <dt id="motto">座右の銘</dt>
+                            <dd>
+                                <blockquote>
+                                    <p>
+                                        <span style="font-family: 'Noto Serif JP'; font-weight: bold;"
+                                        >子曰、知之者不如好之者、好之者不如楽之者。<br
+                                        >――子曰く、之を知る者は之を好む者に如かず、之を好む者は之を楽しむ者に如かず。
+                                        </span>
+                                    </p>
+                                    <footer>――孔子, <cite>論語</cite></footer>
+                                </blockquote>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
                 
-                <h2 id="subject">履修した専門科目</h2>
-                <p><a href="/about/profile/subject.html">ここ</a>でもやしくんが履修した専門科目を確認できます。</p>
-
-                <h2 id="favorite">好きなもの</h2>
-                <h3 id="food">食べもの</h3>
-                <ul>
-                    <li>ねるねるねるね</li>
-                    <li>茶の菓</li>
-                </ul>
-                <h3 id="drink">飲みもの</h3>
-                <ul>
-                    <li>キレートレモン</li>
-                    <li>マックスコーヒー</li>
-                    <li>森永 甘酒</li>
-                </ul>
-
-                <h2 id="motto">座右の銘</h2>
-                <p><span
-                        style="font-family: 'Noto Serif JP'; font-size: 1.25em; font-weight: bold;">子曰、知之者不如好之者、好之者不如楽之者。<br>――子曰く、之を知る者は之を好む者に如かず、之を好む者は之を楽しむ者に如かず。</span>
-                </p>
-                <p>高等学校入試の作文問題の題材として出題された。関連して、日本のことわざ「好きこそものの上手なれ」を答えさせる問題があったが、当時の私が知っているはずもなく、解答することはできなかった。</p>
-                <p>ちなみに、左右の目は、左目1.2、右目1.5である（<time datetime="2023-04-05">2023/04/05</time>時点）。</p>
-
-                <h2 id="goal">目標</h2>
-                <p><a href="/about/profile/goal.html">ここ</a>からもやしくんの目標が見れます。</p>
             </article>
         </main>
     </div>
