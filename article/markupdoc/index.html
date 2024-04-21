@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <!-- basic meta -->
+    <meta charset="UTF-8">
+    <title>アウトライン文書のすすめ - もやしくん.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="もやしくん">
+    <meta name="description" content="もやしくんの執筆した記事の一覧。">
+    <!-- ogp -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@moyashiM_25">
+    <meta property="og:title" content="アウトライン文書のすすめ">
+    <meta property="og:site_name" content="もやしくん.com">
+    <meta property="og:url" content="https://moyashim-25.com/article">
+    <meta property="og:description" content="もやしくんの執筆した記事の一覧。">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
+    <!-- icon, css -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <ul class="twbonly">
+            <li><a href="#main">メインコンテンツへジャンプ</a></li>
+        </ul>
+        <h1>アウトライン文書のすすめ</h1>
+        <div class="document-info">もやしくん</div>
+        <div class="document-info">
+            公開: <time datetime="2024-04-21">2023/06/21</time>, 最終更新: <time datetime="2024-04-21">2024/04/21</time>
+        </div>
+        <nav>
+            <h2 class="twbonly">パンくずリスト</h2>
+            <ol>
+                <li><a href="/">ホーム</a></li><li><a href="/article/">記事一覧</a></li><li>アウトライン文書のすすめ</li>
+            </ol>
+        </nav>
+    </header>
+    <hr id="main">
+    <main>
+        <article>
+            <h2>おことわり</h2>
+            <p>この文書は記事のテストページであり、記事の中身が有益であるわけではないです。</p>
+            <header>
+                <h2>はじめに――文書のアウトライン</h2>
+                <p>文書は、見出しの下に関連した段落や図表などのコンテンツがくるように構成されている。また、書籍のような長い文書のときには見出しの下に小見出しなどを用いて、コンテンツをさらに細分化していく。</p>
+                <p><b>アウトライン</b>は概要やあらましを意味し、特に文書においては、文書全体を階層的にレベル分けして構成していくことをいう。このアウトラインを意識した文書作りをすることで、話の組み立てがわかりやすい文書へと一歩近づく。
+                </p>
+                <p>Microsoft
+                    Wordなどアウトラインを取り入れた文書作成ソフトは存在する。しかし、こういったソフトでアウトライン文書を作成しようとすると、しばしば見た目（スタイル）とアウトラインを混同し、混乱を招く。</p>
+                <p>ありがたいことに、世の中には<b>マークアップ言語</b>や<b>マークダウン記法</b>といった、アウトラインや文章の意味付けに特化した言語や記法が存在する。</p>
+                <blockquote>
+                    <p>マークアップ言語は、テキストを定義し提示するために設計された言語です。HTML (HyperText Markup Language) は、マークアップ言語の一例です。</p>
+                    <p>HTMLファイルなどのテキストファイル内で、要素はコンテンツのその部分の目的を説明するタグを使用してマークアップされます。</p>
+                    <cite>――"MDN Web Docs 用語集: ウェブの関連用語の定義" の<a
+                            href="https://developer.mozilla.org/ja/docs/Glossary/Markup">markup (マークアップ)</a></cite>
+                </blockquote>
+                <p>例えば、マークアップ言語の一つであるHTMLを用いることで、単なる文章のレベル付けを行えるだけでなく、コンテンツの目的を細かく分類できる。そのため、文書内の文章がどういった意図で用いられているのかを確認、意識しながら文書を作成することができる。これによって、<strong>無駄なく組み立てられた文書の作成が可能</strong>になる。</p>
+            </header>
+
+            <h2>文章への意味付け</h2>
+            <p>HTMLは<b>タグ</b>によってマークアップされ、<strong>文書の要素に意味を与える</strong>。一例を次に挙げる。コピペして「hoge.html」などとしてHTMLで保存しウェブブラウザなどで見ると、タイトルと文章が出力される。
+            </p>
+            <figure>
+                <figcaption>かんたんなHTML5の例</figcaption>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;ここは見出し&lt;/h1&gt;
+  &lt;p&gt;h1タグで囲まれたものは見出し、pタグで囲まれたものはパラグラフ（段落）になります。&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+            </figure>
+            <p>今回は、<code>&lt;body&gt;</code>タグ内に注目する。元の文書は非常にかんたんな例で、「ここは見出し」、「h1タグで……になります。」の2つの要素で構成されている。プレーンなテキストのままでは、それぞれの文章がどのような意味を持つのかを理解することができないが、h1タグやpタグをつけることによって意味を与えることができる。
+            </p>
+            <p>ここで注意したいのが、HTMLでは各文章に意味づけしただけで、それらの出力の<strong>スタイルを指定したわけではない</strong>。つまり、文字を大きくしたいためだけにh1タグを使用するのは間違いである。
+            </p>
+            <p>HTMLタグはこの他にも多くの種類あり、文章の内容に合わせた意味付けを行うことができる。</p>
+            <h2>マルチコンテンツ</h2>
+            <p>HTML5では、画像や音声、動画などのコンテンツを挿入することができる。</p>
+            <figure class="fullwidth">
+                <img src="/img/favicon.png" alt="もやしくんのファビコン">
+                <figcaption>もやしくんのファビコン</figcaption>
+            </figure>
+        </article>
+    </main>
+    <hr>
+    <footer>
+        <p><small>&copy; 2024 もやしくん</small></p>
+    </footer>
+</body>
+
+</html>

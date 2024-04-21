@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+/*
+profile.css
+last modified: 2024/04/21
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+
 .prof-grid {
     display: grid;
     grid-template-columns: 10em 1fr;
@@ -41,18 +48,26 @@
 }
 
 .prof-info div dt {
-    border-bottom: 1px dotted var(--gray-color);
+    border-bottom: 1px dotted var(--Gray-Gray);
 }
 
 .prof-info div dd {
     padding: 0;
 }
 
+blockquote {
+    border: none;
+    background-color: unset;
+}
+
 blockquote footer {
     text-align: right;
+    display: block;
+    font-size: 0.8rem;
 }
 
 blockquote footer cite {
+    display: inline;
     font-style: normal;
 }
 
@@ -62,5 +77,10 @@ blockquote footer cite {
         gap: 16px 0;
         flex-direction: column;
         flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    h2 {
+        align-self: flex-start;
     }
 }

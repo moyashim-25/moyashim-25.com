@@ -1,9 +1,50 @@
 @charset "UTF-8";
 
+/*
+lib.css
+last modified: 2024/04/21
+*/
+
+nav #libindex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5em 1.3em;
+    padding: 0;
+
+    li {
+        list-style: none;
+        padding: 0.5em 0;
+        border-left: var(--accent-Green) 5px solid;
+        background-color: var(--costum-backGreen);
+
+        a {
+            padding: 0.5em;
+            font-weight: 700;
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
+
 article h3 {
+    margin-top: 1em;
+    border-left: var(--accent-Green) 5px solid;
+    background-color: var(--costum-backGreen);
+    padding: 0.3em 0.5em;
+}
+
+article h4 {
     border-bottom: 1px gray solid;
-    border-left: 0.5em gray solid;
     padding-left: 0.5em;
+    margin-bottom: 0;
+    font-size: 1.4rem;
 }
 
 article section div dl {
@@ -15,6 +56,7 @@ article section div dl {
 
 article section div dl dt {
     text-align: right;
+    font-weight: 400;
 }
 
 article section div dl dd {

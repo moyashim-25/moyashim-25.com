@@ -2,11 +2,13 @@
 <html lang="ja" prefix="og: https://ogp.me/ns#">
 
 <head>
+    <!-- basic meta -->
     <meta charset="UTF-8">
+    <title>本棚 - もやしくん.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="もやしくん">
     <meta name="description" content="もやしくんが所有している本の一覧です。">
-    <title>本棚 - もやしくん.com</title>
+    <!-- ogp -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@moyashiM_25">
     <meta property="og:title" content="本棚">
@@ -15,106 +17,89 @@
     <meta property="og:description" content="もやしくんが所有している本の一覧です。">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Rg.woff2">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Bd.woff2">
-    <link rel="preload" as="fetch" crossorigin="anonymous" type="application/json" href="/data/libdata.json">
-    <link rel="preload" as="script"crossorigin="anonymous" href="/js/booklibrary.js">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/article.css">
-    <link rel="stylesheet" href="/css/lib.css">
+    <!-- icon, css -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" href="/img/favicon.ico">
-    <script>
-        (function (theme) {
-            if (localStorage.getItem("darktheme")) {
-                theme.document.documentElement.classList.add("dark");
-            }
-        })(this);
-    </script>
-    <script src="/js/theme.js" charset="UTF-8" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/lib.css">
+    <!-- script -->
     <script src="/js/booklibrary.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1><a href="/">もやしくん.com</a></h1>
-            <span id="dark_switch"><img src="/img/dark_swich.svg" alt="テーマの切り替え" height="32" width="32"></span>
-        </header>
-        <nav class="topic_path">
+    <header>
+        <ul class="twbonly">
+            <li><a href="#main">メインコンテンツへジャンプ</a></li>
+        </ul>
+        <h1>本棚</h1>
+        <div class="document-info">もやしくん</div>
+        <div class="document-info">
+            公開: <time datetime="2023-07-21">2023/07/21</time>, 最終更新: <time datetime="2024-04-21">2024/04/21</time>
+        </div>
+        <nav>
+            <h2 class="twbonly">パンくずリスト</h2>
             <ol>
                 <li><a href="/">ホーム</a></li><li>本棚</li>
             </ol>
         </nav>
-        <nav class="right-nav">
-            <h1>もくじ</h1>
-            <ul class="no-marker" id="libindex">
-            </ul>
-        </nav>
-        <main>
-            <article>
-                <div class="art-head">
-                    <h1>本棚</h1>
+    </header>
+    <hr id="main">
+    <main>
+        <article>
+            <header>
+                <p>もやしくんが所有する本の一覧です。</p>
+                <h2>このページについて</h2>
+                <ul>
+                    <li>所有する本のすべてを列挙しているわけではありません。</li>
+                    <li>カテゴリリストから大まかな図書分類先へジャンプできます。</li>
+                    <li>具体的な検索はブラウザ搭載のページ内検索などを利用してください。</li>
+                    <li>このページはJavaScriptが有効な状態でのみ正しく表示されます。</li>
+                </ul>
+                <p>図書リストのデータの最終更新日は<span id="lastModified">[get from JSON by JS]</span>です。</p>
+            </header>
+            <nav>
+                <h2>カテゴリリスト</h2>
+                <ul id="libindex">
+                </ul>
+            </nav>
+
+            <h2>図書リスト</h2>
+            <div id="dataarea">
+
+            </div>
+
+            <template id="bookTemplate">
+                <div class="bookDiv">
+                    <h4 class="bookTitle"></h4>
+                    <dl class="bookInfo">
+                        <dt class="bookTitle">書名</dt>
+                        <dd class="bookTitle"></dd>
+                        <dt class="bookAuthor">著者</dt>
+                        <dd class="bookAuthor"></dd>
+                        <dt class="bookSeries">シリーズ</dt>
+                        <dd class="bookSeries"></dd>
+                        <dt class="bookPublisher">出版社</dt>
+                        <dd class="bookPublisher"></dd>
+                        <dt class="bookEdition">版</dt>
+                        <dd class="bookEdition"></dd>
+                        <dt class="bookYear">出版年</dt>
+                        <dd class="bookYear"></dd>
+                        <dt class="bookPage">ページ数</dt>
+                        <dd class="bookPage"></dd>
+                        <dt class="bookISBN">ISBN</dt>
+                        <dd class="bookISBN"></dd>
+                        <dt class="bookComment">コメント</dt>
+                        <dd class="bookComment"></dd>
+                    </dl>
                 </div>
-                <p>もやしくんが所有する本の一覧です。そのすべてを列挙しているわけではありません。</p>
-
-                <div id="dataarea">
-
-                </div>
-
-                <template id="bookTemplate">
-                    <div class="bookDiv">
-                        <h3 class="bookTitle"></h3>
-                        <dl class="bookInfo">
-                            <dt class="bookTitle">書名</dt>
-                            <dd class="bookTitle"></dd>
-                            <dt class="bookAuthor">著者</dt>
-                            <dd class="bookAuthor"></dd>
-                            <dt class="bookSeries">シリーズ</dt>
-                            <dd class="bookSeries"></dd>
-                            <dt class="bookPublisher">出版社</dt>
-                            <dd class="bookPublisher"></dd>
-                            <dt class="bookEdition">版</dt>
-                            <dd class="bookEdition"></dd>
-                            <dt class="bookYear">出版年</dt>
-                            <dd class="bookYear"></dd>
-                            <dt class="bookPage">ページ数</dt>
-                            <dd class="bookPage"></dd>
-                            <dt class="bookISBN">ISBN</dt>
-                            <dd class="bookISBN"></dd>
-                            <dt class="bookComment">コメント</dt>
-                            <dd class="bookComment"></dd>
-                        </dl>
-                    </div>
-                </template>
-            </article>
-        </main>
-    </div>
-
+            </template>
+        </article>
+    </main>
+    <hr>
     <footer>
-        <div class="footer_container">
-            <div class="foo_title">
-                <h1>もやしくん.com</h1>
-            </div>
-            <div class="foo_left">
-                <ul>
-                    <li><a href="/">ホーム</a></li>
-                    <li><a href="/links/">リンク集</a></li>
-                    <li><a href="/about/">サイトについて</a></li>
-                </ul>
-            </div>
-            <div class="foo_right">
-                <ul>
-                    <li><a href="https://x.com/moyashiM_25" target="_blank">X</a></li>
-                    <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram</a></li>
-                    <li><a href="https://github.com/moyashim-25" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
-            <div class="foo_center">
-                <small>&copy; 2023 もやしくん</small>
-            </div>
-        </div>
+        <p><small>&copy; 2024 もやしくん</small></p>
     </footer>
-
 </body>
 
 </html>

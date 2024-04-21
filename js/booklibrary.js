@@ -1,8 +1,10 @@
 /* 
+last modified: 2024/04/21
 reference:
 https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/JSON
 */
 
+// JSONデータの取得・表示関数の実行
 async function populate() {
     const requestURL = '/data/libdata.json';
     const request = new Request(requestURL);
@@ -13,15 +15,25 @@ async function populate() {
     populateBook(MyLibrary);
 }
 
+// HTMLへの表示
 function populateBook(obj) {
+    // HTML要素の取得
+    const lastModifiedarea = document.getElementById('lastModified');
     const dataarea = document.getElementById('dataarea');
     const navarea = document.getElementById('libindex');
     const bookTemplate = document.getElementById('bookTemplate');
+    // データの整理
     const lib = obj.category;
+    const lastModified = new Date(obj.lastModified);
 
+    // 最終更新日の表示
+    console.log(lastModified.toJSON() + '\n' + lastModified.toISOString());
+    lastModifiedarea.innerHTML = '<time datetime="' + lastModified.toJSON() + '">' + lastModified.getFullYear() + '/' + (lastModified.getMonth()+1) + '/' + lastModified.getDate() + '</time>';
+
+    // HTMLタグ作成（本文・ナビゲーション）
     for (const category of lib) {
         const categorysection = document.createElement('section');
-        const categoryh2 = document.createElement('h2');
+        const categoryh2 = document.createElement('h3');
 
         const navcategoryli = document.createElement('li');
         const navcategorya = document.createElement('a');
@@ -38,23 +50,17 @@ function populateBook(obj) {
         const book = category.data;
         for (const bookData of book) {
             const bookdiv = bookTemplate.content.firstElementChild.cloneNode(true);
-            const [ bookTitle ] = bookdiv.getElementsByClassName('bookTitle');
-            const [ bookInfo ] = bookdiv.getElementsByClassName('bookInfo');
-            const [ bookTitleDT, bookTitleDD ] = bookInfo.getElementsByClassName('bookTitle');
-            const [ bookAuthorDT, bookAuthorDD ] = bookInfo.getElementsByClassName('bookAuthor');
-            const [ bookSeriesDT, bookSeriesDD ] = bookInfo.getElementsByClassName('bookSeries');
-            const [ bookPublisherDT, bookPublisherDD ] = bookInfo.getElementsByClassName('bookPublisher');
-            const [ bookEditionDT, bookEditionDD ] = bookInfo.getElementsByClassName('bookEdition');
-            const [ bookYearDT, bookYearDD ] = bookInfo.getElementsByClassName('bookYear');
-            const [ bookPageDT, bookPageDD ] = bookInfo.getElementsByClassName('bookPage');
-            const [ bookISBNDT, bookISBNDD ] = bookInfo.getElementsByClassName('bookISBN');
-            const [ bookCommentDT, bookCommentDD ] = bookInfo.getElementsByClassName('bookComment');
-
-            const navbookli = document.createElement('li');
-            const navbooka = document.createElement('a');
-
-            navbooka.textContent = bookData.title;
-            navbooka.setAttribute('href', `#${bookData.ISBN}`);
+            const [bookTitle] = bookdiv.getElementsByClassName('bookTitle');
+            const [bookInfo] = bookdiv.getElementsByClassName('bookInfo');
+            const [bookTitleDT, bookTitleDD] = bookInfo.getElementsByClassName('bookTitle');
+            const [bookAuthorDT, bookAuthorDD] = bookInfo.getElementsByClassName('bookAuthor');
+            const [bookSeriesDT, bookSeriesDD] = bookInfo.getElementsByClassName('bookSeries');
+            const [bookPublisherDT, bookPublisherDD] = bookInfo.getElementsByClassName('bookPublisher');
+            const [bookEditionDT, bookEditionDD] = bookInfo.getElementsByClassName('bookEdition');
+            const [bookYearDT, bookYearDD] = bookInfo.getElementsByClassName('bookYear');
+            const [bookPageDT, bookPageDD] = bookInfo.getElementsByClassName('bookPage');
+            const [bookISBNDT, bookISBNDD] = bookInfo.getElementsByClassName('bookISBN');
+            const [bookCommentDT, bookCommentDD] = bookInfo.getElementsByClassName('bookComment');
 
             bookTitle.textContent = bookData.title;
             bookTitle.setAttribute('id', bookData.ISBN);
@@ -78,8 +84,6 @@ function populateBook(obj) {
                 bookCommentDT.parentElement.removeChild(bookCommentDT);
                 bookCommentDD.parentElement.removeChild(bookCommentDD);
             }
-            navbookli.appendChild(navbooka);
-            navcategoryul.appendChild(navbookli);
 
             categorysection.appendChild(bookdiv);
         }
