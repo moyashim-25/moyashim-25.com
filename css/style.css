@@ -60,7 +60,7 @@ a:visited {
 html {
     --Gray-text-Black: rgb(65, 65, 65);
     --Gray-backGray: rgb(248, 248, 248);
-    --costum-backGreen: rgb(231, 255, 243);
+    --costum-backBlue: rgb(230, 241, 255);
     /* These color set are based by the page [https://cudo.jp/?page_id=1565] written by CUDO.*/
     --BaseColor-Cream: rgb(255, 255, 128);
     --BaseColor-Green: rgb(119, 217, 168);

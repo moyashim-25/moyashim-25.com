@@ -16,8 +16,8 @@ nav #libindex {
     li {
         list-style: none;
         padding: 0.5em 0;
-        border-left: var(--accent-Green) 5px solid;
-        background-color: var(--costum-backGreen);
+        border-left: var(--accent-Blue) 5px solid;
+        background-color: var(--costum-backBlue);
 
         a {
             padding: 0.5em;
@@ -35,8 +35,8 @@ nav #libindex {
 
 article h3 {
     margin-top: 1em;
-    border-left: var(--accent-Green) 5px solid;
-    background-color: var(--costum-backGreen);
+    border-left: var(--accent-Blue) 5px solid;
+    background-color: var(--costum-backBlue);
     padding: 0.3em 0.5em;
 }
 
