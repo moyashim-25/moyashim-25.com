@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+nav ul {
+    display: grid;
+    gap: 1em;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 0;
+
+
+    li {
+        list-style: none;
+        background-color: var(--costum-backBlue);
+        border-left: 5px solid var(--accent-Blue);
+
+        a {
+            text-decoration: none;
+            display: block;
+            height: 100%;
+
+            div {
+                padding: 0.5em;
+
+                * {
+                    margin: 0.5rem 0;
+                }
+            }
+        }
+
+        a:hover {
+            * h3 {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav ul {
+        grid-template-columns: 1fr;
+    }
+}
