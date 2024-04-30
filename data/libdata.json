@@ -1,6 +1,6 @@
 {
     "databaseName": "MyLibrary",
-    "lastModified": "2024-04-21T12:18+09:00",
+    "lastModified": "2024-04-30T22:43+09:00",
     "category": [
         {
             "categoryName": "数学",
@@ -68,8 +68,19 @@
                     "publisher": "岩波書店",
                     "edition": "新装版",
                     "year": 2019,
-                    "numberOfPages": 218,
+                    "numberOfPages": 234,
                     "ISBN": "978-4-00-029888-9",
+                    "comment": false
+                },
+                {
+                    "title": "確率・統計",
+                    "author": "薩摩順吉",
+                    "series": "理工系の数学入門コース",
+                    "publisher": "岩波書店",
+                    "edition": "新装版",
+                    "year": 2019,
+                    "numberOfPages": 236,
+                    "ISBN": "978-4-00-029889-6",
                     "comment": false
                 },
                 {
@@ -108,7 +119,7 @@
             ]
         },
         {
-            "categoryName": "理科",
+            "categoryName": "物理学・化学",
             "categoryID": "science",
             "data": [
                 {
@@ -147,8 +158,8 @@
             ]
         },
         {
-            "categoryName": "機械・機構",
-            "categoryID": "maschine",
+            "categoryName": "工業基礎学",
+            "categoryID": "industrialbasics",
             "data": [
                 {
                     "title": "工業力学入門",
@@ -161,6 +172,45 @@
                     "ISBN": "978-4-627-66253-7",
                     "comment": false
                 },
+                {
+                    "title": "材料力学",
+                    "author": "一般社団法人 日本機械学会",
+                    "series": "JSMEテキストシリーズ",
+                    "publisher": "一般社団法人 日本機械学会",
+                    "edition": "初版",
+                    "year": 2007,
+                    "numberOfPages": 230,
+                    "ISBN": "978-4-88898-158-3",
+                    "comment": false
+                },
+                {
+                    "title": "計測工学",
+                    "author": "谷口修, 堀込泰雄",
+                    "series": "最新機械工学シリーズ",
+                    "publisher": "森北出版",
+                    "edition": "第2版",
+                    "year": 1991,
+                    "numberOfPages": 288,
+                    "ISBN": "978-4-627-61161-0",
+                    "comment": false
+                },
+                {
+                    "title": "基礎センサ工学",
+                    "author": "稲荷隆彦",
+                    "series": false,
+                    "publisher": "コロナ社",
+                    "edition": "初版",
+                    "year": 2001,
+                    "numberOfPages": 214,
+                    "ISBN": "978-4-339-03181-2",
+                    "comment": false
+                }
+            ]
+        },
+        {
+            "categoryName": "機械工学",
+            "categoryID": "maschine",
+            "data": [
                 {
                     "title": "機械力学（増補）",
                     "author": "青木繁",
@@ -193,11 +243,61 @@
                     "numberOfPages": 240,
                     "ISBN": "978-4-627-66435-7",
                     "comment": false
+                },
+                {
+                    "title": "新編JIS機械製図",
+                    "author": "吉澤武男 他",
+                    "series": false,
+                    "publisher": "森北出版",
+                    "edition": "第5版",
+                    "year": 2014,
+                    "numberOfPages": 176,
+                    "ISBN": "978-4-627-66115-8",
+                    "comment": false
+                },
+                {
+                    "title": "図面って、どない描くねん！",
+                    "author": "山田学",
+                    "series": "「図面って」シリーズ",
+                    "publisher": "日刊工業新聞社",
+                    "edition": "第2版",
+                    "year": 2016,
+                    "numberOfPages": 232,
+                    "ISBN": "978-4-526-07530-8",
+                    "comment": false
+                },
+                {
+                    "title": "機械材料学",
+                    "author": "公益社団法人 日本材料学会",
+                    "series": false,
+                    "publisher": "公益社団法人 日本材料学会",
+                    "edition": "第5版",
+                    "year": 2022,
+                    "numberOfPages": 439,
+                    "ISBN": "978-4-901381-58-1",
+                    "comment": false
                 }
             ]
         },
         {
-            "categoryName": "電気・電子回路",
+            "categoryName": "金属加工",
+            "categoryID": "metalprocessing",
+            "data": [
+                {
+                    "title": "図解 材料加工学 ―塑性加工・機械加工―",
+                    "author": "松岡信一",
+                    "series": false,
+                    "publisher": "養賢堂",
+                    "edition": "第1版",
+                    "year": 2006,
+                    "numberOfPages": 102,
+                    "ISBN": "978-4-8425-0385-1",
+                    "comment": false
+                }
+            ]
+        },
+        {
+            "categoryName": "電気回路・電子工学",
             "categoryID": "elcircuits",
             "data": [
                 {
@@ -221,12 +321,23 @@
                     "numberOfPages": 288,
                     "ISBN": "978-4-274-22734-9",
                     "comment": false
+                },
+                {
+                    "title": "半導体工学",
+                    "author": "高橋清, 山田陽一 ",
+                    "series": false,
+                    "publisher": "森北出版",
+                    "edition": "第3版 新装版",
+                    "year": 2020,
+                    "numberOfPages": 256,
+                    "ISBN": "978-4-627-71044-3",
+                    "comment": false
                 }
             ]
         },
         {
-            "categoryName": "制御",
-            "categoryID": "control",
+            "categoryName": "情報工学",
+            "categoryID": "infomationengineering",
             "data": [
                 {
                     "title": "古典制御論",
@@ -240,6 +351,17 @@
                     "comment": false
                 },
                 {
+                    "title": "現代制御の基礎",
+                    "author": "田中幹也, 石川昌明, 浪花智英",
+                    "series": false,
+                    "publisher": "森北出版",
+                    "edition": "初版",
+                    "year": 1999,
+                    "numberOfPages": 136,
+                    "ISBN": "978-4-627-91661-6",
+                    "comment": false
+                },
+                {
                     "title": "イラストで学ぶロボット工学",
                     "author": "木野仁 他",
                     "series": "イラストで学ぶ",
@@ -249,13 +371,18 @@
                     "numberOfPages": 224,
                     "ISBN": "978-4-06-153834-4",
                     "comment": false
-                }
-            ]
-        },
-        {
-            "categoryName": "論理回路",
-            "categoryID": "logiccircuit",
-            "data": [
+                },
+                {
+                    "title": "わかりやすい ロボットシステム入門",
+                    "author": "松日楽信人, 大明準治",
+                    "series": false,
+                    "publisher": "オーム社",
+                    "edition": "改訂3版",
+                    "year": 2020,
+                    "numberOfPages": 228,
+                    "ISBN": "978-4-274-22497-3",
+                    "comment": false
+                },
                 {
                     "title": "論理回路入門",
                     "author": "浜辺隆二",
@@ -270,36 +397,8 @@
             ]
         },
         {
-            "categoryName": "プログラミング",
-            "categoryID": "programing",
-            "data": [
-                {
-                    "title": "やさしく学べるC言語入門",
-                    "author": "皆本晃弥",
-                    "series": "UNIX & Information Science",
-                    "publisher": "サイエンス社",
-                    "edition": "第2版",
-                    "year": 2015,
-                    "numberOfPages": 259,
-                    "ISBN": "978-4-7819-1359-9",
-                    "comment": false
-                },
-                {
-                    "title": "明快入門 C",
-                    "author": "林晴比古",
-                    "series": "林 晴比古実用マスターシリーズ",
-                    "publisher": "SBクリエイティブ",
-                    "edition": "初版",
-                    "year": 2013,
-                    "numberOfPages": 288,
-                    "ISBN": "978-4-7973-7326-4",
-                    "comment": "身内からのお下がり"
-                }
-            ]
-        },
-        {
-            "categoryName": "コンピュータ",
-            "categoryID": "computer",
+            "categoryName": "情報科学",
+            "categoryID": "informationscience",
             "data": [
                 {
                     "title": "基礎からわかる情報リテラシー",
@@ -322,12 +421,112 @@
                     "numberOfPages": 240,
                     "ISBN": "978-4-339-02413-5",
                     "comment": false
+                },
+                {
+                    "title": "やさしく学べるC言語入門",
+                    "author": "皆本晃弥",
+                    "series": "UNIX & Information Science",
+                    "publisher": "サイエンス社",
+                    "edition": "第2版",
+                    "year": 2015,
+                    "numberOfPages": 259,
+                    "ISBN": "978-4-7819-1359-9",
+                    "comment": false
+                },
+                {
+                    "title": "明快入門 C",
+                    "author": "林晴比古",
+                    "series": "林 晴比古実用マスターシリーズ",
+                    "publisher": "SBクリエイティブ",
+                    "edition": "初版",
+                    "year": 2013,
+                    "numberOfPages": 288,
+                    "ISBN": "978-4-7973-7326-4",
+                    "comment": "身内からのお下がり"
+                },
+                {
+                    "title": "人工知能原理",
+                    "author": "加納政芳, 山田雅之, 遠藤守",
+                    "series": "コンピュータサイエンス教科書シリーズ",
+                    "publisher": "コロナ社",
+                    "edition": "初版",
+                    "year": 2017,
+                    "numberOfPages": 232,
+                    "ISBN": "978-4-339-02712-9",
+                    "comment": false
+                },
+                {
+                    "title": "インテリジェントネットワークシステム入門",
+                    "author": "原島文雄 他",
+                    "series": false,
+                    "publisher": "コロナ社",
+                    "edition": "初版",
+                    "year": 2008,
+                    "numberOfPages": 240,
+                    "ISBN": "978-4-339-02429-6",
+                    "comment": false
                 }
             ]
         },
         {
-            "categoryName": "信号処理",
-            "categoryID": "signalprocessing",
+            "categoryName": "科学教育・技術教育",
+            "categoryID": "technicaleducation",
+            "data": [
+                {
+                    "title": "理科系の作文技術",
+                    "author": "木下是雄",
+                    "series": "中公新書",
+                    "publisher": "中央公論新社",
+                    "edition": "88版",
+                    "year": 1981,
+                    "numberOfPages": 256,
+                    "ISBN": "978-4-12-100624-0",
+                    "comment": false
+                },
+                {
+                    "title": "知的な科学・技術文章の徹底演習",
+                    "author": "塚本真也",
+                    "series": false,
+                    "publisher": "コロナ社",
+                    "edition": "初版",
+                    "year": 2007,
+                    "numberOfPages": 206,
+                    "ISBN": "978-4-339-07784-1",
+                    "comment": false
+                },
+                {
+                    "title": "大学講義 技術者の倫理入門",
+                    "author": "杉本泰治, 高城重厚",
+                    "series": false,
+                    "publisher": "丸善出版",
+                    "edition": "第5版",
+                    "year": 2016,
+                    "numberOfPages": 254,
+                    "ISBN": "978-4-621-30016-9",
+                    "comment": false
+                }
+            ]
+        },
+        {
+            "categoryName": "印刷",
+            "categoryID": "print",
+            "data": [
+                {
+                    "title": "［改訂第8版］LaTeX2ε美文書作成入門",
+                    "author": "奥村晴彦，黒木裕介",
+                    "series": false,
+                    "publisher": "技術評論社",
+                    "edition": "第8版",
+                    "year": 2020,
+                    "numberOfPages": 448,
+                    "ISBN": "978-4-297-11712-2",
+                    "comment": "皆も美文書になろう。身内からのお下がり"
+                }
+            ]
+        },
+        {
+            "categoryName": "音楽",
+            "categoryID": "music",
             "data": [
                 {
                     "title": "Pythonではじめる音のプログラミング",

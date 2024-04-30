@@ -35,7 +35,7 @@
         <h1>本棚</h1>
         <div class="document-info">もやしくん</div>
         <div class="document-info">
-            公開: <time datetime="2023-07-21">2023/07/21</time>, 最終更新: <time datetime="2024-04-21">2024/04/21</time>
+            公開: <time datetime="2023-07-21">2023/07/21</time>, 最終更新: <time datetime="2024-04-24">2024/04/24</time>
         </div>
         <nav>
             <h2 class="twbonly">パンくずリスト</h2>
@@ -52,11 +52,21 @@
                 <h2>このページについて</h2>
                 <ul>
                     <li>所有する本のすべてを列挙しているわけではありません。</li>
+                    <li>NDCによって大まかにカテゴライズしています。
+                        <ul>
+                            <li>NDCは次で参照しており、上の方が優先度が高いです:
+                                <ol>
+                                    <li>国立国会図書館サーチ</li>
+                                    <li>富山県立大学附属図書館蔵書検索</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
                     <li>カテゴリリストから大まかな図書分類先へジャンプできます。</li>
                     <li>具体的な検索はブラウザ搭載のページ内検索などを利用してください。</li>
                     <li>このページはJavaScriptが有効な状態でのみ正しく表示されます。</li>
                 </ul>
-                <p>図書リストのデータの最終更新日は<span id="lastModified">[get from JSON by JS]</span>です。</p>
+                <p>図書リストのデータの最終更新日は<span id="lastModified">[get from JSON by JS]</span>、記録されている図書は<span id="howmuch">[get from JSON by JS]</span>冊です。</p>
             </header>
             <nav>
                 <h2>カテゴリリスト</h2>

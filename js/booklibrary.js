@@ -1,5 +1,5 @@
 /* 
-last modified: 2024/04/21
+last modified: 2024/04/23
 reference:
 https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/JSON
 */
@@ -19,6 +19,7 @@ async function populate() {
 function populateBook(obj) {
     // HTML要素の取得
     const lastModifiedarea = document.getElementById('lastModified');
+    const howmucharea = document.getElementById('howmuch');
     const dataarea = document.getElementById('dataarea');
     const navarea = document.getElementById('libindex');
     const bookTemplate = document.getElementById('bookTemplate');
@@ -27,9 +28,10 @@ function populateBook(obj) {
     const lastModified = new Date(obj.lastModified);
 
     // 最終更新日の表示
-    console.log(lastModified.toJSON() + '\n' + lastModified.toISOString());
     lastModifiedarea.innerHTML = '<time datetime="' + lastModified.toJSON() + '">' + lastModified.getFullYear() + '/' + (lastModified.getMonth()+1) + '/' + lastModified.getDate() + '</time>';
 
+    // 冊数カウント
+    var countBook = 0;
     // HTMLタグ作成（本文・ナビゲーション）
     for (const category of lib) {
         const categorysection = document.createElement('section');
@@ -86,10 +88,15 @@ function populateBook(obj) {
             }
 
             categorysection.appendChild(bookdiv);
+
+            countBook++;
         }
         dataarea.appendChild(categorysection);
         navcategoryli.appendChild(navcategoryul);
         navarea.appendChild(navcategoryli);
+
+        // 冊数の表示
+        howmucharea.innerHTML = countBook;
     }
 }
 

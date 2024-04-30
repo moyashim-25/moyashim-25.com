@@ -2,7 +2,7 @@
 
 /*
 lib.css
-last modified: 2024/04/21
+last modified: 2024/04/24
 */
 
 nav #libindex {
@@ -33,7 +33,18 @@ nav #libindex {
 
 }
 
+article section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0 2rem;
+}
+
 article h3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
     margin-top: 1em;
     border-left: var(--accent-Blue) 5px solid;
     background-color: var(--costum-backBlue);
@@ -61,4 +72,10 @@ article section div dl dt {
 
 article section div dl dd {
     padding: 0;
+}
+
+@media screen and (max-width: 500px) {
+    article section {
+        display: block;
+    }
 }
