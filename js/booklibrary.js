@@ -1,5 +1,5 @@
 /* 
-last modified: 2024/04/23
+last modified: 2024/05/03
 reference:
 https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/JSON
 */
@@ -65,7 +65,7 @@ function populateBook(obj) {
             const [bookCommentDT, bookCommentDD] = bookInfo.getElementsByClassName('bookComment');
 
             bookTitle.textContent = bookData.title;
-            bookTitle.setAttribute('id', bookData.ISBN);
+            // bookTitle.setAttribute('id', bookData.ISBN);
 
             bookTitleDD.textContent = bookData.title;
             bookAuthorDD.textContent = bookData.author;
@@ -79,7 +79,12 @@ function populateBook(obj) {
             bookEditionDD.textContent = bookData.edition;
             bookYearDD.textContent = bookData.year;
             bookPageDD.textContent = bookData.numberOfPages;
-            bookISBNDD.textContent = bookData.ISBN;
+            if (bookData.ISBN) {
+                bookISBNDD.textContent = bookData.ISBN;
+            } else {
+                bookISBNDT.parentElement.removeChild(bookISBNDT);
+                bookISBNDD.parentElement.removeChild(bookISBNDD);
+            }
             if (bookData.comment) {
                 bookCommentDD.textContent = bookData.comment;
             } else {
