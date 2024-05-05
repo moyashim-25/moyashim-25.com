@@ -1,0 +1,9 @@
+{
+    "icons": [
+        {
+            "src": "/apple-touch-icon.png",
+            "type": "image/png",
+            "sizes": "400x400"
+        }
+    ]
+}

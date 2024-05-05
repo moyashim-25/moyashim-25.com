@@ -2,11 +2,13 @@
 <html lang="ja" prefix="og: https://ogp.me/ns#">
 
 <head>
+    <!-- basic meta -->
     <meta charset="UTF-8">
+    <title>いま何きいてる？ - もやしくん.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="もやしくん">
     <meta name="description" content="もやしくんのいまきいている曲やおすすめの曲などを紹介。">
-    <title>いま何きいてる？ - もやしくん.com</title>
+    <!-- ogp -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@moyashiM_25">
     <meta property="og:title" content="いま何きいてる？">
@@ -15,99 +17,88 @@
     <meta property="og:description" content="もやしくんのいまきいている曲やおすすめの曲などを紹介。">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Rg.woff2">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Bd.woff2">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/article.css">
+    <!-- icon, css -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" href="/img/favicon.ico">
-    <script>
-        (function(theme) {
-            if(localStorage.getItem("darktheme")) {
-                theme.document.documentElement.classList.add("dark");
-            }
-        })(this);
-    </script>
-    <script src="/js/theme.js" charset="UTF-8" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1><a href="/">もやしくん.com</a></h1>
-            <span id="dark_switch"><img src="/img/dark_swich.svg" alt="テーマの切り替え" height="32" width="32"></span>
-        </header>
-        <nav class="topic_path">
+    <header>
+        <ul class="twbonly">
+            <li><a href="#main">メインコンテンツへジャンプ</a></li>
+        </ul>
+        <h1>いま何きいてる？</h1>
+        <div class="document-info">もやしくん</div>
+        <div class="document-info">
+            公開: <time datetime="2023-10-08">2023/10/08</time>, 最終更新: <time datetime="2024-04-21">2024/04/21</time>
+        </div>
+        <nav>
+            <h2 class="twbonly">パンくずリスト</h2>
             <ol>
                 <li><a href="/">ホーム</a></li><li>いま何きいてる？</li>
             </ol>
         </nav>
-        <nav class="right-nav">
-            <h1>もくじ</h1>
-            <ul class="no-marker">
-                <li><a href="#nowplay">いまきいてる on Spotify</a></li>
-                <li><a href="#recommend">おすすめ</a></li>
-                <li><a href="#spotify">もやしくんのSpotify</a></li>
-                <li><a href="#you">おすすめを教えて！</a></li>
-                <li><a href="#info">このページの情報</a></li>
+    </header>
+    <hr id="main">
+    <main>
+        <article>
+            <header>
+                <p>もやしくんがいまSpotifyできいているものや、おすすめの曲を紹介します。</p>
+            </header>
+            <h2>Spotifyで再生中</h2>
+            <p class="twbonly">iframeタグに対応したブラウザで閲覧すると、この下に、もやしくんがいまSpotifyできいている曲が表示されます。</p>
+            <iframe
+                src="https://script.google.com/macros/s/AKfycbyXsjFtaOCdi1ncB6mTYnEW-kKo3ttvRpLEk4MzAwSDsCk76XbjX-EV7JX5ePeJwxEe-g/exec"
+                style="width: 100%; overflow: hidden; border: 0;" loading="lazy" title="もやしくんがSpotifyで再生中"></iframe>
+            <p>もやしくんがSpotifyできいているのが曲の場合、曲名がその曲へのリンクになっています。</p>
+            <p>「Spotifyで再生中」は<a href="https://qiita.com/nozomit/items/0bec86a08f967aaa0762">Qiitaの@nozomitさんの記事</a>を参考に作成しています。</p>
+
+            <h2>もやしくんの音楽リンク</h2>
+            <ul>
+                <li>
+                    <dl>
+                        <dt><a href="https://open.spotify.com/user/7fkqqcfyqr21xghsm7afsqlml">Spotify</a></dt>
+                        <dd>
+                            <p>公開プレイリストなどを見れます。年ごとの視聴ランキングプレイリストも公開中！</p>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt><a href="https://bandcamp.com/moyashim_25">Bandcamp (moyashim_25)</a></dt>
+                        <dd>
+                            <p>コレクション(購入した曲)やお気に入りの曲などが見れます。</p>
+                            <p>Snail's Houseの曲はほぼ全部買った。コレクションはすべて私のwalkmanの中に入り旅のお供となる……</p>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt><a href="https://soundcloud.com/moyashim_25">SoundCloud (moyashim_25)</a>, 視聴用</dt>
+                        <dd>
+                            <p>フォローしたアーティストやお気に入りの楽曲を見れます。</p>
+                            <p>Kawaii future bassの宝庫。瀬名航や歩く人との出会いはここから。たまに聴きにいくと懐かしい気分になる。</p>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt><a href="https://soundcloud.com/foxalien25">SoundCloud (foxalien25)</a>, 投稿用</dt>
+                        <dd>
+                            <p>もやしくんが投稿した曲を見れます。</p>
+                            <p>MIDIとかNEUTRINOとか。ただの保存倉庫。</p>
+                        </dd>
+                    </dl>
+                </li>
             </ul>
-        </nav>
-        <main>
-            <article>
-                <div class="art-head">
-                    <h1>いま何きいてる？</h1>
-                </div>
-                <h2 id="nowplay">いまきいてる on Spotify</h2>
-                <iframe src="https://script.google.com/macros/s/AKfycbz26WOjInAnRlRk5XikNcnKtpdrREeazw2mW-G2b-sLd00uI_J-FrIie_yViJGmqAw2kA/exec" frameborder="0" style="width: 100%; border-radius: 1rem;height: 10.5rem;overflow: hidden; border: gray 1px solid;" loading="lazy"></iframe>
-
-                <h2 id="recommend">おすすめ</h2>
-                <h3>とっぷ おぶ おすすめ なう</h3>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0wZUJxxybEiafs0BIg9SAP?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                <h3>My Top Songs 2023</h3>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3piiNw8mGg1duvmU9OWcJI?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                <h3>YouTubeにもオヌヌメあるよ</h3>
-                <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/lTgkcoCCkoI?si=VFG3RjW1x2q6QyOG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                <h3>Bandcampのコレクション</h3>
-                <p><a href="https://bandcamp.com/moyashim_25" target="_blank">もやしくんのコレクション</a>を確認してみよう！</p>
-
-                <h2 id="spotify">もやしくんのSpotify</h2>
-                <p><a href="https://open.spotify.com/user/7fkqqcfyqr21xghsm7afsqlml" target="_blank">もやしくんのSpotifyプロフィール</a>で公開プレイリストを確認してみる。</p>
-
-                <h2 id="you">おすすめを教えて！</h2>
-                <p><a href="https://forms.gle/YYdRDzhwV3HrLkfr7" target="_blank">このフォーム（Google フォーム）</a>から君のおすすめの曲を教えて！</p>
-
-                <h2 id="info">このページの情報</h2>
-                <p><a href="#nowplay">いまきいてる on Spotify</a>は、Qiitaの@nozomitさんの<a href="https://qiita.com/nozomit/items/0bec86a08f967aaa0762" target="_blank">記事</a>を元に作成しました。</p>
-                <p>各曲は各サービスの埋め込み共有（iframeタグのそれ）を用いて表示されている場合があります。ブラウザや端末によっては、埋め込み先からDRM制御されたコンテンツの許可を求められることがあります。当ページを利用することで、各埋め込み先の利用規約が適用される場合があります。</p>
-                <p>このページに含まれる著作物などの権利は、各権利所有者などに帰属されています。</p>
-            </article>
-        </main>
-    </div>
-
+        </article>
+    </main>
+    <hr>
     <footer>
-        <div class="footer_container">
-            <div class="foo_title">
-                <h1>もやしくん.com</h1>
-            </div>
-            <div class="foo_left">
-                <ul>
-                    <li><a href="/">ホーム</a></li>
-                    <li><a href="/links/">リンク集</a></li>
-                    <li><a href="/about/">サイトについて</a></li>
-                </ul>
-            </div>
-            <div class="foo_right">
-                <ul>
-                    <li><a href="https://x.com/moyashiM_25" target="_blank">X</a></li>
-                    <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram</a></li>
-                    <li><a href="https://github.com/moyashim-25" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
-            <div class="foo_center">
-                <small>&copy; 2023 もやしくん</small>
-            </div>
-        </div>
+        <p><small>&copy; 2024 もやしくん</small></p>
     </footer>
-
 </body>
 
 </html>

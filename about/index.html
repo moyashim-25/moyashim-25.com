@@ -2,11 +2,13 @@
 <html lang="ja" prefix="og: https://ogp.me/ns#">
 
 <head>
+    <!-- basic meta -->
     <meta charset="UTF-8">
+    <title>サイトについて - もやしくん.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="もやしくん">
     <meta name="description" content="もやしくん.comに関する情報が掲載されています。">
-    <title>サイトについて - もやしくん.com</title>
+    <!-- ogp -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@moyashiM_25">
     <meta property="og:title" content="サイトについて">
@@ -15,146 +17,59 @@
     <meta property="og:description" content="もやしくん.comに関する情報が掲載されています。">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Rg.woff2">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Bd.woff2">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/article.css">
+    <!-- icon, css -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" href="/img/favicon.ico">
-    <script>
-        (function(theme) {
-            if(localStorage.getItem("darktheme")) {
-                theme.document.documentElement.classList.add("dark");
-            }
-        })(this);
-    </script>
-    <script src="/js/theme.js" charset="UTF-8" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1><a href="/">もやしくん.com</a></h1>
-            <span id="dark_switch"><img src="/img/dark_swich.svg" alt="テーマの切り替え" height="32" width="32"></span>
-        </header>
-        <nav class="topic_path">
+    <header>
+        <ul class="twbonly">
+            <li><a href="#main">メインコンテンツへジャンプ</a></li>
+        </ul>
+        <h1>サイトについて</h1>
+        <div class="document-info">もやしくん</div>
+        <div class="document-info">
+            公開: <time datetime="2023-06-20">2023/06/20</time>, 最終更新: <time datetime="2024-04-21">2024/04/21</time>
+        </div>
+        <nav>
+            <h2 class="twbonly">パンくずリスト</h2>
             <ol>
                 <li><a href="/">ホーム</a></li><li>サイトについて</li>
             </ol>
         </nav>
-        <nav class="right-nav">
-            <h1>もくじ</h1>
-            <ul class="no-marker">
-                <li><a href="#disclaimer">免責事項</a></li>
-                <li><a href="#copyright">著作権</a></li>
-                <li><a href="#fonts">フォント</a></li>
-                <li><a href="#browser">動作確認済みブラウザ</a></li>
-                <li><a href="#thanks">サイト制作の道標</a></li>
-                <li><a href="#who-are-you">制作者について</a></li>
-                <li><a href="#banner">バナー</a></li>
-            </ul>
-        </nav>
-        <main>
-            <article>
-                <div class="art-head">
-                    <h1>サイトについて</h1>
-                    <p class="art-date">公開日: <time datetime="2023-06-20">2023/06/20</time></p>
-                    <p class="art-date">更新日: <time datetime="2024-02-12">2024/02/17</time></p>
-                </div>
-                <p>ここでは、当サイトに関する情報が掲載されています。</p>
+    </header>
+    <hr id="main">
+    <main>
+        <article>
+            <header>
+                <p>もやしくん.comに関する情報が掲載されています。</p>
+            </header>
+            <h2>免責事項</h2>
+            <p>当サイトコンテンツやURL、ドメインは、予告なく変更、改変、削除などを行うことがあります。当サイトコンテンツに掲載されている情報が正確であるかどうか、最新であるかどうかは保証しかねます。当サイトコンテンツを使用したことによる利用者の損害等は、当サイト制作者は一切の責任を負いかねます。</p>
+            <h3>公開日と更新日に関する留意事項</h3>
+            <p>当サイトコンテンツの一部には、目安として、そのページがいつ公開され、最終更新がいつであるかを記事の見出し下に示しています。これらは日本時間に基づいています。また、当サイトコンテンツのすべての公開日、更新日とその内容はGitHub上のCommitsやHistoryで確認できます。記事上とGitHub上で公開日や更新日に齟齬がある場合、GitHub上のものが優先されます。</p>
 
-                <h2 id="disclaimer">免責事項</h2>
-                <p>当サイトコンテンツやURL、ドメインは、予告なく変更、改変、削除などを行うことがあります。当サイトコンテンツに掲載されている情報が正確であるかどうか、最新であるかどうかは保証しかねます。当サイトコンテンツを使用したことによる利用者の損害等は、当サイト制作者は一切の責任を負いかねます。</p>
-                <h3>公開日と更新日に関する留意事項</h3>
-                <p>当サイトコンテンツの一部には、目安として、そのページがいつ公開され、最終更新がいつであるかを記事の見出し下に示しています。これらは日本時間に基づいています。また、当サイトコンテンツのすべての公開日、更新日とその内容は<a href="https://github.com/moyashim-25/moyashim-25.com" target="_blank">GitHub</a>上のCommitsやHistoryで確認できます。記事上とGitHub上で公開日や更新日に齟齬がある場合、GitHub上のものが優先されます。</p>
+            <h2>著作権</h2>
+            <p>当サイトコンテンツの著作権は、特記無き場合、当サイト制作者に帰属します。</p>
+            
+            <h2>制作者について</h2>
+            <p>当サイト制作者のもやしくんについては、<a href="/about/profile/">もやしくんとは</a>をご覧ください。</p>
+            
+            <h2>フォント</h2>
+            <p>当サイトでは主要フォントとして<a href="https://fonts.google.com/">Google Fonts</a>のNotoシリーズを使用しています。</p>
+            <p>バナーなどの一部に<a href="https://seed.line.me/index_jp.html">LINE Seed</a>を SIL Open Font License, Version 1.1 に基づいて使用しています。</p>
 
-                <h2 id="copyright">著作権</h2>
-                <p>当サイトコンテンツの著作権は、特記無き場合、当サイト制作者に帰属します。</p>
-
-                <h2 id="fonts">フォント</h2>
-                <p>当サイトでは主要フォントとして<a href="https://seed.line.me/index_jp.html" target="_blank">LINE Seed</a>を SIL Open Font License, Version 1.1 に基づいて使用しています。</p>
-                
-                <h2 id="browser">動作確認済ブラウザ</h2>
-                <p>動作を確認したブラウザは以下のとおりです。いずれも最新版です。</p>
-                <dl>
-                    <dt>Android</dt>
-                    <dd>
-                        <ul>
-                            <li>Firefox</li>
-                            <li>Google Chrome（PC版サイトでフォントサイズがごちゃる、普通に見るなら無問題）</li>
-                        </ul>
-                    </dd>
-                    <dt>Windows</dt>
-                    <dd>
-                        <ul>
-                            <li>Firefox</li>
-                            <li>Google Chrome</li>
-                        </ul>
-                    </dd>
-                    <dt>iPadOS</dt>
-                    <dd>
-                        <ul>
-                            <li>Safari</li>
-                            <li>Firefox</li>
-                            <li>Google Chrome</li>
-                        </ul>
-                    </dd>
-                </dl>
-
-                <h2 id="thanks">サイト制作の道標</h2>
-                <p>当サイト制作にあたって、次のサイトを参考にしました。なお、参考にしたのは制作当時のものであって、現在のものと異なる可能性があります。</p>
-                <dl>
-                    <dt><a href="https://www.htmq.com/" target="_blank">HTMLクイックリファレンス</a></dt>
-                    <dd>HTML、CSSをいじり始めた初期から、基礎知識の定着や確認に度々使用。</dd>
-                    <dt><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></dt>
-                    <dd>HTML、CSS、JavaScriptのより詳細なリファレンスとして使用。</dd>
-                    <dt><a href="https://www.digital.go.jp/" target="_blank">デジタル庁</a></dt>
-                    <dd>CSSのグリッドレイアウトの実用使用例として参考にした。</dd>
-                    <dt><a href="https://kusaremkn.com/" target="_blank">KusaReMKN.com</a></dt>
-                    <dd>フォントやスタイルの例として使用。</dd>
-                    <dt><a href="https://zenn.dev/k1350/articles/2e0c165d0cf943" target="_blank">個人サイトにダークモード（ダークテーマ）を実装する</a></dt>
-                    <dd>k1350さんの記事。ダークモードの実装の際に参考にした。</dd>
-                </dl>
-
-                <h2 id="who-are-you">制作者について</h2>
-                <p>制作者「もやしくん」については<a href="/about/profile/">もやしくんとは</a>をご覧ください。</p>
-
-                <h2 id="banner">バナー</h2>
-                <p>あります。次のものが使えます。詳しくは<a href="/about/banner/">バナー</a>をご覧ください。</p>
-                <picture>
-                    <img src="/img/banner/banner_234_60_.webp" alt="もやしくん.com" width="234" height="60">
-                </picture>
-                <picture>
-                    <img src="/img/banner/banner_88_31_.webp" alt="もやしくん.com" width="88" height="31">
-                </picture>
-            </article>
-        </main>
-    </div>
-
+            <h2>バナー</h2>
+            <p>もやしくん.comのバナーがあります。詳しくは<a href="/about/banner/">こちら</a>をご覧ください。</p>
+        </article>
+    </main>
+    <hr>
     <footer>
-        <div class="footer_container">
-            <div class="foo_title">
-                <h1>もやしくん.com</h1>
-            </div>
-            <div class="foo_left">
-                <ul>
-                    <li><a href="/">ホーム</a></li>
-                    <li><a href="/links/">リンク集</a></li>
-                    <li><a href="/about/">サイトについて</a></li>
-                </ul>
-            </div>
-            <div class="foo_right">
-                <ul>
-                    <li><a href="https://x.com/moyashiM_25" target="_blank">X</a></li>
-                    <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram</a></li>
-                    <li><a href="https://github.com/moyashim-25" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
-            <div class="foo_center">
-                <small>&copy; 2023 もやしくん</small>
-            </div>
-        </div>
+        <p><small>&copy; 2024 もやしくん</small></p>
     </footer>
-
 </body>
 
 </html>

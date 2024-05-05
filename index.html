@@ -2,11 +2,13 @@
 <html lang="ja" prefix="og: https://ogp.me/ns#">
 
 <head>
+    <!-- basic meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>もやしくん.com</title>
     <meta name="author" content="もやしくん">
     <meta name="description" content="もやしくんの公式ウェブサイト。もやしくんの活動や創作物を見ることができます。">
-    <title>もやしくん.com</title>
+    <!-- ogp -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@moyashiM_25">
     <meta property="og:title" content="もやしくん.com">
@@ -15,136 +17,90 @@
     <meta property="og:description" content="もやしくんの公式ウェブサイト。もやしくんの活動や創作物を見ることができます。">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Rg.woff2">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Bd.woff2">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/home.css">
+    <!-- icon, css -->
     <link rel="icon" href="/img/favicon.ico">
-    <script>
-        (function (theme) {
-            if (localStorage.getItem("darktheme")) {
-                theme.document.documentElement.classList.add("dark");
-            }
-        })(this);
-    </script>
-    <script src="/js/theme.js" charset="UTF-8" defer></script>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/top.css">
 </head>
 
 <body>
-    <div class="container">
+    <header>
+        <ul class="twbonly">
+            <li><a href="#main">メインコンテンツへジャンプ</a></li>
+        </ul>
+        <h1>もやしくん.com</h1>
+        <div class="document-info">もやしくんの運営する個人サイト</div>
+        <div class="document-info">https://moyashim-25.com/</div>
+        <nav>
+            <h2 class="twbonly">パンくずリスト</h2>
+            <ol>
+                <li>ホーム</li>
+            </ol>
+        </nav>
+    </header>
+    <hr id="main">
+    <main>
         <header>
-            <h1><a href="/">もやしくん.com</a></h1>
-            <span id="dark_switch"><img src="/img/dark_swich.svg" alt="テーマの切り替え" height="32" width="32"></span>
+            <h2>もやしくん.comへようこそ！</h2>
+            <figure class="fullwidth">
+                <img src="/img/topimg.webp" alt="もやしくん.comのホームページのバナー">
+            </figure>
+            <p>
+                もやしくん.comには、もやしくんのあんなことやそんなこと、興味のあるものについて記されています。<a href="#top-nav">各ページへの案内</a>からコンテンツにアクセスしてみましょう！
+            </p>
         </header>
-        <div class="right-nav side-nav">
-            <nav>
-                <h1>もくじ</h1>
-                <ul class="no-marker">
-                    <!-- <li><a href="#notice">お知らせ</a></li> -->
-                    <li><a href="#hello">ようこそ</a></li>
-                    <li><a href="#topic">トピック</a></li>
-                </ul>
-            </nav>
-            <nav>
-                <h1>ここにもいるよ</h1>
-                <ul class="no-marker">
-                    <li><a href="https://x.com/moyashiM_25" target="_blank">X</a></li>
-                    <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram</a></li>
-                    <li><a href="https://github.com/moyashim-25" target="_blank">GitHub</a></li>
-                    <li><a href="https://atcoder.jp/users/moyashim_25" target="_blank">AtCoder</a></li>
-                </ul>
-            </nav>
-        </div>
-        <main>
-            <!-- <h2 class="card_head" id="notice">お知らせ</h2>
-            <ul class="imp_card card-div">
-                <li class="card">
-                    <div class="card_body">
-                        <div class="card_main">
-                            <p>もやしくんはどうやら春休み中らしい</p>
-                        </div>
-                    </div>
-                </li>
-            </ul> -->
-            <h2 class="card_head" id="hello">ようこそ</h2>
-            <ul class="card-div">
-                <li class="card">
-                    <div class="card_body">
-                        <div class="card_main">
-                            <h3><span style="font-weight: bold;">もやしくん.com</span>へようこそ！</h3>
-                            <p>もやしくん.comには、もやしくんのあんなことやそんなこと、興味のあるものについて記されています。<a href="#navi">各ページへの案内</a>からコンテンツを見てみましょう！</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <h2 class="card_head" id="topic">トピック</h2>
-            <ul class="card-div">
-                <li class="card">
-                    <a href="/music/" class="card_body link">
-                        <div class="card_main">
+        <h2 id="top-nav">各ページへの案内</h2>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/music/">
+                        <div>
                             <h3>いま何きいてる？</h3>
-                            <p>いまきいてる on Spotifyを確認しよう！おすすめの曲とかあるよ、iframe多用だからたぶん重いよ</p>
+                            <p>もやしくんのきいている曲を見てみよう！</p>
                         </div>
                     </a>
                 </li>
-                <li class="card">
-                    <a href="/library/" class="card_body link">
-                        <div class="card_main">
+                <li>
+                    <a href="/library/">
+                        <div>
                             <h3>本棚</h3>
-                            <p>もやしくんが所有している本の一覧です。だんだん追加中！</p>
+                            <p>もやしくんの所有する図書を見れます</p>
                         </div>
                     </a>
                 </li>
-                <li class="card">
-                    <a href="/about/banner/" class="card_body link">
-                        <img src="/img/cardimg.webp" alt="もやしくん.comのバナー">
-                        <div class="card_main">
-                            <h3>バナーがあります</h3>
-                            <p>もやしくん.comのためのバナーがあります。詳しくはこちらをご覧ください。</p>
+                <li>
+                    <a href="/links/">
+                        <div>
+                            <h3>リンク集</h3>
+                            <p>もやしくんの各種リンクにアクセスできます</p>
                         </div>
                     </a>
                 </li>
-            </ul>
-        </main>
-        <nav class="left-nav side-nav" id="navi">
-            <h1>各ページへの案内</h1>
-            <ul class="no-marker">
-                <li><a href="/">ホーム</a></li>
-                <li><a href="/article/">記事一覧</a></li>
-                <li><a href="/music/">いま何きいてる？</a></li>
-                <li><a href="/library/">本棚</a></li>
-                <li><a href="/links/">リンク集</a></li>
-                <li><a href="/about/">サイトについて</a></li>
-                <li><a href="/sitemap.html">サイトマップ</a></li>
+                <li>
+                    <a href="/about/">
+                        <div>
+                            <h3>サイトについて</h3>
+                            <p>もやしくん.comに関する情報を見れます</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/sitemap.html">
+                        <div>
+                            <h3>サイトマップ</h3>
+                            <p>もやしくん.comのサイトマップです</p>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </nav>
-    </div>
-
+    </main>
+    <hr>
     <footer>
-        <div class="footer_container">
-            <div class="foo_title">
-                <h1>もやしくん.com</h1>
-            </div>
-            <div class="foo_left">
-                <ul>
-                    <li><a href="/">ホーム</a></li>
-                    <li><a href="/links/">リンク集</a></li>
-                    <li><a href="/about/">サイトについて</a></li>
-                </ul>
-            </div>
-            <div class="foo_right">
-                <ul>
-                    <li><a href="https://x.com/moyashiM_25" target="_blank">X</a></li>
-                    <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram</a></li>
-                    <li><a href="https://github.com/moyashim-25" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
-            <div class="foo_center">
-                <small>&copy; 2023 もやしくん</small>
-            </div>
-        </div>
+        <p><small>&copy; 2024 もやしくん</small></p>
     </footer>
-
 </body>
 
 </html>

@@ -2,11 +2,13 @@
 <html lang="ja" prefix="og: https://ogp.me/ns#">
 
 <head>
+    <!-- basic meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サイトマップ - もやしくん.com</title>
     <meta name="author" content="もやしくん">
     <meta name="description" content="もやしくん.comのサイトマップです。">
-    <title>サイトマップ - もやしくん.com</title>
+    <!-- ogp -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@moyashiM_25">
     <meta property="og:title" content="サイトマップ">
@@ -15,87 +17,60 @@
     <meta property="og:description" content="もやしくん.comのサイトマップです。">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Rg.woff2">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Bd.woff2">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/nonav_article.css">
+    <!-- icon, css -->
     <link rel="icon" href="/img/favicon.ico">
-    <script>
-        (function (theme) {
-            if (localStorage.getItem("darktheme")) {
-                theme.document.documentElement.classList.add("dark");
-            }
-        })(this);
-    </script>
-    <script src="/js/theme.js" charset="UTF-8" defer></script>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1><a href="/">もやしくん.com</a></h1>
-            <span id="dark_switch"><img src="/img/dark_swich.svg" alt="テーマの切り替え" height="32" width="32"></span>
-        </header>
-        <nav class="topic_path">
+    <header>
+        <ul class="twbonly">
+            <li><a href="#main">メインコンテンツへジャンプ</a></li>
+        </ul>
+        <h1>サイトマップ</h1>
+        <div class="document-info">もやしくん</div>
+        <div class="document-info">
+            公開: <time datetime="2023-10-16">2023/10/16</time>, 最終更新: <time datetime="2024-04-21">2024/04/21</time>
+        </div>
+
+        <nav>
+            <h2 class="twbonly">パンくずリスト</h2>
             <ol>
                 <li>サイトマップ</li>
             </ol>
         </nav>
-        <main>
-            <article>
-                <div class="art-head">
-                    <h1>サイトマップ</h1>
-                    <ul>
-                        <li><a href="/">ホーム</a></li>
-                        <li>
-                            <a href="/article/">記事一覧</a>
-                            <ul>
-                                <li>各記事（記事一覧からアクセスしてください）</li>
-                            </ul>
-                        </li>
-                        <li><a href="/music/">いま何きいてる？</a></li>
-                        <li><a href="/library/">本棚</a></li>
-                        <li><a href="/links/">リンク集</a></li>
-                        <li>
-                            <a href="/about/">サイトについて</a>
-                            <ul>
-                                <li><a href="/about/banner/">バナー</a></li>
-                                <li><a href="/about/profile/">もやしくんとは</a></li>
-                            </ul>
-                        </li>
+    </header>
+    <hr id="main">
+    <main>
+        <ul>
+            <li><a href="/">ホーム</a></li>
+            <li>
+                <a href="/article/">記事一覧</a>
+                <ul>
+                    <li>各記事（記事一覧からアクセスしてください）</li>
+                </ul>
+            </li>
+            <li><a href="/music/">いま何きいてる？</a></li>
+            <li><a href="/library/">本棚</a></li>
+            <li><a href="/links/">リンク集</a></li>
+            <li>
+                <a href="/about/">サイトについて</a>
+                <ul>
+                    <li><a href="/about/banner/">バナー</a></li>
+                    <li><a href="/about/profile/">もやしくんとは</a></li>
+                </ul>
+            </li>
 
-                        <li><a href="#">サイトマップ</a>（このページ）</li>
-                    </ul>
-                </div>
-            </article>
-        </main>
-    </div>
+            <li><a href="#">サイトマップ</a>（このページ）</li>
+        </ul>
 
+    </main>
+    <hr>
     <footer>
-        <div class="footer_container">
-            <div class="foo_title">
-                <h1>もやしくん.com</h1>
-            </div>
-            <div class="foo_left">
-                <ul>
-                    <li><a href="/">ホーム</a></li>
-                    <li><a href="/links/">リンク集</a></li>
-                    <li><a href="/about/">サイトについて</a></li>
-                </ul>
-            </div>
-            <div class="foo_right">
-                <ul>
-                    <li><a href="https://x.com/moyashiM_25" target="_blank">X</a></li>
-                    <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram</a></li>
-                    <li><a href="https://github.com/moyashim-25" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
-            <div class="foo_center">
-                <small>&copy; 2023 もやしくん</small>
-            </div>
-        </div>
+        <p><small>&copy; 2024 もやしくん</small></p>
     </footer>
-
 </body>
 
 </html>

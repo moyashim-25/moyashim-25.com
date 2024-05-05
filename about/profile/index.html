@@ -2,11 +2,13 @@
 <html lang="ja" prefix="og: https://ogp.me/ns#">
 
 <head>
+    <!-- basic meta -->
     <meta charset="UTF-8">
+    <title>もやしくんとは - もやしくん.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="もやしくん">
     <meta name="description" content="「もやしくん」は、実在する人物の呼び名・ニックネーム。">
-    <title>もやしくんとは - もやしくん.com</title>
+    <!-- ogp -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@moyashiM_25">
     <meta property="og:title" content="もやしくんとは">
@@ -15,172 +17,134 @@
     <meta property="og:description" content="「もやしくん」は、実在する人物の呼び名・ニックネーム。">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Rg.woff2">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Bd.woff2">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/article.css">
-    <link rel="stylesheet" href="/css/profile.css">
+    <!-- icon, css -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" href="/img/favicon.ico">
-    <script>
-        (function (theme) {
-            if (localStorage.getItem("darktheme")) {
-                theme.document.documentElement.classList.add("dark");
-            }
-        })(this);
-    </script>
-    <script src="/js/theme.js" charset="UTF-8" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/profile.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1><a href="/">もやしくん.com</a></h1>
-            <span id="dark_switch"><img src="/img/dark_swich.svg" alt="テーマの切り替え" height="32" width="32"></span>
-        </header>
-        <nav class="topic_path">
+    <header>
+        <ul class="twbonly">
+            <li><a href="#main">メインコンテンツへジャンプ</a></li>
+        </ul>
+        <h1>もやしくんとは</h1>
+        <div class="document-info">もやしくん</div>
+        <div class="document-info">
+            公開: <time datetime="2023-07-06">2023/07/06</time>, 最終更新: <time datetime="2024-04-21">2024/04/21</time>
+        </div>
+        <nav>
+            <h2 class="twbonly">パンくずリスト</h2>
             <ol>
                 <li><a href="/">ホーム</a></li><li><a href="/about/">サイトについて</a></li><li>もやしくんとは</li>
             </ol>
         </nav>
-        <nav class="right-nav">
-            <h1>もくじ</h1>
-            <ul class="no-marker">
-                <li><a href="#name">名前</a></li>
-                <li><a href="#affiliation">所属</a></li>
-                <li><a href="#links">主要リンク</a></li>
-                <li><a href="#lang">できるかも言語</a></li>
-                <li><a href="#license">免許・資格</a></li>
-                <li><a href="#subject">履修した専門科目</a></li>
-                <li><a href="#goal">目標</a></li>
-                <li><a href="#motto">座右の銘</a></li>
-            </ul>
-        </nav>
-        <main>
-            <article>
-                <div class="art-head">
-                    <h1>もやしくんとは</h1>
-                    <p class="art-date">公開日: <time datetime="2023-06-20">2023/06/20</time></p>
-                    <p class="art-date">更新日: <time datetime="2024-02-12">2024/02/12</time></p>
+    </header>
+    <hr id="main">
+    <main>
+        <article>
+            <div class="prof-grid">
+                <figure class="prof-fig">
+                    <img src="/img/profile_icon.png" alt="りーぜんとくん" width="160" height="160">
+                    <!-- <figcaption>もやしくんのアイコンで使用されるりーぜんとくん</figcaption> -->
+                </figure>
+                <div class="prof-main">
+                    <p>こんにちは。ごく普通の工学部生、<span style="font-weight: bold;">もやしくん</span>だよ！ HTMLとCSSは趣味でやっているよ。音楽とか音に興味があるよ。
+                    </p>
+                    <p>もやしくんが使うアイコンのそれは「りーぜんとくん」であって、もやしくんではないよ。</p>
                 </div>
-                <div class="prof-grid">
-                    <figure class="prof-fig">
-                        <img src="/img/cardicon.png" alt="りーぜんとくん" width="160" height="160">
-                        <!-- <figcaption>もやしくんのアイコンで使用されるりーぜんとくん</figcaption> -->
-                    </figure>
-                    <div class="prof-main">
-                        <p>こんにちは。ごく普通の工学部生、<span style="font-weight: bold;">もやしくん</span>だよ！ HTMLとCSSは趣味でやっているよ。音楽とか音に興味があるよ。</p>
-                        <p>もやしくんが使うアイコンのそれは「りーぜんとくん」であって、もやしくんではないよ。</p>
+                <h2>プロフィール</h2>
+                <dl class="prof-info">
+                    <div>
+                        <dt>名前</dt>
+                        <dd>もやしくん</dd>
                     </div>
-                    <dl class="prof-info">
-                        <div>
-                            <dt id="name">名前</dt>
-                            <dd>もやしくん</dd>
-                        </div>
-                        <div>
-                            <dt id="affiliation">所属</dt>
-                            <dd>
-                                <ul>
-                                    <li>
-                                        富山県立大学知能ロボット工学科（<time datetime="2022-04-01">2022/04</time>–）
-                                        <ul>
-                                            <li>同大学アカペラサークル（<time datetime="2022-04-01">2022/04</time>–）</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        宮城県の高等学校普通科（<time datetime="2019-04-01">2019/04</time>–<time datetime="2022-03-01">2022/03</time>）
-                                        <ul>
-                                            <li>同高等学校吹奏楽部（<time datetime="2019-04-01">2019/04</time>–<time datetime="2021-07-01">2021/07</time>）</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </dd>
-                        </div>
-                        <div>
-                            <dt id="links">主要リンク</dt>
-                            <dd>
-                                <ul>
-                                    <li><a href="https://x.com/moyashiM_25" target="_blank">X</a></li>
-                                    <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram</a></li>
-                                    <li><a href="https://github.com/moyashim-25" target="_blank">GitHub</a></li>
-                                </ul>
-                                その他のリンクは<a href="/links/">リンク集</a>へ
-                            </dd>
-                        </div>
-                        <div>
-                            <dt id="lang">できるかも言語</dt>
-                            <dd>
-                                <ul>
-                                    <li>HTML5/CSS</li>
-                                    <li>C言語</li>
-                                    <li>JavaScript</li>
-                                </ul>
-                            </dd>
-                        </div>
-                        <div>
-                            <dt id="license">資格・免許</dt>
-                            <dd>
-                                <ul>
-                                    <li>ヤマハ音楽能力検定 エレクトーン演奏グレード7級<br>（ヤマハエレクトーン総合演奏力上級1認定）（<time datetime="2018-11-25">2018/11/25</time>）</li>
-                                </ul>
-                            </dd>
-                        </div>
-                        <div>
-                            <dt id="subject">履修した専門科目</dt>
-                            <dd><a href="/about/profile/subject.html">ここ</a>から確認できるよ</dd>
-                        </div>
-                        <div>
-                            <dt id="goal">目標</dt>
-                            <dd><a href="/about/profile/goal.html">ここ</a>から確認できるよ</dd>
-                        </div>
-                        <div>
-                            <dt id="motto">座右の銘</dt>
-                            <dd>
-                                <blockquote>
-                                    <p>
-                                        <span style="font-family: 'Noto Serif JP'; font-weight: bold;"
-                                        >子曰、知之者不如好之者、好之者不如楽之者。<br
-                                        >――子曰く、之を知る者は之を好む者に如かず、之を好む者は之を楽しむ者に如かず。
-                                        </span>
-                                    </p>
-                                    <footer>――孔子, <cite>論語</cite></footer>
-                                </blockquote>
-                            </dd>
-                        </div>
-                    </dl>
-                </div>
-                
-            </article>
-        </main>
-    </div>
-
+                    <div>
+                        <dt>所属</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    富山県立大学工学部知能ロボット工学科（<time datetime="2022-04-01">2022/04</time>–）
+                                    <ul>
+                                        <li>同大学アカペラサークル（<time datetime="2022-04-01">2022/04</time>–）</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    宮城県の高等学校普通科（<time datetime="2019-04-01">2019/04</time>–<time
+                                        datetime="2022-03-01">2022/03</time>）
+                                    <ul>
+                                        <li>同高等学校吹奏楽部（<time datetime="2019-04-01">2019/04</time>–<time
+                                                datetime="2021-07-01">2021/07</time>）</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>主要リンク</dt>
+                        <dd>
+                            <ul>
+                                <li><a href="https://x.com/moyashiM_25" target="_blank">X</a></li>
+                                <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram</a></li>
+                                <li><a href="https://github.com/moyashim-25" target="_blank">GitHub</a></li>
+                            </ul>
+                            その他のリンクは<a href="/links/">リンク集</a>へ
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>できるかも言語</dt>
+                        <dd>
+                            <ul>
+                                <li>HTML5/CSS</li>
+                                <li>C言語</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>資格・免許</dt>
+                        <dd>
+                            <ul>
+                                <li>ヤマハ音楽能力検定 エレクトーン演奏グレード7級<br>（ヤマハエレクトーン総合演奏力上級1認定）（<time
+                                        datetime="2018-11-25">2018/11/25</time>）</li>
+                            </ul>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>いま何きいてる？</dt>
+                        <dd><a href="/music/">ここ</a>からSpotifyで聞いている曲をcheck!</dd>
+                    </div>
+                    <div>
+                        <dt>履修した専門科目</dt>
+                        <dd><a href="/about/profile/subject.html">ここ</a>から確認できるよ</dd>
+                    </div>
+                    <div>
+                        <dt>目標</dt>
+                        <dd><a href="/about/profile/goal.html">ここ</a>から確認できるよ</dd>
+                    </div>
+                    <div>
+                        <dt>座右の銘</dt>
+                        <dd>
+                            <blockquote>
+                                <p>
+                                    <span
+                                        style="font-family: 'Noto Serif JP', serif; font-weight: 400;">子曰、知之者不如好之者、好之者不如楽之者。<br>――子曰く、之を知る者は之を好む者に如かず、之を好む者は之を楽しむ者に如かず。
+                                    </span>
+                                </p>
+                                <footer>――孔子, <cite>論語</cite></footer>
+                            </blockquote>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </article>
+    </main>
+    <hr>
     <footer>
-        <div class="footer_container">
-            <div class="foo_title">
-                <h1>もやしくん.com</h1>
-            </div>
-            <div class="foo_left">
-                <ul>
-                    <li><a href="/">ホーム</a></li>
-                    <li><a href="/links/">リンク集</a></li>
-                    <li><a href="/about/">サイトについて</a></li>
-                </ul>
-            </div>
-            <div class="foo_right">
-                <ul>
-                    <li><a href="https://x.com/moyashiM_25" target="_blank">X</a></li>
-                    <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram</a></li>
-                    <li><a href="https://github.com/moyashim-25" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
-            <div class="foo_center">
-                <small>&copy; 2023 もやしくん</small>
-            </div>
-        </div>
+        <p><small>&copy; 2024 もやしくん</small></p>
     </footer>
-
 </body>
 
 </html>

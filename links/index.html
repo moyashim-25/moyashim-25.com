@@ -2,11 +2,13 @@
 <html lang="ja" prefix="og: https://ogp.me/ns#">
 
 <head>
+    <!-- basic meta -->
     <meta charset="UTF-8">
+    <title>リンク集 - もやしくん.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="もやしくん">
     <meta name="description" content="もやしくんに関わるリンクが集まっています。">
-    <title>リンク集 - もやしくん.com</title>
+    <!-- ogp -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@moyashiM_25">
     <meta property="og:title" content="リンク集">
@@ -15,112 +17,76 @@
     <meta property="og:description" content="もやしくんに関わるリンクが集まっています。">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Rg.woff2">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Bd.woff2">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/article.css">
+    <!-- icon, css -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" href="/img/favicon.ico">
-    <script>
-        (function(theme) {
-            if(localStorage.getItem("darktheme")) {
-                theme.document.documentElement.classList.add("dark");
-            }
-        })(this);
-    </script>
-    <script src="/js/theme.js" charset="UTF-8" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1><a href="/">もやしくん.com</a></h1>
-            <span id="dark_switch"><img src="/img/dark_swich.svg" alt="テーマの切り替え" height="32" width="32"></span>
-        </header>
-        <nav class="topic_path">
+    <header>
+        <ul class="twbonly">
+            <li><a href="#main">メインコンテンツへジャンプ</a></li>
+        </ul>
+        <h1>リンク集</h1>
+        <div class="document-info">もやしくん</div>
+        <div class="document-info">
+            公開: <time datetime="2023-06-29">2023/06/29</time>, 最終更新: <time datetime="2024-04-21">2024/04/21</time>
+        </div>
+        <nav>
+            <h2 class="twbonly">パンくずリスト</h2>
             <ol>
                 <li><a href="/">ホーム</a></li><li>リンク集</li>
             </ol>
         </nav>
-        <nav class="right-nav">
-            <h1>もくじ</h1>
-            <ul class="no-marker">
-                <li><a href="#sns">SNSとか</a></li>
-                <li><a href="#other">そのほか</a></li>
-            </ul>
-        </nav>
-        <main>
-            <article>
-                <div class="art-head">
-                    <h1>リンク集</h1>
-                    <p class="art-date">公開日: <time datetime="2023-06-20">2023/06/29</time></p>
-                    <p class="art-date">更新日: <time datetime="2024-02-12">2024/02/17</time></p>
-                </div>
+    </header>
+    <hr id="main">
+    <main>
+        <article>
+            <header>
                 <p>「もやしくん」の所有する各種SNSなどへのリンク集です。</p>
-                <h2 id="sns">SNSとか</h2>
-                <dl>
-                    <dt><a href="https://x.com/moyashiM_25" target="_blank">X (@moyashiM_25)</a></dt>
-                    <dd><a href="https://twitter.com/moyashiM_25" target="_blank">旧Twitter</a>。日常。</dd>
-                    <dt><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram (moyashim_25)</a></dt>
-                    <dd>ちょっと素敵な日常。</dd>
-                    <dt><a href="https://www.threads.net/@moyashim_25" target="_blank">Threads (@moyashim_25@threads.net)</a></dt>
-                    <dd>Instagramのお流れ。今後の進展に期待。</dd>
-                    <dt><a href="https://bsky.app/profile/moyashim-25.com" target="_blank">Bluesky (moyashim-25.com)</a></dt>
-                    <dd>嗚呼、青い空。</dd>
-                    <dt>note</dt>
-                    <dd>たまに独り言ちている。</dd>
-                    <dt>YouTube</dt>
-                    <dd>公開しているものはたぶんない。ライブ配信のテストをたまにやっている。</dd>
-                    <dt>SoundCloud</dt>
-                    <dd>
-                        <ul>
-                            <li><a href="https://soundcloud.com/foxalien25" target="_blank">もやしくん</a>（投稿用）: 自作編曲たち。駄作。アイコンは逆さま。FoxAlienでの運用を引継。</li>
-                            <li><a href="https://soundcloud.com/moyashim_25" target="_blank">もやしくん</a>（視聴用）: Following / Likes で聴いている・いたアーティスト / 曲を知れるよ。</li>
-                        </ul>
-                    </dd>
-                </dl>
-                <h2 id="other">そのほか</h2>
-                <dl>
-                    <dt><a href="https://moyashim-25.com">もやしくん.com</a></dt>
-                    <dd>このサイト。</dd>
-                    <dt><a href="https://github.com/moyashim-25" target="_blank">GitHub</a></dt>
-                    <dd>このサイトがある。Cプロちょっと支援とかもある。</dd>
-                    <dt><a href="https://atcoder.jp/users/moyashim_25" target="_blank">AtCoder</a></dt>
-                    <dd>競技プログラミング。サボりがち。</dd>
-                    <dt><a href="https://open.spotify.com/user/7fkqqcfyqr21xghsm7afsqlml" target="_blank">Spotify</a></dt>
-                    <dd>公開プレイリストと最近聴いたアーティスト、フォローしているアーティストが見れる（はず）。</dd>
-                </dl>
-                <h2 id="kobanashi">こばなし</h2>
-                <p>現在、もやしくんはユーザーIDの多くに "moyashiM_25" や "moyashim-25" を用いています。</p>
-                <p>末尾の "_25" は、IDのダブりで勝手にサジェストされたとか、「ニコッ(^^)」の意味があるとかないとか…</p>
-            </article>
-        </main>
-    </div>
-
+            </header>
+            <h2>SNSとか</h2>
+            <ul>
+                <li><a href="https://twitter.com/moyashiM_25">X (@moyashiM_25)</a></li>
+                <li><a href="https://www.instagram.com/moyashim_25/">Instagram (moyashim_25)</a></li>
+                <li><a href="https://www.threads.net/@moyashim_25">Threads (@moyashim_25)</a></li>
+                <li><a
+                        href="https://www.facebook.com/profile.php?id=61557709736178">Facebook</a>
+                </li>
+                <li><a href="https://bsky.app/profile/moyashim-25.com">Bluesky (@moyashim-25.com)</a></li>
+                <li>note</li>
+                <li>YouTube</li>
+                <li>ニコニコ</li>
+                <li>pixiv</li>
+            </ul>
+            <h2>ミュージック</h2>
+            <ul>
+                <li><a href="https://open.spotify.com/user/7fkqqcfyqr21xghsm7afsqlml">Spotify</a>, 視聴用</li>
+                <li><a href="https://bandcamp.com/moyashim_25">Bandcamp (moyashim_25)</a>, 視聴用</li>
+                <li><a href="https://soundcloud.com/moyashim_25">SoundCloud (moyashim_25)</a>, 視聴用</li>
+                <li><a href="https://soundcloud.com/foxalien25">SoundCloud (foxalien25)</a>, 投稿用</li>
+            </ul>
+            <h2>moyashim-25.github.io</h2>
+            <ul>
+                <li><a href="https://moyashim-25.github.io/tpu-creditchecker/sogo/">TPU IR 2022年度入学生用総合科目単位チェッカー</a></li>
+                <li><a href="https://moyashim-25.github.io/TPUcprog/">Cプログラムちょっと支援</a>, 工学部知能ロボット工学科「プログラミング演習2」の入力データ作成支援ツール</li>
+                <li><a href="https://moyashim-25.github.io/kanji/">書き初めなににする？</a>, 漢字かな文字をランダムに表示</li>
+            </ul>
+            <h2>そのほか</h2>
+            <ul>
+                <li><a href="https://moyashim-25.com/">もやしくん.com</a>, このサイト</li>
+                <li><a href="https://electone-asobu.blogspot.com/">Electoneで遊ぶ</a>, Bloggerで作成</li>
+                <li><a href="https://github.com/moyashim-25">GitHub (moyashim-25)</a></li>
+                <li><a href="https://atcoder.jp/users/moyashim_25">AtCoder (moyashim_25)</a></li>
+            </ul>
+        </article>
+    </main>
+    <hr>
     <footer>
-        <div class="footer_container">
-            <div class="foo_title">
-                <h1>もやしくん.com</h1>
-            </div>
-            <div class="foo_left">
-                <ul>
-                    <li><a href="/">ホーム</a></li>
-                    <li><a href="/links/">リンク集</a></li>
-                    <li><a href="/about/">サイトについて</a></li>
-                </ul>
-            </div>
-            <div class="foo_right">
-                <ul>
-                    <li><a href="https://x.com/moyashiM_25" target="_blank">X</a></li>
-                    <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram</a></li>
-                    <li><a href="https://github.com/moyashim-25" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
-            <div class="foo_center">
-                <small>&copy; 2023 もやしくん</small>
-            </div>
-        </div>
+        <p><small>&copy; 2024 もやしくん</small></p>
     </footer>
-
 </body>
 
 </html>

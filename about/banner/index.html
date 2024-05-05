@@ -2,11 +2,13 @@
 <html lang="ja" prefix="og: https://ogp.me/ns#">
 
 <head>
+    <!-- basic meta -->
     <meta charset="UTF-8">
+    <title>バナー - もやしくん.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="もやしくん">
     <meta name="description" content="もやしくん.comのバナーがあります。">
-    <title>バナー - もやしくん.com</title>
+    <!-- ogp -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@moyashiM_25">
     <meta property="og:title" content="バナー">
@@ -15,98 +17,68 @@
     <meta property="og:description" content="もやしくん.comのバナーがあります。">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Rg.woff2">
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="/fonts/LINESeedJP_OTF_Bd.woff2">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/article.css">
+    <!-- icon, css -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" href="/img/favicon.ico">
-    <script>
-        (function (theme) {
-            if (localStorage.getItem("darktheme")) {
-                theme.document.documentElement.classList.add("dark");
-            }
-        })(this);
-    </script>
-    <script src="/js/theme.js" charset="UTF-8" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1><a href="/">もやしくん.com</a></h1>
-            <span id="dark_switch"><img src="/img/dark_swich.svg" alt="テーマの切り替え" height="32" width="32"></span>
-        </header>
-        <nav class="topic_path">
+    <header>
+        <ul class="twbonly">
+            <li><a href="#main">メインコンテンツへジャンプ</a></li>
+        </ul>
+        <h1>バナー</h1>
+        <div class="document-info">もやしくん</div>
+        <div class="document-info">
+            公開: <time datetime="2023-06-29">2023/06/29</time>, 最終更新: <time datetime="2024-04-21">2024/04/21</time>
+        </div>
+        <nav>
+            <h2 class="twbonly">パンくずリスト</h2>
             <ol>
                 <li><a href="/">ホーム</a></li><li><a href="/about/">サイトについて</a></li><li>バナー</li>
             </ol>
         </nav>
-        <nav class="right-nav">
-            <h1>もくじ</h1>
-            <ul class="no-marker">
-                <li><a href="#88_31">88×31相当</a></li>
-                <li><a href="#234_60">234×60相当</a></li>
-            </ul>
-        </nav>
-        <main>
-            <article>
-                <div class="art-head">
-                    <h1>バナー</h1>
-                </div>
-                <p>サイズの違う2種類があります。いずれかの形式を選んで使用することができます。SVG形式から任意のサイズやファイル形式に変換して使用しても良いです。</p>
+    </header>
+    <hr id="main">
+    <main>
+        <article>
+            <header>
+                <p>もやしくん.comにはバナーが2種類あります。SVG形式から任意のサイズ（ただし縦横比は維持すること）やファイル形式に変換して使用することができます。</p>
                 <p>これらのバナーは、このウェブサイト(https://moyashim-25.com)へのリンクにのみ使用してください。</p>
-
-                <h2 id="88_31">88×31相当</h2>
-                <picture>
-                    <img src="/img/banner/banner_88_31_.webp" alt="もやしくん.com" width="88" height="31">
-                </picture>
-                <p>マイクロバナーのサイズ（縦横比）、実際のサイズはいずれも176×62です</p>
-                <ul>
-                    <li><a href="/img/banner/banner_88_31_.gif">GIF形式 (3.14KB)</a></li>
-                    <li><a href="/img/banner/banner_88_31_.png">PNG形式 (4.16KB)</a></li>
-                    <li><a href="/img/banner/banner_88_31_.webp">WEBP形式 (2.53KB)</a></li>
-                    <li><a href="/img/banner/banner_88_31_.svg">SVG形式 (21.3KB)</a></li>
-                </ul>
-                <h2 id="234_60">234×60相当</h2>
-                <picture>
-                    <img src="/img/banner/banner_234_60_.webp" alt="もやしくん.com" width="234" height="60">
-                </picture>
-                <p>ハーフバナーのサイズ（縦横比）、実際のサイズはいずれも468×120です</p>
-                <ul>
-                    <li><a href="/img/banner/banner_234_60_.gif">GIF形式 (8.47KB)</a></li>
-                    <li><a href="/img/banner/banner_234_60_.png">PNG形式 (12.7KB)</a></li>
-                    <li><a href="/img/banner/banner_234_60_.webp">WEBP形式 (7.89KB)</a></li>
-                    <li><a href="/img/banner/banner_234_60_.svg">SVG形式 (31.2KB)</a></li>
-                </ul>
-            </article>
-        </main>
-    </div>
-
+            </header>
+            <h2>88x31相当</h2>
+            <picture>
+                <source srcset="/img/banner/banner_88_31_.webp" type="image/webp" width="88" height="31">
+                <img src="/img/banner/banner_88_31_.gif" alt="もやしくん.com" width="88" height="31">
+            </picture>
+            <p>マイクロバナーのサイズ（縦横比）、実際のサイズはいずれも176x62です</p>
+            <ul>
+                <li><a href="/img/banner/banner_88_31_.gif">GIF形式 (3.14KB)</a></li>
+                <li><a href="/img/banner/banner_88_31_.png">PNG形式 (4.16KB)</a></li>
+                <li><a href="/img/banner/banner_88_31_.webp">WEBP形式 (2.53KB)</a></li>
+                <li><a href="/img/banner/banner_88_31_.svg">SVG形式 (21.3KB)</a></li>
+            </ul>
+            
+            <h2>234x61相当</h2>
+            <picture>
+                <source srcset="/img/banner/banner_234_60_.webp" type="image/webp" width="234" height="60">
+                <img src="/img/banner/banner_234_60_.gif" alt="もやしくん.com" width="234" height="60">
+            </picture>
+            <p>ハーフバナーのサイズ（縦横比）、実際のサイズはいずれも468x120です</p>
+            <ul>
+                <li><a href="/img/banner/banner_234_60_.gif">GIF形式 (8.47KB)</a></li>
+                <li><a href="/img/banner/banner_234_60_.png">PNG形式 (12.7KB)</a></li>
+                <li><a href="/img/banner/banner_234_60_.webp">WEBP形式 (7.89KB)</a></li>
+                <li><a href="/img/banner/banner_234_60_.svg">SVG形式 (31.2KB)</a></li>
+            </ul>
+        </article>
+    </main>
+    <hr>
     <footer>
-        <div class="footer_container">
-            <div class="foo_title">
-                <h1>もやしくん.com</h1>
-            </div>
-            <div class="foo_left">
-                <ul>
-                    <li><a href="/">ホーム</a></li>
-                    <li><a href="/links/">リンク集</a></li>
-                    <li><a href="/about/">サイトについて</a></li>
-                </ul>
-            </div>
-            <div class="foo_right">
-                <ul>
-                    <li><a href="https://x.com/moyashiM_25" target="_blank">X</a></li>
-                    <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram</a></li>
-                    <li><a href="https://github.com/moyashim-25" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
-            <div class="foo_center">
-                <small>&copy; 2023 もやしくん</small>
-            </div>
-        </div>
+        <p><small>&copy; 2024 もやしくん</small></p>
     </footer>
-
 </body>
 
 </html>
