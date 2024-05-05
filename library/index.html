@@ -7,14 +7,14 @@
     <title>本棚 - もやしくん.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="もやしくん">
-    <meta name="description" content="もやしくんが所有している本の一覧です。">
+    <meta name="description" content="もやしくんが所有している図書の一覧です。">
     <!-- ogp -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@moyashiM_25">
     <meta property="og:title" content="本棚">
     <meta property="og:site_name" content="もやしくん.com">
     <meta property="og:url" content="https://moyashim-25.com/about/library">
-    <meta property="og:description" content="もやしくんが所有している本の一覧です。">
+    <meta property="og:description" content="もやしくんが所有している図書の一覧です。">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
     <!-- icon, css -->
@@ -35,7 +35,7 @@
         <h1>本棚</h1>
         <div class="document-info">もやしくん</div>
         <div class="document-info">
-            公開: <time datetime="2023-07-21">2023/07/21</time>, 最終更新: <time datetime="2024-04-24">2024/04/24</time>
+            公開: <time datetime="2023-07-21">2023/07/21</time>, 最終更新: <time datetime="2024-05-04">2024/05/04</time>
         </div>
         <nav>
             <h2 class="twbonly">パンくずリスト</h2>
@@ -48,25 +48,36 @@
     <main>
         <article>
             <header>
-                <p>もやしくんが所有する本の一覧です。</p>
+                <p>もやしくんが所有する図書の一覧です。</p>
                 <h2>このページについて</h2>
-                <ul>
-                    <li>所有する本のすべてを列挙しているわけではありません。</li>
-                    <li>NDCによって大まかにカテゴライズしています。
-                        <ul>
-                            <li>NDCは次で参照しており、上の方が優先度が高いです:
+                <dl>
+                    <dt>概要</dt>
+                    <dd>もやしくんが所有する図書のほとんどを列挙しています。</dd>
+
+                    <dt>分類</dt>
+                    <dd>
+                        次の通り分類しており、上の方が優先度が高いです:
+                        <ol>
+                            <li>NDCによる分類、以下を参照:
                                 <ol>
                                     <li>国立国会図書館サーチ</li>
                                     <li>富山県立大学附属図書館蔵書検索</li>
                                 </ol>
                             </li>
-                        </ul>
-                    </li>
-                    <li>カテゴリリストから大まかな図書分類先へジャンプできます。</li>
-                    <li>具体的な検索はブラウザ搭載のページ内検索などを利用してください。</li>
-                    <li>このページはJavaScriptが有効な状態でのみ正しく表示されます。</li>
-                </ul>
-                <p>図書リストのデータの最終更新日は<span id="lastModified">[get from JSON by JS]</span>、記録されている図書は<span id="howmuch">[get from JSON by JS]</span>冊です。</p>
+                            <li>Cコード（日本図書コード）</li>
+                            <li>独自カテゴリ</li>
+                        </ol>
+                    </dd>
+
+                    <dt>図書の検索</dt>
+                    <dd>カテゴリリストによる分類から検索またはブラウザのページ内検索を利用して検索できます。</dd>
+
+                    <dt>注意</dt>
+                    <dd>このページはJavaScriptが有効な状態でのみ正しく表示されます。</dd>
+
+                    <dt>情報</dt>
+                    <dd>図書リストのデータの最終更新日は<span id="lastModified">[get from JSON by JS]</span>、記録されている図書は<span id="howmuch">[get from JSON by JS]</span>冊です。</dd>
+                </dl>
             </header>
             <nav>
                 <h2>カテゴリリスト</h2>
