@@ -1,6 +1,6 @@
 {
     "databaseName": "MyLibrary",
-    "lastModified": "2024-05-04T23:21+09:00",
+    "lastModified": "2024-06-08T12:06+09:00",
     "category": [
         {
             "categoryName": "数学",
@@ -616,6 +616,17 @@
                     "numberOfPages": 189,
                     "ISBN": "978-4-8330-2239-2",
                     "comment": false
+                },
+                {
+                    "title": "新幹線50年の技術史",
+                    "author": "曽根悟",
+                    "series": "ブルーバックス",
+                    "publisher": "講談社",
+                    "edition": "初版",
+                    "year": 2014,
+                    "numberOfPages": 240,
+                    "ISBN": "978-4-06-257863-9",
+                    "comment": "通巻番号1863"
                 }
             ]
         },
