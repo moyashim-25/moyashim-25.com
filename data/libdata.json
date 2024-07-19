@@ -1,6 +1,6 @@
 {
     "databaseName": "MyLibrary",
-    "lastModified": "2024-06-08T12:06+09:00",
+    "lastModified": "2024-07-19T23:51+09:00",
     "category": [
         {
             "categoryName": "数学",
@@ -524,7 +524,7 @@
             "data": [
                 {
                     "title": "［改訂第8版］LaTeX2ε美文書作成入門",
-                    "author": "奥村晴彦，黒木裕介",
+                    "author": "奥村晴彦, 黒木裕介",
                     "series": false,
                     "publisher": "技術評論社",
                     "edition": "第8版",
