@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+/*
+top.css
+last modified: 2024/07/21
+*/
+
 nav ul {
     display: grid;
     gap: 1em;
@@ -37,7 +42,7 @@ nav ul {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 590px) {
     nav ul {
         grid-template-columns: 1fr;
     }

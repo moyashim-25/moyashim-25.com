@@ -2,7 +2,7 @@
 
 /*
 lib.css
-last modified: 2024/04/24
+last modified: 2024/07/21
 */
 
 nav #libindex {
@@ -74,7 +74,7 @@ article section div dl dd {
     padding: 0;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 590px) {
     article section {
         display: block;
     }
