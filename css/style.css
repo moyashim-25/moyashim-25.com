@@ -3,7 +3,7 @@
 /* ##########
 style.css
 (c) 2024 もやしくん
-last modified: 2024/04/21
+last modified: 2024/08/14
 ########## */
 
 /* ==========
@@ -15,13 +15,15 @@ general
 
 @font-face {
     font-family: "PC Noto";
-    src: local("Noto Sans JP");
+    src: local("Noto Sans JP"),
+         local("Noto Sans CJK JP");
     font-weight: 400;
 }
 
 @font-face {
     font-family: "PC Noto";
-    src: local("Noto Sans JP Bold");
+    src: local("Noto Sans JP Bold"), 
+         local("Noto Sans CJK JP Bold");
     font-weight: 700;
 }
 
