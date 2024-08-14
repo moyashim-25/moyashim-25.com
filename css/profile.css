@@ -2,7 +2,7 @@
 
 /*
 profile.css
-last modified: 2024/05/31
+last modified: 2024/08/14
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
@@ -52,6 +52,10 @@ last modified: 2024/05/31
     margin: 0;
 }
 
+.prof-info div {
+    max-width: calc((1000px - 4rem) / 2);
+}
+
 .prof-info div dt {
     border-bottom: 1px dotted var(--Gray-Gray);
 }
@@ -63,6 +67,7 @@ last modified: 2024/05/31
 blockquote {
     border: none;
     background-color: unset;
+    padding: 0;
 }
 
 blockquote footer {
