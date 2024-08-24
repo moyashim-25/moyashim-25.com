@@ -138,6 +138,7 @@ pre {
     border-radius: 0.5em;
     color: var(--Gray-White);
     overflow-x: auto;
+    scrollbar-width: thin;
 
     & * {
         font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemo", monospace;
@@ -253,7 +254,7 @@ main h2 {
 }
 
 main h3 {
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0.8rem 0 0.5rem 0;
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--Gray-Black);
