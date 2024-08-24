@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <!-- basic meta -->
+    <meta charset="UTF-8">
+    <title>Spotify Web APIを使うときに読むやつ - もやしくん.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="もやしくん">
+    <meta name="description" content="Spotify Web APIを使うときの手順を示したメモ。この記事では、Spotifyで最近再生した曲をJSONで取得するときに、どのようにSpotify Web APIを用いるかを説明しています。">
+    <!-- ogp -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@moyashiM_25">
+    <meta property="og:title" content="Spotify Web APIを使うときに読むやつ">
+    <meta property="og:site_name" content="もやしくん.com">
+    <meta property="og:url" content="https://moyashim-25.com/article">
+    <meta property="og:description" content="Spotify Web APIを使うときの手順を示したメモ。この記事では、Spotifyで最近再生した曲をJSONで取得するときに、どのようにSpotify Web APIを用いるかを説明しています。">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
+    <!-- icon, css -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <ul class="twbonly">
+            <li><a href="#main">メインコンテンツへジャンプ</a></li>
+        </ul>
+        <h1>Spotify Web APIを使うときに読むやつ</h1>
+        <div class="document-info">もやしくん</div>
+        <div class="document-info">
+            公開: <time datetime="2024-08-24">2024/08/24</time>, 最終更新: <time datetime="2024-08-24">2024/08/24</time>
+        </div>
+        <nav>
+            <h2 class="twbonly">パンくずリスト</h2>
+            <ol>
+                <li><a href="/">ホーム</a></li><li><a href="/article/">記事一覧</a></li><li>Spotify Web APIを使うときに読むやつ</li>
+            </ol>
+        </nav>
+    </header>
+    <hr id="main">
+    <main>
+        <article>
+            <h2>はじめに</h2>
+            <p>SpotifyのWeb APIを用いることで、コンテンツのメタデータの取得、再生のコントロールなどを行えます [<a href="#web-api">1</a>]。</p>
+            <p>この記事は、Spotifyで最近再生した曲をJSONで取得するときに、どのようにSpotify Web APIを用いるかのメモです。情報はこの記事の制作時点のものであり、その正確性は保証しません。</p>
+
+            <h2>準備・環境</h2>
+            <p>
+                はじめに次を用意します:
+            </p>
+            <ul>
+                <li>インターネットに接続できる環境</li>
+                <li>インターネットブラウザ</li>
+                <li>base64とcurlを実行できる環境（この記事ではUbuntuを使用）</li>
+                <li>Spotifyのアカウント</li>
+                <li>やる気</li>
+            </ul>
+
+            <h2>注意</h2>
+            <p>SpotifyのWeb APIを用いると、場合によってはアカウントの情報を入手できるようになります。これから先で入手するIDやtokenが外部に漏れることで、アカウント情報が流出しかねないことを留意してください。また、これから先の手順は、そのような情報に簡単にアクセスできないように用意された認証ステップでもあります。</p>
+
+            <h2>流れ</h2>
+            <ol>
+                <li><a href="#access">Spotify for Developersへアクセス</a></li>
+                <li><a href="#makeapp">appを作成する</a></li>
+                <li><a href="#get_client">Client IDとClient secretを入手する</a></li>
+                <li><a href="#get_authorization">User Authorizationを入手する</a></li>
+                <li><a href="#get_token">Access tokenを入手する</a></li>
+                <li><a href="#get_music">最近再生した曲を取得する</a></li>
+                <li><a href="#refresh">Access tokenをリフレッシュする</a></li>
+            </ol>
+
+            <h2>手順</h2>
+            <h3 id="access">Spotify for Developersへアクセス</h3>
+            <p><a target="_blank" href="https://developer.spotify.com/dashboard">Spotify for DevelopersのDashboard</a>にアクセスします。Spotifyアカウントへのログインやアクセス承認が求められた場合は適宜対応してください。</p>
+            <h3 id="makeapp">appを作成する</h3>
+            <p>
+                Dashboardにある「Create app」をクリックし、appを作成します。表示される画面に従って、必要な情報を入力します:
+            </p>
+            <dl>
+                <dt>App name</dt><dd>自身がわかりやすい適当な名前を入力</dd>
+                <dt>App description</dt><dd>自身がわかりやすい適当な説明を入力</dd>
+                <dt>Website</dt><dd>空欄でよい</dd>
+                <dt>Redirect URIs</dt><dd>リダイレクト先のURI。今回はすべて手動でやるので適当に入力（例: 「http://localhost/」）</dd>
+                <dt>Which API/SDKs are you planning to use?</dt><dd>Web APIにチェックをいれる</dd>
+            </dl>
+            <h3 id="get_client">Client IDとClient secretを入手する</h3>
+            <p>
+                Dashboard上で作成したAppをクリックし、画面の遷移後「Settings」をクリックします。「Basic Information」タグの上部にClient IDとClient secretがあるので、メモ帳などにメモします（Client secretは「View client secret」をクリックすることで表示されます）。
+            </p>
+            <p>次に、Client IDとClient secretをBase64でエンコードします:</p>
+            <pre><code>echo -n "{Client ID}:{Client secret}" | base64</code></pre>
+            <p>これによって得た文字列もメモしておきます。</p>
+            <h3 id="get_authorization">User Authorizationを入手する</h3>
+            <p>先ほど入手したClient IDをもとに、インターネットブラウザでつぎのURLにアクセスします:</p>
+            <pre><code>https://accounts.spotify.com/authorize?response_type=code&client_id={入手したclient_id}&scope=user-read-recently-played&redirect_uri={指定したリダイレクト先}</code></pre>
+            <p>今回は、最近再生した曲をゲットするために、<code style="text-wrap: nowrap;">scope=user-read-recently-played</code>を指定しました。アクセスすると、</p>
+            <pre><code style="text-wrap: nowrap;">http://localhost/?code={code}</code></pre>
+            <p>のように、リダイレクトされたリンクのあとにcodeがついてきます。このcodeもメモしておきます。</p>
+            <h3 id="get_token">Access tokenを入手する</h3>
+            <p>次を実行します:</p>
+            <pre><code>curl -X POST \
+--url https://accounts.spotify.com/api/token \
+-H "content-type: application/x-www-form-urlencoded" \
+-H "Authorization: Basic {Base64でエンコードしたやつ}" \
+-d grant_type=authorization_code \
+-d code={code} \
+-d redirect_uri=http://localhost/</code></pre>
+            <p>そうすると、次が得られます:</p>
+            <pre><code>{
+    "access_token": "{access_token}",
+    "token_type": "Bearer",
+    "expires_in": 3600,
+    "refresh_token": "{refresh_token}",
+    "scope": "user-read-recently-played"
+}</code></pre>
+            <p>access_token、refresh_tokenをメモしておきます。</p>
+            <h3 id="get_music">最近再生した曲を取得する</h3>
+            <p>実際に、APIをつついて最近再生した曲を取得してみます。今回は最近再生した3曲を取得することにします（<code style="text-wrap: nowrap;">limit=3</code>）。次を実行します:</p>
+            <pre><code>curl --request GET \
+--url https://api.spotify.com/v1/me/player/recently-played?limit=3 \
+--header 'Authorization: Bearer {access_token}'</code></pre>
+            <p>実行すると、曲のメタデータがJSONで入手できます。</p>
+            <h3 id="refresh">Access tokenをリフレッシュする</h3>
+            <p>先ほど入手したAccess tokenは1時間の有効期限があります。Access tokenをリフレッシュするには、次を実行します:</p>
+            <pre><code>curl -X POST \
+--url https://accounts.spotify.com/api/token \
+-H "content-type: application/x-www-form-urlencoded" \
+-H "Authorization: Basic {Base64でエンコードしたやつ}" \
+-d grant_type=refresh_token \
+-d refresh_token={refresh_token}</code></pre>
+            <p>実行すると、Access tokenを入手したときと同様のJSONが得られます。</p>
+            <h2>うまくいかないとき</h2>
+            <h3>原因1: 混乱している</h3>
+            <p>
+                次に挙げるものを、混乱して勘違いして入力していませんか？
+            </p>
+            <ul>
+                <li>Client ID</li>
+                <li>Client secret</li>
+                <li>User Authorization</li>
+                <li>Base64でエンコードしたやつ</li>
+                <li>Access token</li>
+                <li>Refresh token</li>
+            </ul>
+            <h3>原因2: Access tokenの有効期限が切れた</h3>
+            <p><a href="#refresh">Access tokenをリフレッシュする</a>か、改めて<a href="#get_token">Access tokenを入手</a>してみましょう。</p>
+            <h3>原因3: タイプミス</h3>
+            <p>綴りやクォーテーションに抜けがないかなどを確認してみましょう。</p>
+            <h2>もっと詳しく知りたいなら</h2>
+            <p>今回は、<a target="_blank" href="https://developer.spotify.com/documentation/web-api/tutorials/code-flow">Authorization Code Flow</a>に則って実行していきました。この記事で行ったことが具体的に何をしているのかや、APIを用いて他のことをしてみたいならば、<a target="_blank" href="https://developer.spotify.com/documentation/web-api">Spotify公式のドキュメント</a>を見てみましょう。</p>
+            <h2>参考</h2>
+            <ol>
+                <li id="web-api"><a href="https://developer.spotify.com/documentation/web-api">Web API | Spotify for Developers</a></li>
+            </ol>
+        </article>
+    </main>
+    <hr>
+    <footer>
+        <p><small>&copy; 2024 もやしくん</small></p>
+    </footer>
+</body>
+
+</html>
