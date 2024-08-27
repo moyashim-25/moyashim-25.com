@@ -32,7 +32,7 @@
         <h1>Spotify Web APIを使うときに読むやつ</h1>
         <div class="document-info">もやしくん</div>
         <div class="document-info">
-            公開: <time datetime="2024-08-24">2024/08/24</time>, 最終更新: <time datetime="2024-08-24">2024/08/24</time>
+            公開: <time datetime="2024-08-24">2024/08/24</time>, 最終更新: <time datetime="2024-08-27">2024/08/27</time>
         </div>
         <nav>
             <h2 class="twbonly">パンくずリスト</h2>
@@ -98,7 +98,10 @@
             <h3 id="get_authorization">User Authorizationを入手する</h3>
             <p>先ほど入手したClient IDをもとに、インターネットブラウザでつぎのURLにアクセスします:</p>
             <pre><code>https://accounts.spotify.com/authorize?response_type=code&client_id={入手したclient_id}&scope=user-read-recently-played&redirect_uri={指定したリダイレクト先}</code></pre>
-            <p>今回は、最近再生した曲をゲットするために、<code style="text-wrap: nowrap;">scope=user-read-recently-played</code>を指定しました。アクセスすると、</p>
+            <p>
+                今回は、最近再生した曲をゲットするために、<code style="text-wrap: nowrap;">scope=user-read-recently-played</code>を指定しました。
+                例えば、リダイレクト先が<code style="text-wrap: nowrap;">http://localhost/</code>であるとき、前のURLにアクセスすると、
+            </p>
             <pre><code style="text-wrap: nowrap;">http://localhost/?code={code}</code></pre>
             <p>のように、リダイレクトされたリンクのあとにcodeがついてきます。このcodeもメモしておきます。</p>
             <h3 id="get_token">Access tokenを入手する</h3>
@@ -109,7 +112,7 @@
 -H "Authorization: Basic {Base64でエンコードしたやつ}" \
 -d grant_type=authorization_code \
 -d code={code} \
--d redirect_uri=http://localhost/</code></pre>
+-d redirect_uri={指定したリダイレクト先}</code></pre>
             <p>そうすると、次が得られます:</p>
             <pre><code>{
     "access_token": "{access_token}",
