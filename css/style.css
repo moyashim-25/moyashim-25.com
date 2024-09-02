@@ -3,7 +3,7 @@
 /* ##########
 style.css
 (c) 2024 もやしくん
-last modified: 2024/08/14
+last modified: 2024/09/02
 ########## */
 
 /* ==========
@@ -89,6 +89,10 @@ html {
 }
 
 /* tags */
+* {
+    text-spacing-trim: space-first;
+}
+
 hr {
     /* The hr tag in moyashim-25.com is for Text-based web browser only. */
     display: none;
