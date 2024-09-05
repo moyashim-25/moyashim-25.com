@@ -174,7 +174,7 @@ figure.center {
 }
 
 figure.fullwidth {
-    margin: auto;
+    margin: 1em auto;
     text-align: center;
     display: block;
     max-width: 700px;
