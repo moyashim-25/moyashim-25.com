@@ -2,7 +2,7 @@
 
 /*
 profile.css
-last modified: 2024/09/02
+last modified: 2024/09/29
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
@@ -79,6 +79,11 @@ blockquote footer {
 blockquote footer cite {
     display: inline;
     font-style: normal;
+}
+
+span.mincho {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
 }
 
 @media screen and (max-width: 500px) {
