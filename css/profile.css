@@ -2,7 +2,7 @@
 
 /*
 profile.css
-last modified: 2024/09/29
+last modified: 2024/09/30
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
@@ -43,7 +43,7 @@ last modified: 2024/09/29
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     gap: 1em 1.5rem;
 }
@@ -52,12 +52,9 @@ last modified: 2024/09/29
     margin: 0;
 }
 
-.prof-info div {
-    max-width: calc((1000px - 6rem) / 2);
-}
-
 .prof-info div dt {
     border-bottom: 1px dotted var(--Gray-Gray);
+    font-size: 1.2rem;
 }
 
 .prof-info div dd {
