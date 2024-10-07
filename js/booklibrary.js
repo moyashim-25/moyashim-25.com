@@ -1,5 +1,5 @@
 /* 
-last modified: 2024/05/03
+last modified: 2024/10/08
 reference:
 https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/JSON
 */
@@ -39,7 +39,6 @@ function populateBook(obj) {
 
         const navcategoryli = document.createElement('li');
         const navcategorya = document.createElement('a');
-        const navcategoryul = document.createElement('ul');
 
         categoryh2.textContent = category.categoryName;
         categoryh2.setAttribute('id', category.categoryID);
@@ -97,7 +96,6 @@ function populateBook(obj) {
             countBook++;
         }
         dataarea.appendChild(categorysection);
-        navcategoryli.appendChild(navcategoryul);
         navarea.appendChild(navcategoryli);
 
         // 冊数の表示
