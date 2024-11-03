@@ -3,7 +3,7 @@
 /* ##########
 style.css
 (c) 2024 もやしくん
-last modified: 2024/09/07
+last modified: 2024/11/04
 ########## */
 
 /* ==========
@@ -47,6 +47,10 @@ general
     font-weight: 400;
     line-height: 1.5em;
     color: var(--Gray-text-Black);
+}
+
+html {
+    font-size: 16px;
 }
 
 a {
