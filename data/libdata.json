@@ -1,6 +1,6 @@
 {
     "databaseName": "MyLibrary",
-    "lastModified": "2024-10-07T13:06+09:00",
+    "lastModified": "2024-11-09T22:41+09:00",
     "category": [
         {
             "categoryName": "数学",
@@ -293,6 +293,17 @@
                     "numberOfPages": 102,
                     "ISBN": "978-4-8425-0385-1",
                     "comment": false
+                },
+                {
+                    "title": "社員が努力して、働けば働くほど報われる仕組み",
+                    "author": "釣谷宏行",
+                    "series": false,
+                    "publisher": "ダイヤモンド・ビジネス企画",
+                    "edition": "第1刷",
+                    "year": 2023,
+                    "numberOfPages": 308,
+                    "ISBN": "978-4-478-08500-4",
+                    "comment": "株式会社CKサンエツからの講義内配布による蔵書、内容は[企業/経営者]"
                 }
             ]
         },
