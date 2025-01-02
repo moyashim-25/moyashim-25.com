@@ -1,0 +1,34 @@
+{
+    "$schema": "https://kusaremkn.github.io/mantela/mantela.schema.json",
+    "version": "0.0.0",
+    "aboutMe": {
+        "name": "moyashitel",
+        "preferredPrefix": "0113",
+        "identifier": "e5e9120a-1b58-4eb7-b2c8-efe5b452c910"
+    },
+    "extensions": [
+        {
+            "name": "ivory",
+            "extension": "200",
+            "type": "phone"
+        },
+        {
+            "name": "lin",
+            "extension": "201",
+            "type": "other"
+        },
+        {
+            "name": "linand",
+            "extension": "202",
+            "type": "other"
+        }
+    ],
+    "providers": [
+        {
+            "identifier": "93b2d256-39c1-4053-bda1-c0643dd40690",
+            "name": "MKNETEL",
+            "prefix": "0510",
+            "mantela": "https://unstable.kusaremkn.com/.well-known/mantela.json"
+        }
+    ]
+}
