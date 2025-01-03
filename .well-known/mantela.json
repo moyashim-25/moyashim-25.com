@@ -13,14 +13,14 @@
             "type": "phone"
         },
         {
-            "name": "lin",
+            "name": "laptop",
             "extension": "201",
-            "type": "other"
+            "type": "phone"
         },
         {
-            "name": "linand",
+            "name": "mobile phone",
             "extension": "202",
-            "type": "other"
+            "type": "phone"
         }
     ],
     "providers": [
