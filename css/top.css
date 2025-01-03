@@ -2,9 +2,25 @@
 
 /*
 top.css
-last modified: 2024/11/04
+last modified: 2025/01/03
 */
 
 nav ul {
     margin: 0.5em 0;
+}
+
+main div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 0.5em 1em;
+    margin: 0.5em 0;
+
+    picture,
+    picture img {
+        display: block;
+    }
 }
