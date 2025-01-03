@@ -29,6 +29,18 @@
             "name": "MKNETEL",
             "prefix": "0510",
             "mantela": "https://unstable.kusaremkn.com/.well-known/mantela.json"
+        },
+        {
+            "identifier": "5bbdd9ae-4d41-420c-80df-eba486495b12",
+            "mantela": "https://108jiminy.jp/phone/jiminypublicmantela.json",
+            "name": "Jiminy Public",
+            "prefix": "0108"
+        },
+        {
+            "identifier": "153048c5-db33-4e00-ad49-694762555d5c",
+            "name": "Jiminy Local",
+            "prefix": "0119",
+            "mantela": "https://108jiminy.jp/phone/jiminylocalmantela.json"
         }
     ]
 }
