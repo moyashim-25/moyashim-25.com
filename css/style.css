@@ -3,7 +3,7 @@
 /* ##########
 style.css
 (c) 2024 もやしくん
-last modified: 2024/11/22
+last modified: 2025/01/04
 ########## */
 
 /* ==========
@@ -119,6 +119,10 @@ dd {
 b,
 strong {
     font-weight: 700;
+}
+
+em {
+    text-decoration: underline;
 }
 
 blockquote {
