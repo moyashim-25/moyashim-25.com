@@ -3,7 +3,7 @@
 /* ##########
 style.css
 (c) 2024 もやしくん
-last modified: 2025/01/04
+last modified: 2025/02/01
 ########## */
 
 /* ==========
@@ -188,6 +188,8 @@ figure.fullwidth {
     max-width: 700px;
 
     img {
+        display: block;
+        margin: auto;
         width: 100%;
         max-width: max-content;
     }
