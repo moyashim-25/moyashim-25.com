@@ -1,6 +1,6 @@
 {
     "databaseName": "MyLibrary",
-    "lastModified": "2024-11-09T22:41+09:00",
+    "lastModified": "2025-02-01T16:06+09:00",
     "category": [
         {
             "categoryName": "数学",
@@ -982,6 +982,28 @@
                     "numberOfPages": 138,
                     "ISBN": false,
                     "comment": "IDEA magazine 352 ビデオ・ゲーム・グラフィック"
+                },
+                {
+                    "title": "芸術工学研究 vol. 20",
+                    "author": "九州大学大学院芸術工学研究院紀要『芸術工学研究』編集委員会",
+                    "series": "九州大学大学院芸術工学研究院 紀要",
+                    "publisher": "九州大学大学院芸術工学研究院",
+                    "edition": "vol. 20",
+                    "year": 2014,
+                    "numberOfPages": 44,
+                    "ISBN": false,
+                    "comment": false
+                },
+                {
+                    "title": "芸術工学研究 vol. 21",
+                    "author": "九州大学大学院芸術工学研究院紀要『芸術工学研究』編集委員会",
+                    "series": "九州大学大学院芸術工学研究院 紀要",
+                    "publisher": "九州大学大学院芸術工学研究院",
+                    "edition": "vol. 21",
+                    "year": 2014,
+                    "numberOfPages": 68,
+                    "ISBN": false,
+                    "comment": false
                 }
             ]
         },
