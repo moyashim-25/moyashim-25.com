@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <!-- basic meta -->
+    <meta charset="UTF-8">
+    <title>もやしくん.comの記事テンプレート - もやしくん.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="もやしくん">
+    <meta name="description" content="このhtmlは、もやしくん.comの記事のテンプレートです。">
+    <!-- ogp -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@moyashiM_25">
+    <meta property="og:title" content="もやしくん.comの記事テンプレート">
+    <meta property="og:site_name" content="もやしくん.com">
+    <meta property="og:url" content="https://moyashim-25.com/article/template/">
+    <meta property="og:description" content="このhtmlは、もやしくん.comの記事のテンプレートです。">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
+    <!-- icon, css -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://moyashim-25.com/",
+                        "name": "ホーム"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://moyashim-25.com/article/",
+                        "name": "記事一覧"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://moyashim-25.com/article/template/",
+                        "name": "もやしくん.comの記事テンプレート"
+                    }
+                }
+            ]
+        }
+     </script>
+</head>
+
+<body>
+    <header>
+        <ul class="twbonly">
+            <li><a href="#main">メインコンテンツへジャンプ</a></li>
+        </ul>
+        <h1>もやしくん.comの記事テンプレート</h1>
+        <div class="document-info">もやしくん</div>
+        <div class="document-info">
+            公開: <time datetime="2025-02-09">2025/02/09</time>, 最終更新: <time datetime="2025-02-09">2025/02/09</time>
+        </div>
+        <nav>
+            <h2 class="twbonly">パンくずリスト</h2>
+            <ol>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/article/">記事一覧</a></li>
+                <li>もやしくん.comの記事テンプレート</li>
+            </ol>
+        </nav>
+    </header>
+    <hr id="main">
+    <main>
+        <article>
+            <h2 id="introduction">はじめに</h2>
+            <p>このhtmlは、もやしくん.comの記事のテンプレートです。執筆のときの変更指針を合わせて記しています。</p>
+            <h2>目次</h2>
+            <ol>
+                <li><a href="#introduction">はじめに</a></li>
+                <li><a href="#procedure">記事執筆の際の変更手順の例</a></li>
+                <li><a href="#ogp">ogpの記述</a></li>
+                <li><a href="#breadcrumb">リッチリザルトのためのパンくずリスト</a></li>
+                <li><a href="#other">その他</a></li>
+            </ol>
+            <h2 id="procedure">記事執筆の際の変更手順の例</h2>
+            <p>このテンプレートを使用して記事を執筆するとき、次に挙げる箇所を適切に変更してください。</p>
+            <ol>
+                <li>タイトル
+                    <ul>
+                        <li>titleタグ</li>
+                        <li>og:title</li>
+                        <li>h1タグ</li>
+                        <li>パンくずリスト内</li>
+                    </ul>
+                </li>
+                <li>著作権表示</li>
+                <li>記事の著者</li>
+                <li>記事の内容 (articleタグ内に記述)</li>
+                <li>記事の説明
+                    <ul>
+                        <li>descriptionメタタグ</li>
+                        <li>og:description</li>
+                    </ul>
+                </li>
+                <li>ogp
+                    <ul>
+                        <li>og:titleとog:descriptionの確認</li>
+                        <li>og:url</li>
+                    </ul>
+                </li>
+                <li>パンくずリスト (JSON-LD形式のパンくずリスト)</li>
+                <li>公開日</li>
+                <li>最終更新日</li>
+                <li>ほかページへのURLの追加
+                    <ul>
+                        <li>記事一覧</li>
+                        <li>sitemap.xml</li>
+                    </ul>
+                </li>
+            </ol>
+            <h2 id="ogp">ogpの記述</h2>
+            <p>もやしくん.comの記事では、ogpを記しています。このページにおける例を以下に示します。</p>
+            <figure>
+                <figcaption>ogpの記述例</figcaption>
+                <pre><code>&lt;meta name="twitter:card" content="summary"&gt;
+&lt;meta name="twitter:creator" content="@moyashiM_25"&gt;
+&lt;meta property="og:title" content="もやしくん.comの記事テンプレート"&gt;
+&lt;meta property="og:site_name" content="もやしくん.com"&gt;
+&lt;meta property="og:url" content="https://moyashim-25.com/article/template/"&gt;
+&lt;meta property="og:description" content="このhtmlは、もやしくん.comの記事のテンプレートです。"&gt;
+&lt;meta property="og:type" content="article"&gt;
+&lt;meta property="og:image" content="https://moyashim-25.com/img/cardimg.png"&gt;</code></pre>
+            </figure>
+            <h2 id="breadcrumb">リッチリザルトのためのパンくずリスト</h2>
+            <p>もやしくん.comの各記事は、リッチリザルトのためのパンくずリストの記述として、JSON-LDの形式を採用しています。記述方法は<a
+                    href="https://schema.org/BreadcrumbList">schema.org/BreadcrumbList</a>や<a
+                    href="https://developers.google.com/search/docs/data-types/breadcrumb">Google
+                    Developersのページ</a>から確認できます。また、エディタにGitHub Copilotが有効なVisual Studio
+                Codeを用いている場合は、フォルダの階層やolタグによるパンくずリストからJSON-LDのそれを生成してくれます。助かる。このページにおける例を以下に示します。</p>
+            <figure>
+                <figcaption>JSON-LD形式によるパンくずリストの記述例</figcaption>
+                <pre><code>&lt;script type="application/ld+json"&gt;
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://moyashim-25.com/",
+                "name": "ホーム"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "https://moyashim-25.com/article/",
+                "name": "記事一覧"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "@id": "https://moyashim-25.com/article/template/",
+                "name": "もやしくん.comの記事テンプレート"
+            }
+        }
+    ]
+}
+&lt;/script&gt;</code></pre>
+            </figure>
+            <h2 id="other">その他</h2>
+            <p>記事においては、articleタグ内headerの設置は必須ではありません。</p>
+            <p>記事を更新するときは、最終更新日の変更を忘れずにしてください。</p>
+        </article>
+    </main>
+    <hr>
+    <footer>
+        <p><small>&copy; 2025 もやしくん</small></p>
+    </footer>
+</body>
+
+</html>
