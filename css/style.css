@@ -3,7 +3,7 @@
 /* ##########
 style.css
 (c) 2024 もやしくん
-last modified: 2025/02/01
+last modified: 2025/02/09
 ########## */
 
 /* ==========
@@ -16,14 +16,14 @@ general
 @font-face {
     font-family: "PC Noto";
     src: local("Noto Sans JP"),
-         local("Noto Sans CJK JP");
+        local("Noto Sans CJK JP");
     font-weight: 400;
 }
 
 @font-face {
     font-family: "PC Noto";
-    src: local("Noto Sans JP Bold"), 
-         local("Noto Sans CJK JP Bold");
+    src: local("Noto Sans JP Bold"),
+        local("Noto Sans CJK JP Bold");
     font-weight: 700;
 }
 
@@ -100,6 +100,10 @@ html {
 hr {
     /* The hr tag in moyashim-25.com is for Text-based web browser only. */
     display: none;
+}
+
+p {
+    margin: 0.3em 0;
 }
 
 ul,
@@ -234,13 +238,17 @@ body>header nav {
 body>header nav ol {
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 body>header nav ol li {
-    display: inline;
+    display: block;
 }
 
-body>header nav ol li:not(:last-of-type)::after {
+body>header nav ol li:not(:first-of-type)::before {
     content: ">";
     user-select: none;
     padding: 0 0.5em;
@@ -254,10 +262,6 @@ main {
     max-width: calc(1000px - 4rem);
     margin: 1rem auto;
     padding: 0 0.5rem;
-}
-
-p {
-    margin: 0.3em 0;
 }
 
 main h2 {
