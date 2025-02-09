@@ -13,15 +13,48 @@
     <meta name="twitter:creator" content="@moyashiM_25">
     <meta property="og:title" content="アウトライン文書のすすめ">
     <meta property="og:site_name" content="もやしくん.com">
-    <meta property="og:url" content="https://moyashim-25.com/article">
+    <meta property="og:url" content="https://moyashim-25.com/article/markupdoc/">
     <meta property="og:description" content="もやしくんの執筆した記事の一覧。">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
     <!-- icon, css -->
     <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://moyashim-25.com/",
+                        "name": "ホーム"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://moyashim-25.com/article/",
+                        "name": "記事一覧"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://moyashim-25.com/article/markupdoc/",
+                        "name": "アウトライン文書のすすめ"
+                    }
+                }
+            ]
+        }
+    </script>
 </head>
 
 <body>
@@ -37,7 +70,9 @@
         <nav>
             <h2 class="twbonly">パンくずリスト</h2>
             <ol>
-                <li><a href="/">ホーム</a></li><li><a href="/article/">記事一覧</a></li><li>アウトライン文書のすすめ</li>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/article/">記事一覧</a></li>
+                <li>アウトライン文書のすすめ</li>
             </ol>
         </nav>
     </header>
@@ -60,7 +95,8 @@
                     <cite>――"MDN Web Docs 用語集: ウェブの関連用語の定義" の<a
                             href="https://developer.mozilla.org/ja/docs/Glossary/Markup">markup (マークアップ)</a></cite>
                 </blockquote>
-                <p>例えば、マークアップ言語の一つであるHTMLを用いることで、単なる文章のレベル付けを行えるだけでなく、コンテンツの目的を細かく分類できる。そのため、文書内の文章がどういった意図で用いられているのかを確認、意識しながら文書を作成することができる。これによって、<strong>無駄なく組み立てられた文書の作成が可能</strong>になる。</p>
+                <p>例えば、マークアップ言語の一つであるHTMLを用いることで、単なる文章のレベル付けを行えるだけでなく、コンテンツの目的を細かく分類できる。そのため、文書内の文章がどういった意図で用いられているのかを確認、意識しながら文書を作成することができる。これによって、<strong>無駄なく組み立てられた文書の作成が可能</strong>になる。
+                </p>
             </header>
 
             <h2>文章への意味付け</h2>

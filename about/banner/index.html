@@ -19,9 +19,42 @@
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
     <!-- icon, css -->
     <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://moyashim-25.com/",
+                        "name": "ホーム"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://moyashim-25.com/about/",
+                        "name": "サイトについて"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://moyashim-25.com/about/banner/",
+                        "name": "バナー"
+                    }
+                }
+            ]
+        }
+    </script>
 </head>
 
 <body>
@@ -37,7 +70,9 @@
         <nav>
             <h2 class="twbonly">パンくずリスト</h2>
             <ol>
-                <li><a href="/">ホーム</a></li><li><a href="/about/">サイトについて</a></li><li>バナー</li>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/about/">サイトについて</a></li>
+                <li>バナー</li>
             </ol>
         </nav>
     </header>
@@ -60,7 +95,7 @@
                 <li><a href="/img/banner/banner_88_31_.webp">WEBP形式 (2.53KB)</a></li>
                 <li><a href="/img/banner/banner_88_31_.svg">SVG形式 (21.3KB)</a></li>
             </ul>
-            
+
             <h2>234x61相当</h2>
             <picture>
                 <source srcset="/img/banner/banner_234_60_.webp" type="image/webp" width="234" height="60">

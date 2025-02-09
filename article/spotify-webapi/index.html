@@ -7,21 +7,56 @@
     <title>Spotify Web APIを使うときに読むやつ - もやしくん.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="もやしくん">
-    <meta name="description" content="Spotify Web APIを使うときの手順を示したメモ。この記事では、Spotifyで最近再生した曲をJSONで取得するときに、どのようにSpotify Web APIを用いるかを説明しています。">
+    <meta name="description"
+        content="Spotify Web APIを使うときの手順を示したメモ。この記事では、Spotifyで最近再生した曲をJSONで取得するときに、どのようにSpotify Web APIを用いるかを説明しています。">
     <!-- ogp -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@moyashiM_25">
     <meta property="og:title" content="Spotify Web APIを使うときに読むやつ">
     <meta property="og:site_name" content="もやしくん.com">
     <meta property="og:url" content="https://moyashim-25.com/article/spotify-webapi/">
-    <meta property="og:description" content="Spotify Web APIを使うときの手順を示したメモ。この記事では、Spotifyで最近再生した曲をJSONで取得するときに、どのようにSpotify Web APIを用いるかを説明しています。">
+    <meta property="og:description"
+        content="Spotify Web APIを使うときの手順を示したメモ。この記事では、Spotifyで最近再生した曲をJSONで取得するときに、どのようにSpotify Web APIを用いるかを説明しています。">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
     <!-- icon, css -->
     <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://moyashim-25.com/",
+                        "name": "ホーム"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://moyashim-25.com/article/",
+                        "name": "記事一覧"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://moyashim-25.com/article/spotify-webapi/",
+                        "name": "Spotify Web APIを使うときに読むやつ"
+                    }
+                }
+            ]
+        }
+    </script>
 </head>
 
 <body>
@@ -37,7 +72,9 @@
         <nav>
             <h2 class="twbonly">パンくずリスト</h2>
             <ol>
-                <li><a href="/">ホーム</a></li><li><a href="/article/">記事一覧</a></li><li>Spotify Web APIを使うときに読むやつ</li>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/article/">記事一覧</a></li>
+                <li>Spotify Web APIを使うときに読むやつ</li>
             </ol>
         </nav>
     </header>
@@ -61,7 +98,9 @@
             </ul>
 
             <h2>注意</h2>
-            <p>SpotifyのWeb APIを用いると、場合によってはアカウントの情報を入手できるようになります。これから先で入手するIDやtokenが外部に漏れることで、アカウント情報が流出しかねないことを留意してください。また、これから先の手順は、そのような情報に簡単にアクセスできないように用意された認証ステップでもあります。</p>
+            <p>SpotifyのWeb
+                APIを用いると、場合によってはアカウントの情報を入手できるようになります。これから先で入手するIDやtokenが外部に漏れることで、アカウント情報が流出しかねないことを留意してください。また、これから先の手順は、そのような情報に簡単にアクセスできないように用意された認証ステップでもあります。
+            </p>
 
             <h2>流れ</h2>
             <ol>
@@ -76,21 +115,28 @@
 
             <h2>手順</h2>
             <h3 id="access">Spotify for Developersへアクセス</h3>
-            <p><a target="_blank" href="https://developer.spotify.com/dashboard">Spotify for DevelopersのDashboard</a>にアクセスします。Spotifyアカウントへのログインやアクセス承認が求められた場合は適宜対応してください。</p>
+            <p><a target="_blank" href="https://developer.spotify.com/dashboard">Spotify for
+                    DevelopersのDashboard</a>にアクセスします。Spotifyアカウントへのログインやアクセス承認が求められた場合は適宜対応してください。</p>
             <h3 id="makeapp">appを作成する</h3>
             <p>
                 Dashboardにある「Create app」をクリックし、appを作成します。表示される画面に従って、必要な情報を入力します:
             </p>
             <dl>
-                <dt>App name</dt><dd>自身がわかりやすい適当な名前を入力</dd>
-                <dt>App description</dt><dd>自身がわかりやすい適当な説明を入力</dd>
-                <dt>Website</dt><dd>空欄でよい</dd>
-                <dt>Redirect URIs</dt><dd>リダイレクト先のURI。今回はすべて手動でやるので適当に入力（例: 「http://localhost/」）</dd>
-                <dt>Which API/SDKs are you planning to use?</dt><dd>Web APIにチェックをいれる</dd>
+                <dt>App name</dt>
+                <dd>自身がわかりやすい適当な名前を入力</dd>
+                <dt>App description</dt>
+                <dd>自身がわかりやすい適当な説明を入力</dd>
+                <dt>Website</dt>
+                <dd>空欄でよい</dd>
+                <dt>Redirect URIs</dt>
+                <dd>リダイレクト先のURI。今回はすべて手動でやるので適当に入力（例: 「http://localhost/」）</dd>
+                <dt>Which API/SDKs are you planning to use?</dt>
+                <dd>Web APIにチェックをいれる</dd>
             </dl>
             <h3 id="get_client">Client IDとClient secretを入手する</h3>
             <p>
-                Dashboard上で作成したAppをクリックし、画面の遷移後「Settings」をクリックします。「Basic Information」タグの上部にClient IDとClient secretがあるので、メモ帳などにメモします（Client secretは「View client secret」をクリックすることで表示されます）。
+                Dashboard上で作成したAppをクリックし、画面の遷移後「Settings」をクリックします。「Basic Information」タグの上部にClient IDとClient
+                secretがあるので、メモ帳などにメモします（Client secretは「View client secret」をクリックすることで表示されます）。
             </p>
             <p>次に、Client IDとClient secretをBase64でエンコードします:</p>
             <pre><code>echo -n "{Client ID}:{Client secret}" | base64</code></pre>
@@ -123,7 +169,8 @@
 }</code></pre>
             <p>access_token、refresh_tokenをメモしておきます。</p>
             <h3 id="get_music">最近再生した曲を取得する</h3>
-            <p>実際に、APIをつついて最近再生した曲を取得してみます。今回は最近再生した3曲を取得することにします（<code style="text-wrap: nowrap;">limit=3</code>）。次を実行します:</p>
+            <p>実際に、APIをつついて最近再生した曲を取得してみます。今回は最近再生した3曲を取得することにします（<code
+                    style="text-wrap: nowrap;">limit=3</code>）。次を実行します:</p>
             <pre><code>curl --request GET \
 --url https://api.spotify.com/v1/me/player/recently-played?limit=3 \
 --header 'Authorization: Bearer {access_token}'</code></pre>
@@ -155,10 +202,14 @@
             <h3>原因3: タイプミス</h3>
             <p>綴りやクォーテーションに抜けがないかなどを確認してみましょう。</p>
             <h2>もっと詳しく知りたいなら</h2>
-            <p>今回は、<a target="_blank" href="https://developer.spotify.com/documentation/web-api/tutorials/code-flow">Authorization Code Flow</a>に則って実行していきました。この記事で行ったことが具体的に何をしているのかや、APIを用いて他のことをしてみたいならば、<a target="_blank" href="https://developer.spotify.com/documentation/web-api">Spotify公式のドキュメント</a>を見てみましょう。</p>
+            <p>今回は、<a target="_blank"
+                    href="https://developer.spotify.com/documentation/web-api/tutorials/code-flow">Authorization Code
+                    Flow</a>に則って実行していきました。この記事で行ったことが具体的に何をしているのかや、APIを用いて他のことをしてみたいならば、<a target="_blank"
+                    href="https://developer.spotify.com/documentation/web-api">Spotify公式のドキュメント</a>を見てみましょう。</p>
             <h2>参考</h2>
             <ol>
-                <li id="web-api"><a href="https://developer.spotify.com/documentation/web-api">Web API | Spotify for Developers</a></li>
+                <li id="web-api"><a href="https://developer.spotify.com/documentation/web-api">Web API | Spotify for
+                        Developers</a></li>
             </ol>
         </article>
     </main>

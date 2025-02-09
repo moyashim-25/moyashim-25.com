@@ -18,10 +18,34 @@
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
     <!-- icon, css -->
-    <link rel="icon" href="/img/favicon.ico">
     <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://moyashim-25.com/",
+                        "name": "ホーム"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://moyashim-25.com/sitemap.html",
+                        "name": "サイトマップ"
+                    }
+                }
+            ]
+        }
+    </script>
 </head>
 
 <body>
@@ -72,7 +96,7 @@
             <li><a href="/404.html">ページが見つかりません</a></li>
             <li><a href="#">サイトマップ</a>（このページ）</li>
         </ul>
-        
+
     </main>
     <hr>
     <footer>

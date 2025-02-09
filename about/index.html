@@ -19,9 +19,34 @@
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
     <!-- icon, css -->
     <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://moyashim-25.com/",
+                        "name": "ホーム"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://moyashim-25.com/about/",
+                        "name": "サイトについて"
+                    }
+                }
+            ]
+        }
+    </script>
 </head>
 
 <body>
@@ -37,7 +62,8 @@
         <nav>
             <h2 class="twbonly">パンくずリスト</h2>
             <ol>
-                <li><a href="/">ホーム</a></li><li>サイトについて</li>
+                <li><a href="/">ホーム</a></li>
+                <li>サイトについて</li>
             </ol>
         </nav>
     </header>
@@ -48,22 +74,26 @@
                 <p>もやしくん.comに関する情報が掲載されています。</p>
             </header>
             <h2>免責事項</h2>
-            <p>当サイトコンテンツやURL、ドメインは、予告なく変更、改変、削除などを行うことがあります。当サイトコンテンツに掲載されている情報が正確であるかどうか、最新であるかどうかは保証しかねます。当サイトコンテンツを使用したことによる利用者の損害等は、当サイト制作者は一切の責任を負いかねます。</p>
+            <p>当サイトコンテンツやURL、ドメインは、予告なく変更、改変、削除などを行うことがあります。当サイトコンテンツに掲載されている情報が正確であるかどうか、最新であるかどうかは保証しかねます。当サイトコンテンツを使用したことによる利用者の損害等は、当サイト制作者は一切の責任を負いかねます。
+            </p>
             <h3>公開日と更新日に関する留意事項</h3>
-            <p>当サイトコンテンツのほとんどに、目安として、そのページがいつ公開され、最終更新がいつであるかを記事の見出し下に示しています。これらは日本時間に基づいています。また、当サイトコンテンツのすべての公開日、更新日とその内容はGitHub上のCommitsやHistoryで確認できます。記事上とGitHub上で公開日や更新日に齟齬がある場合、GitHub上のものが優先されます。</p>
+            <p>当サイトコンテンツのほとんどに、目安として、そのページがいつ公開され、最終更新がいつであるかを記事の見出し下に示しています。これらは日本時間に基づいています。また、当サイトコンテンツのすべての公開日、更新日とその内容はGitHub上のCommitsやHistoryで確認できます。記事上とGitHub上で公開日や更新日に齟齬がある場合、GitHub上のものが優先されます。
+            </p>
 
             <h2>著作権</h2>
             <p>当サイトコンテンツの著作権は、特記無き場合、当サイト制作者に帰属します。</p>
-            
+
             <h2>制作者について</h2>
             <p>当サイト制作者のもやしくんについては、<a href="/about/profile/">もやしくんとは</a>をご覧ください。</p>
-            
+
             <h2>フォント</h2>
             <p>当サイトでは主要フォントとして<a href="https://fonts.google.com/">Google Fonts</a>のNotoシリーズを使用しています。</p>
-            <p>バナーなどの一部に<a href="https://seed.line.me/index_jp.html">LINE Seed</a>を SIL Open Font License, Version 1.1 に基づいて使用しています。</p>
+            <p>バナーなどの一部に<a href="https://seed.line.me/index_jp.html">LINE Seed</a>を SIL Open Font License, Version 1.1
+                に基づいて使用しています。</p>
 
             <h2>HTMLの確認</h2>
-            <p>もやしくん.comの各HTMLドキュメントは<a href="https://validator.w3.org/">The W3C Markup Validation Service</a>によってHTML記述の妥当性の確認を行っています。</p>
+            <p>もやしくん.comの各HTMLドキュメントは<a href="https://validator.w3.org/">The W3C Markup Validation
+                    Service</a>によってHTML記述の妥当性の確認を行っています。</p>
 
             <h2>バナー</h2>
             <p>もやしくん.comのバナーがあります。詳しくは<a href="/about/banner/">こちら</a>をご覧ください。</p>

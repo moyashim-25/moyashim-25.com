@@ -19,9 +19,34 @@
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
     <!-- icon, css -->
     <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://moyashim-25.com/",
+                        "name": "ホーム"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://moyashim-25.com/article/",
+                        "name": "記事一覧"
+                    }
+                }
+            ]
+        }
+    </script>
 </head>
 
 <body>
@@ -37,7 +62,8 @@
         <nav>
             <h2 class="twbonly">パンくずリスト</h2>
             <ol>
-                <li><a href="/">ホーム</a></li><li>記事一覧</li>
+                <li><a href="/">ホーム</a></li>
+                <li>記事一覧</li>
             </ol>
         </nav>
     </header>
@@ -60,8 +86,11 @@
                 <li>
                     <a href="https://electone-asobu.blogspot.com/">Electoneで遊ぶ</a>
                     <ul>
-                        <li><a href="https://electone-asobu.blogspot.com/2021/12/environment.html">作業環境・参考ページ、資料</a></li>
-                        <li><a href="https://electone-asobu.blogspot.com/2021/12/blog-post.html">エレクトーンのデータはどうやって保存されてる?</a></li>
+                        <li><a href="https://electone-asobu.blogspot.com/2021/12/environment.html">作業環境・参考ページ、資料</a>
+                        </li>
+                        <li><a
+                                href="https://electone-asobu.blogspot.com/2021/12/blog-post.html">エレクトーンのデータはどうやって保存されてる?</a>
+                        </li>
                     </ul>
                 </li>
             </ul>

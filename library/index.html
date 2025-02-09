@@ -13,18 +13,42 @@
     <meta name="twitter:creator" content="@moyashiM_25">
     <meta property="og:title" content="本棚">
     <meta property="og:site_name" content="もやしくん.com">
-    <meta property="og:url" content="https://moyashim-25.com/about/library">
+    <meta property="og:url" content="https://moyashim-25.com/library">
     <meta property="og:description" content="もやしくんが所有している図書の一覧です。">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
     <!-- icon, css -->
     <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/lib.css">
     <!-- script -->
     <script src="/js/booklibrary.js" defer></script>
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://moyashim-25.com/",
+                        "name": "ホーム"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://moyashim-25.com/library/",
+                        "name": "本棚"
+                    }
+                }
+            ]
+        }
+    </script>
 </head>
 
 <body>
@@ -35,12 +59,13 @@
         <h1>本棚</h1>
         <div class="document-info">もやしくん</div>
         <div class="document-info">
-            公開: <time datetime="2023-07-21">2023/07/21</time>, 最終更新: <time datetime="2024-05-04">2024/05/04</time>
+            公開: <time datetime="2023-07-21">2023/07/21</time>, 最終更新: <time datetime="2025-02-09">2025/02/09</time>
         </div>
         <nav>
             <h2 class="twbonly">パンくずリスト</h2>
             <ol>
-                <li><a href="/">ホーム</a></li><li>本棚</li>
+                <li><a href="/">ホーム</a></li>
+                <li>本棚</li>
             </ol>
         </nav>
     </header>
@@ -76,7 +101,8 @@
                     <dd>このページはJavaScriptが有効な状態でのみ正しく表示されます。</dd>
 
                     <dt>情報</dt>
-                    <dd>図書リストのデータの最終更新日は<span id="lastModified">[get from JSON by JS]</span>、記録されている図書は<span id="howmuch">[get from JSON by JS]</span>冊です。</dd>
+                    <dd>図書リストのデータの最終更新日は<span id="lastModified">[get from JSON by JS]</span>、記録されている図書は<span
+                            id="howmuch">[get from JSON by JS]</span>冊です。</dd>
                 </dl>
             </header>
             <nav>
@@ -119,7 +145,7 @@
     </main>
     <hr>
     <footer>
-        <p><small>&copy; 2024 もやしくん</small></p>
+        <p><small>&copy; 2024&ndash;2025 もやしくん</small></p>
     </footer>
 </body>
 

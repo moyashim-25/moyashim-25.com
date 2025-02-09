@@ -19,10 +19,43 @@
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
     <!-- icon, css -->
     <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/profile.css">
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://moyashim-25.com/",
+                        "name": "ホーム"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://moyashim-25.com/about/",
+                        "name": "サイトについて"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://moyashim-25.com/about/profile/",
+                        "name": "もやしくんとは"
+                    }
+                }
+            ]
+        }
+        </script>
 </head>
 
 <body>
@@ -38,7 +71,9 @@
         <nav>
             <h2 class="twbonly">パンくずリスト</h2>
             <ol>
-                <li><a href="/">ホーム</a></li><li><a href="/about/">サイトについて</a></li><li>もやしくんとは</li>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/about/">サイトについて</a></li>
+                <li>もやしくんとは</li>
             </ol>
         </nav>
     </header>
@@ -55,8 +90,10 @@
                     <p>もやしくんが使うアイコンのそれは「りーぜんとくん」であって、もやしくんではないよ。</p>
                 </div>
                 <div class="prof-yokonaga">
-                    <p>中学生の頃からHTML/CSSを触り始める。趣味でCやC++、Pythonを用いてAtCoderに参加している。たまにLaTeXで回路図を描いている。幼少期から高校1年までエレクトーンを習う。中学・高校で吹奏楽部でトロンボーンを担当した。高校でブラス譜、大学でアカペラ譜の編曲をした。MIDIによる作編曲を嗜むときもある。</p>
-                    <p>大学では知能ロボット工学科の学部生として機械・情報・電気の分野をまんべんなく学んでいるので、工学部生の話なら、他分野の人とでも「話せばわかる（わからない）」状態になれる。音楽や音の関わる工学分野に興味がある。</p>
+                    <p>中学生の頃からHTML/CSSを触り始める。趣味でCやC++、Pythonを用いてAtCoderに参加している。たまにLaTeXで回路図を描いている。幼少期から高校1年までエレクトーンを習う。中学・高校で吹奏楽部でトロンボーンを担当した。高校でブラス譜、大学でアカペラ譜の編曲をした。MIDIによる作編曲を嗜むときもある。
+                    </p>
+                    <p>大学では知能ロボット工学科の学部生として機械・情報・電気の分野をまんべんなく学んでいるので、工学部生の話なら、他分野の人とでも「話せばわかる（わからない）」状態になれる。音楽や音の関わる工学分野に興味がある。
+                    </p>
                 </div>
                 <h2 class="prof-yokonaga">プロフィール</h2>
                 <dl class="prof-info">
@@ -69,10 +106,19 @@
                         <dd>
                             <ul>
                                 <li>
-                                    <a href="https://www.pu-toyama.ac.jp/" target="_blank">富山県立大学</a> <a href="https://www.pu-toyama.ac.jp/engineering/" target="_blank">工学部</a> <a href="https://isd.pu-toyama.ac.jp/">知能ロボット工学科</a>（<time datetime="2022-04-01">2022/04</time>&ndash;）
+                                    <a href="https://www.pu-toyama.ac.jp/" target="_blank">富山県立大学</a> <a
+                                        href="https://www.pu-toyama.ac.jp/engineering/" target="_blank">工学部</a> <a
+                                        href="https://isd.pu-toyama.ac.jp/">知能ロボット工学科</a>（<time
+                                        datetime="2022-04-01">2022/04</time>&ndash;）
                                     <ul>
-                                        <li><a href="https://isd.pu-toyama.ac.jp/about/ii" target="_blank">知的インタフェース講座</a> <a href="https://isd.pu-toyama.ac.jp/~auris/" target="_blank">森川研究室</a>（<time datetime="2024-09-30">2024/10</time>&ndash;）</li>
-                                        <li>同大学<a href="https://acappella-growing.jimdofree.com/" target="_blank">アカペラサークル</a> [17期生]（<time datetime="2022-04-01">2022/04</time>&ndash;）</li>
+                                        <li><a href="https://isd.pu-toyama.ac.jp/about/ii"
+                                                target="_blank">知的インタフェース講座</a> <a
+                                                href="https://isd.pu-toyama.ac.jp/~auris/"
+                                                target="_blank">森川研究室</a>（<time
+                                                datetime="2024-09-30">2024/10</time>&ndash;）</li>
+                                        <li>同大学<a href="https://acappella-growing.jimdofree.com/"
+                                                target="_blank">アカペラサークル</a> [17期生]（<time
+                                                datetime="2022-04-01">2022/04</time>&ndash;）</li>
                                     </ul>
                                 </li>
                                 <li>宮城県○○高校吹奏楽部OB・OG会 [同窓会員]（<time datetime="2024-05-18">2024/05</time>&ndash;）
@@ -96,8 +142,10 @@
                         <dd>
                             <ul>
                                 <li><a href="https://x.com/moyashiM_25" target="_blank">X (@moyashiM_25)</a></li>
-                                <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram (moyashim_25)</a></li>
-                                <li><a href="https://github.com/moyashim-25" target="_blank">GitHub (moyashim-25)</a></li>
+                                <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram
+                                        (moyashim_25)</a></li>
+                                <li><a href="https://github.com/moyashim-25" target="_blank">GitHub (moyashim-25)</a>
+                                </li>
                             </ul>
                             その他のリンクは<a href="/links/">リンク集</a>へ
                         </dd>
@@ -114,10 +162,18 @@
                                 <li>
                                     MATLAB
                                     <ul>
-                                        <li><a href="https://matlabacademy.mathworks.com/jp/details/matlab-onramp/gettingstarted" target="_blank">MATLAB 入門</a>（<time datetime="2024-11-21">2024年11月21日</time> 修了）</li>
-                                        <li><a href="https://matlabacademy.mathworks.com/jp/details/simulink-onramp/simulink" target="_blank">Simulink 入門</a>（<time datetime="2024-12-06">2024年12月06日</time> 修了）</li>
-                                        <li><a href="https://matlabacademy.mathworks.com/jp/details/stateflow-onramp/stateflow" target="_blank">Stateflow 入門</a>（<time datetime="2024-12-17">2024年12月17日</time> 修了）</li>
-                                        <li><a href="https://matlabacademy.mathworks.com/jp/details/signal-processing-onramp/signalprocessing" target="_blank">信号処理入門</a>（<time datetime="2025-01-23">2025年01月23日</time> 修了）</li>
+                                        <li><a href="https://matlabacademy.mathworks.com/jp/details/matlab-onramp/gettingstarted"
+                                                target="_blank">MATLAB 入門</a>（<time
+                                                datetime="2024-11-21">2024年11月21日</time> 修了）</li>
+                                        <li><a href="https://matlabacademy.mathworks.com/jp/details/simulink-onramp/simulink"
+                                                target="_blank">Simulink 入門</a>（<time
+                                                datetime="2024-12-06">2024年12月06日</time> 修了）</li>
+                                        <li><a href="https://matlabacademy.mathworks.com/jp/details/stateflow-onramp/stateflow"
+                                                target="_blank">Stateflow 入門</a>（<time
+                                                datetime="2024-12-17">2024年12月17日</time> 修了）</li>
+                                        <li><a href="https://matlabacademy.mathworks.com/jp/details/signal-processing-onramp/signalprocessing"
+                                                target="_blank">信号処理入門</a>（<time
+                                                datetime="2025-01-23">2025年01月23日</time> 修了）</li>
                                     </ul>
                                 </li>
                                 <li>Google Apps Script</li>
@@ -129,8 +185,7 @@
                         <dd>
                             <ul>
                                 <li>普通自動車第一種運転免許（AT限定）（<time datetime="2024-08-14">2024/08/14</time>）</li>
-                                <li>実用英語技能検定 準2級（<time
-                                        datetime="2019-11-08">2019/11/08</time>）</li>
+                                <li>実用英語技能検定 準2級（<time datetime="2019-11-08">2019/11/08</time>）</li>
                                 <li>ヤマハ音楽能力検定 エレクトーン演奏グレード7級（ヤマハエレクトーン総合演奏力上級1認定）（<time
                                         datetime="2018-11-25">2018/11/25</time>）</li>
                             </ul>
