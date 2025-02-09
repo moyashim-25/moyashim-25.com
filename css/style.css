@@ -16,7 +16,9 @@ general
 @font-face {
     font-family: "PC Noto";
     src: local("Noto Sans JP"),
-        local("Noto Sans CJK JP");
+        local("Noto Sans CJK JP"),
+        local("Noto Sans JP Regular"),
+        local("Noto Sans CJK JP Regular");
     font-weight: 400;
 }
 
@@ -27,16 +29,17 @@ general
     font-weight: 700;
 }
 
-
 @font-face {
     font-family: "PC Noto Mono";
-    src: local("Noto Mono");
+    src: local("Noto Mono"),
+        local("Noto Mono Regular"),;
     font-weight: 400;
 }
 
 @font-face {
-    font-family: "PC plemo";
-    src: local("PlemolJP Regular");
+    font-family: "PC plemol";
+    src: local("PlemolJP"),
+        local("PlemolJP Regular");
     font-weight: 400;
 }
 
@@ -142,7 +145,7 @@ blockquote cite {
 }
 
 pre {
-    font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemo", monospace;
+    font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemol", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -157,13 +160,13 @@ pre {
     scrollbar-width: thin;
 
     & * {
-        font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemo", monospace;
+        font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemol", monospace;
         color: var(--Gray-White);
     }
 }
 
 p code {
-    font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemo", monospace;
+    font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemol", monospace;
     font-size: 0.8em;
     background-color: var(--Gray-Black);
     color: var(--Gray-White);
