@@ -2,15 +2,15 @@
 
 /*
 profile.css
-last modified: 2024/09/30
+last modified: 2025/02/18
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
 
 .prof-grid {
     display: grid;
-    grid-template-columns: 10em 1fr;
-    gap: 16px 32px;
+    grid-template-columns: 160px 1fr;
+    gap: 1rem 2rem;
     justify-content: center;
     align-items: center;
 }
@@ -45,7 +45,7 @@ last modified: 2024/09/30
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 1em 1.5rem;
+    gap: 1rem 1.5rem;
 }
 
 .prof-info {
@@ -83,10 +83,10 @@ span.mincho {
     font-weight: 400;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 590px) {
     .prof-grid {
         display: flex;
-        gap: 16px 0;
+        gap: 1rem 0;
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: center;

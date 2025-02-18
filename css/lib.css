@@ -2,7 +2,7 @@
 
 /*
 lib.css
-last modified: 2024/07/21
+last modified: 2025/02/18
 */
 
 nav #libindex {
@@ -10,17 +10,17 @@ nav #libindex {
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 0.5em 1.3em;
+    gap: 0.5rem 1.3rem;
     padding: 0;
 
     li {
         list-style: none;
-        padding: 0.5em 0;
+        padding: 0.5rem 0;
         border-left: var(--accent-Blue) 5px solid;
         background-color: var(--costum-backBlue);
 
         a {
-            padding: 0.5em;
+            padding: 0.5rem;
             font-weight: 700;
             text-decoration: none;
             color: black;
@@ -45,15 +45,15 @@ article h3 {
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    margin-top: 1em;
+    margin-top: 1rem;
     border-left: var(--accent-Blue) 5px solid;
     background-color: var(--costum-backBlue);
-    padding: 0.3em 0.5em;
+    padding: 0.3rem 0.5rem;
 }
 
 article h4 {
     border-bottom: 1px gray solid;
-    padding-left: 0.5em;
+    padding-left: 0.5rem;
     margin-bottom: 0;
     font-size: 1.4rem;
 }
@@ -61,7 +61,7 @@ article h4 {
 article section div dl {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 0 1.5em;
+    gap: 0 1.5rem;
     align-items: start;
 }
 

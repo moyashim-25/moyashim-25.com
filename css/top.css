@@ -2,13 +2,13 @@
 
 /*
 top.css
-last modified: 2025/02/04
+last modified: 2025/02/18
 */
 
 nav ul {
-    margin: 0.5em 0;
+    margin: 0.5rem 0;
     display: grid;
-    gap: 0.75em 1em;
+    gap: 0.75rem 1rem;
     justify-items: stretch;
     align-items: stretch;
     grid-template-columns: 1fr 1fr;
@@ -27,16 +27,16 @@ nav ul {
             height: 100%;
 
             dl {
-                margin: 0.5em;
+                margin: 0.5rem;
 
                 dt {
-                    font-size: 1.2em;
+                    font-size: 1.2rem;
                 }
-                
+
                 dd {
                     padding: 0;
                 }
-                
+
                 * {
                     color: var(--Gray-Black);
                 }
@@ -59,7 +59,7 @@ nav ul {
 
 
 main div#banner {
-    margin: 0.5em 0;
+    margin: 0.5rem 0;
 
     ul {
         margin: 0;
@@ -70,7 +70,7 @@ main div#banner {
         justify-content: center;
         align-content: center;
         align-items: center;
-        gap: 0.5em 1em;
+        gap: 0.5rem 1rem;
 
         li {
             list-style: none;

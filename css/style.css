@@ -3,7 +3,7 @@
 /* ##########
 style.css
 (c) 2024 もやしくん
-last modified: 2025/02/09
+last modified: 2025/02/18
 ########## */
 
 /* ==========
@@ -32,7 +32,7 @@ general
 @font-face {
     font-family: "PC Noto Mono";
     src: local("Noto Mono"),
-        local("Noto Mono Regular"),;
+        local("Noto Mono Regular");
     font-weight: 400;
 }
 
@@ -81,7 +81,7 @@ html {
     --Gray-Gray: rgb(132, 145, 158);
     --Gray-Black: rgb(0, 0, 0);
 
-    --screen: calc(1000px+2em);
+    --screen: calc(1000px+2rem);
 }
 
 /* Text-based Web Browser ONLY */
@@ -100,13 +100,23 @@ html {
     text-spacing-trim: trim-start;
 }
 
+html {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 590px) {
+    html {
+        font-size: 14px;
+    }
+}
+
 hr {
     /* The hr tag in moyashim-25.com is for Text-based web browser only. */
     display: none;
 }
 
 p {
-    margin: 0.3em 0;
+    margin: 0.3rem 0;
 }
 
 ul,
@@ -120,7 +130,7 @@ dt * {
 }
 
 dd {
-    padding-left: 1.5em;
+    padding-left: 1.5rem;
 }
 
 b,
@@ -135,7 +145,7 @@ em {
 blockquote {
     border-left: var(--Gray-Gray) 5px solid;
     background-color: var(--Gray-backGray);
-    padding: 0.8em;
+    padding: 0.8rem;
 }
 
 blockquote cite {
@@ -151,10 +161,10 @@ pre {
     font-style: normal;
     font-variation-settings: "wdth" 100;
 
-    padding: 1em;
-    font-size: 0.8em;
+    padding: 1rem;
+    font-size: 0.8rem;
     background-color: var(--Gray-Black);
-    border-radius: 0.5em;
+    border-radius: 0.5rem;
     color: var(--Gray-White);
     overflow-x: auto;
     scrollbar-width: thin;
@@ -167,20 +177,20 @@ pre {
 
 p code {
     font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemol", monospace;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     background-color: var(--Gray-Black);
     color: var(--Gray-White);
-    padding: 0 0.5em;
-    border-radius: 0.5em;
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
 }
 
 figure {
-    margin: 1em 0;
+    margin: 1rem 0;
 }
 
 figure>figcaption {
     text-align: center;
-    margin: 0.5em;
+    margin: 0.5rem;
 }
 
 figure.center {
@@ -189,7 +199,7 @@ figure.center {
 }
 
 figure.fullwidth {
-    margin: 1em auto;
+    margin: 1rem auto;
     text-align: center;
     display: block;
     max-width: 700px;
@@ -202,14 +212,19 @@ figure.fullwidth {
     }
 }
 
+small {
+    font-size: 0.8rem;
+}
+
 
 /* ==========
 body
 ========== */
 body {
-    padding: 1em;
+    padding: 1rem;
     max-width: 1000px;
     margin: auto;
+    text-align: justify;
 }
 
 
@@ -235,7 +250,7 @@ body>header .document-info {
 
 body>header nav {
     font-size: 0.8rem;
-    margin: 0.5em 0;
+    margin: 0.5rem 0;
 }
 
 body>header nav ol {
@@ -254,7 +269,7 @@ body>header nav ol li {
 body>header nav ol li:not(:first-of-type)::before {
     content: ">";
     user-select: none;
-    padding: 0 0.5em;
+    padding: 0 0.5rem;
 }
 
 
@@ -268,7 +283,7 @@ main {
 }
 
 main h2 {
-    margin: 1em 0 0.5rem 0;
+    margin: 1rem 0 0.5rem 0;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--Gray-Black);
