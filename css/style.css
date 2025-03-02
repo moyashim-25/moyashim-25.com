@@ -3,7 +3,7 @@
 /* ##########
 style.css
 (c) 2024 もやしくん
-last modified: 2025/02/18
+last modified: 2025/03/03
 ########## */
 
 /* ==========
@@ -142,13 +142,17 @@ em {
     text-decoration: underline;
 }
 
-blockquote {
+figure:has(blockquote) {
     border-left: var(--Gray-Gray) 5px solid;
     background-color: var(--Gray-backGray);
     padding: 0.8rem;
 }
 
-blockquote cite {
+figure>blockquote+figcaption {
+    margin: 0;
+}
+
+figure>blockquote+figcaption cite {
     display: block;
     text-align: right;
     font-size: 0.8rem;
