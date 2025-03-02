@@ -65,7 +65,7 @@
         <h1>もやしくん.comの記事テンプレート</h1>
         <div class="document-info">もやしくん</div>
         <div class="document-info">
-            公開: <time datetime="2025-02-09">2025/02/09</time>, 最終更新: <time datetime="2025-02-09">2025/02/09</time>
+            公開: <time datetime="2025-02-09">2025/02/09</time>, 最終更新: <time datetime="2025-03-03">2025/03/03</time>
         </div>
         <nav>
             <h2 class="twbonly">パンくずリスト</h2>
@@ -128,7 +128,6 @@
             <h2 id="ogp">ogpの記述</h2>
             <p>もやしくん.comの記事では、ogpを記しています。このページにおける例を以下に示します。</p>
             <figure>
-                <figcaption>ogpの記述例</figcaption>
                 <pre><code>&lt;meta name="twitter:card" content="summary"&gt;
 &lt;meta name="twitter:creator" content="@moyashiM_25"&gt;
 &lt;meta property="og:title" content="もやしくん.comの記事テンプレート"&gt;
@@ -137,6 +136,7 @@
 &lt;meta property="og:description" content="このhtmlは、もやしくん.comの記事のテンプレートです。"&gt;
 &lt;meta property="og:type" content="article"&gt;
 &lt;meta property="og:image" content="https://moyashim-25.com/img/cardimg.png"&gt;</code></pre>
+                <figcaption>ogpの記述例</figcaption>
             </figure>
             <h2 id="breadcrumb">リッチリザルトのためのパンくずリスト</h2>
             <p>もやしくん.comの各記事は、リッチリザルトのためのパンくずリストの記述として、JSON-LDの形式を採用しています。記述方法は<a
@@ -145,7 +145,6 @@
                     Developersのページ</a>から確認できます。また、エディタにGitHub Copilotが有効なVisual Studio
                 Codeを用いている場合は、フォルダの階層やolタグによるパンくずリストからJSON-LDのそれを生成してくれます。助かる。このページにおける例を以下に示します。</p>
             <figure>
-                <figcaption>JSON-LD形式によるパンくずリストの記述例</figcaption>
                 <pre><code>&lt;script type="application/ld+json"&gt;
 {
     "@context": "https://schema.org",
@@ -178,6 +177,7 @@
     ]
 }
 &lt;/script&gt;</code></pre>
+                <figcaption>JSON-LD形式によるパンくずリストの記述例</figcaption>
             </figure>
             <h2 id="other">その他</h2>
             <p>記事においては、articleタグ内headerの設置は必須ではありません。</p>
