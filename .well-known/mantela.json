@@ -18,9 +18,19 @@
             "type": "phone"
         },
         {
-            "name": "mobile phone",
+            "name": "pixel",
             "extension": "202",
             "type": "phone"
+        },
+        {
+            "name": "mobile phone",
+            "extension": "203",
+            "type": "phone"
+        },
+        {
+            "name": "DATA/FAX",
+            "extension": "210",
+            "type": "modem"
         }
     ],
     "providers": [
