@@ -1,6 +1,6 @@
 {
     "databaseName": "MyLibrary",
-    "lastModified": "2025-02-01T16:06+09:00",
+    "lastModified": "2025-03-14T20:46+09:00",
     "category": [
         {
             "categoryName": "数学",
@@ -857,6 +857,17 @@
                     "comment": false
                 },
                 {
+                    "title": "新明解国語辞典",
+                    "author": "山田忠雄 他",
+                    "series": "新明解",
+                    "publisher": "三省堂",
+                    "edition": "第8版小型版",
+                    "year": 2020,
+                    "numberOfPages": 1792,
+                    "ISBN": "978-4-385-13080-4",
+                    "comment": "身内からのお上がり"
+                },
+                {
                     "title": "全訳・漢辞海",
                     "author": "戸川芳郎 他",
                     "series": "漢辞海",
@@ -1159,7 +1170,7 @@
                     "year": 2020,
                     "numberOfPages": 183,
                     "ISBN": "978-4-06-377485-6",
-                    "comment": "積まれてる"
+                    "comment": false
                 },
                 {
                     "title": "かくしごと 2",
