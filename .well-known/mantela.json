@@ -10,27 +10,32 @@
         {
             "name": "ivory",
             "extension": "200",
-            "type": "phone"
+            "type": "dialphone",
+            "identifier": "36f94d6c-6c11-4962-930f-af4ca3b9699c"
         },
         {
             "name": "laptop",
             "extension": "201",
-            "type": "phone"
+            "type": "phone",
+            "identifier": "3ebf464c-7e1d-4fde-8d36-9c1877073b8a"
         },
         {
             "name": "pixel",
             "extension": "202",
-            "type": "phone"
+            "type": "smartphone",
+            "identifier": "5e2b055a-5304-4eeb-80fc-81f3a1c2ad5b"
         },
         {
             "name": "mobile phone",
             "extension": "203",
-            "type": "phone"
+            "type": "smartphone",
+            "identifier": "0319601f-7c4d-4733-8e2c-32e9a85e174a"
         },
         {
             "name": "DATA/FAX",
             "extension": "210",
-            "type": "modem"
+            "type": "modem",
+            "identifier": "161a8a9b-3cf1-4574-b7b1-0bdf0aeac659"
         }
     ],
     "providers": [
