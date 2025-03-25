@@ -36,6 +36,17 @@
             "extension": "210",
             "type": "modem",
             "identifier": "161a8a9b-3cf1-4574-b7b1-0bdf0aeac659"
+        },
+        {
+            "name": "main",
+            "extension": "300",
+            "type": "main",
+            "identifier": "3d45c7c2-5ba9-4a64-b5ab-960ea1351b36",
+            "transferTo": [
+                "36f94d6c-6c11-4962-930f-af4ca3b9699c",
+                "5e2b055a-5304-4eeb-80fc-81f3a1c2ad5b",
+                "0319601f-7c4d-4733-8e2c-32e9a85e174a"
+            ]
         }
     ],
     "providers": [
