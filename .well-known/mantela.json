@@ -67,6 +67,12 @@
             "name": "Jiminy Local",
             "prefix": "0119",
             "mantela": "https://108jiminy.jp/phone/jiminylocalmantela.json"
+        },
+        {
+            "identifier": "d8405294-3ea4-40c4-8809-23dd6d917d38",
+            "name": "private",
+            "prefix": "",
+            "mantela": "https://unstable.kusaremkn.com/.well-known/priv-mantela.json"
         }
     ]
 }
