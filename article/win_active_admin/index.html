@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <!-- basic meta -->
+    <meta charset="UTF-8">
+    <title>WindowsのAdministratorを有効にする - もやしくん.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="もやしくん">
+    <meta name="description" content="管理者権限が付与されたユーザーアカウントが操作できないWindows上での、Administratorを有効にする方法を紹介します。">
+    <!-- ogp -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@moyashiM_25">
+    <meta property="og:title" content="WindowsのAdministratorを有効にする">
+    <meta property="og:site_name" content="もやしくん.com">
+    <meta property="og:url" content="https://moyashim-25.com/article/win_active_admin/">
+    <meta property="og:description" content="管理者権限が付与されたユーザーアカウントが操作できないWindows上での、Administratorを有効にする方法を紹介します。">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
+    <!-- icon, css -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://moyashim-25.com/",
+                        "name": "ホーム"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://moyashim-25.com/article/",
+                        "name": "記事一覧"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://moyashim-25.com/article/win_active_admin",
+                        "name": "WindowsのAdministratorを有効にする"
+                    }
+                }
+            ]
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <ul class="twbonly">
+            <li><a href="#main">メインコンテンツへジャンプ</a></li>
+        </ul>
+        <h1>WindowsのAdministratorを有効にする</h1>
+        <div class="document-info">もやしくん</div>
+        <div class="document-info">
+            公開: <time datetime="2025-04-12">2025/04/12</time>, 最終更新: <time datetime="2025-04-12">2025/04/12</time>
+        </div>
+        <nav>
+            <h2 class="twbonly">パンくずリスト</h2>
+            <ol>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/article/">記事一覧</a></li>
+                <li>WindowsのAdministratorを有効にする</li>
+            </ol>
+        </nav>
+    </header>
+    <hr id="main">
+    <main>
+        <article>
+            <h2>嗚呼、困った！</h2>
+            <p>嗚呼、どうしたらいいのだろう！</p>
+            <ul>
+                <li>私はログインできる管理者権限が付与されたWindowsユーザーがなくなってしまった</li>
+            </ul>
+            <p>普通このような状況に陥ることはないですが、例えば、</p>
+            <ul>
+                <li>私が未熟だった</li>
+                <li>コントロールパネルで意図せず自身の権限を降格させてしまった</li>
+            </ul>
+            <p>なんてときに使えるでしょう。</p>
+            <h2>注意</h2>
+            <p>紹介する方法は、システムファイルを扱います。また、権限が昇格したプロンプトを用います。場合によってはPCが起動できなくなる、PCの脆弱性につながる可能性があります。紹介する操作を行う場合は、自己責任でお願いします。
+            </p>
+            <h2>手順</h2>
+            <ol>
+                <li><a href="#recovery-cmd">回復環境のコマンドプロンプトを立ち上げる</a></li>
+                <li><a href="#replace-accessibility">アクセシビリティ（コンピューターの簡単操作）をコマンドプロンプトに置き換える</a></li>
+                <li><a href="#admin-enable">Administratorを有効にする</a></li>
+                <li><a href="#admin-disable">Administratorを無効にする</a></li>
+                <li><a href="#restore-accessibility">アクセシビリティ（コンピューターの簡単操作）をもとに戻す</a></li>
+            </ol>
+            <h2>やってみた</h2>
+            <h3 id="recovery-cmd">回復環境のコマンドプロンプトを立ち上げる</h3>
+            <p>はじめに、Windowsの回復環境に入ります。</p>
+            <ol>
+                <li>スタート画面やロック画面の電源アイコンをクリックし、キーボードの[Shift]キーを押下しながら再起動をクリックします</li>
+                <li>「お待ちください」などと表示された後に、オプションの選択画面に移ります</li>
+            </ol>
+            <p>次に、回復環境のコマンドプロンプトを立ち上げます。</p>
+            <ol>
+                <li>トラブルシューティング、コマンドプロンプトの順にクリックします</li>
+                <li>場合によっては、ここでBitLocker回復キーを入力します</li>
+            </ol>
+            <h3 id="replace-accessibility">アクセシビリティ（コンピューターの簡単操作）をコマンドプロンプトに置き換える</h3>
+            <p>前の操作で起動しているコマンドプロンプトで、次を各行ずつ実行します。</p>
+            <pre><code>C:
+cd Windows\System32
+ren Utilman.exe Utilman.exe.bak
+copy cmd.exe Utilman.exe</code></pre>
+            <p>これで、次回Windowsを起動したときに、アクセシビリティ（コンピューターの簡単操作）がコマンドプロンプトに置き換わります。直ちに再起動するには、コマンドプロンプトで</p>
+            <pre><code>shutdown /r /t 0</code></pre>
+            <p>を実行します。</p>
+            <h3 id="admin-enable">Administratorを有効にする</h3>
+            <p>再起動したあと、ロック画面上の[電源]の隣にある、アクセシビリティをクリックします。すると、コマンドプロンプトが立ち上がります。</p>
+            <p>このとき、<code>whoami</code>を実行すると、<code>nt authority\system</code>となるでしょう。すなわち、このコマンドプロンプトは通常の環境（回復環境ではないということ）の下、SYSTEM権限で立ち上がっています。
+            </p>
+            <p>Administratorを有効にするには、次を各行ずつ実行します。</p>
+            <pre><code>net user administrator /active:yes
+net user administrator *</code></pre>
+            <p>任意のパスワードを設定するように求められます（未設定も可）。これで、Administratorが有効になりました。再起動後、ロック画面にAdministratorのユーザーが表示され、ログインできるようになります。
+            </p>
+            <h3 id="admin-disable">Administratorを無効にする</h3>
+            <p>Administratorを無効にするには、管理者権限が与えられた任意のコマンドプロンプトで次を実行します。</p>
+            <pre><code>net user administrator /active:no</code></pre>
+            <h3 id="restore-accessibility">アクセシビリティ（コンピューターの簡単操作）をもとに戻す</h3>
+            <p><strong>回復環境のコマンドプロンプト</strong>を立ち上げ、次を実行します。</p>
+            <pre><code>C:
+cd Windows\System32
+del Utilman.exe
+ren Utilman.exe.bak Utilman.exe</code></pre>
+            <p>実行後、再起動し、ロック画面上の[電源]の隣にある、アクセシビリティが通常動作していれば完了です。</p>
+            <h2>参考</h2>
+            <ul>
+                <li><a href="https://note.com/herf_neat/n/n8200cdd436ca">Windowsの管理者権限を取得する方法｜田舎の半ニート(仮)</a></li>
+            </ul>
+        </article>
+    </main>
+    <hr>
+    <footer>
+        <p><small>&copy; 2025 もやしくん</small></p>
+    </footer>
+</body>
+
+</html>
