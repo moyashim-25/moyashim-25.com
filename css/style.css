@@ -3,7 +3,7 @@
 /* ##########
 style.css
 (c) 2024 もやしくん
-last modified: 2024/04/21
+last modified: 2025/03/25
 ########## */
 
 /* ==========
@@ -15,26 +15,31 @@ general
 
 @font-face {
     font-family: "PC Noto";
-    src: local("Noto Sans JP");
+    src: local("Noto Sans JP"),
+        local("Noto Sans CJK JP"),
+        local("Noto Sans JP Regular"),
+        local("Noto Sans CJK JP Regular");
     font-weight: 400;
 }
 
 @font-face {
     font-family: "PC Noto";
-    src: local("Noto Sans JP Bold");
+    src: local("Noto Sans JP Bold"),
+        local("Noto Sans CJK JP Bold");
     font-weight: 700;
 }
 
-
 @font-face {
     font-family: "PC Noto Mono";
-    src: local("Noto Mono");
+    src: local("Noto Mono"),
+        local("Noto Mono Regular");
     font-weight: 400;
 }
 
 @font-face {
-    font-family: "PC plemo";
-    src: local("PlemolJP Regular");
+    font-family: "PC plemol";
+    src: local("PlemolJP"),
+        local("PlemolJP Regular");
     font-weight: 400;
 }
 
@@ -45,6 +50,10 @@ general
     font-weight: 400;
     line-height: 1.5em;
     color: var(--Gray-text-Black);
+}
+
+html {
+    font-size: 16px;
 }
 
 a {
@@ -72,7 +81,7 @@ html {
     --Gray-Gray: rgb(132, 145, 158);
     --Gray-Black: rgb(0, 0, 0);
 
-    --screen: calc(1000px+2em);
+    --screen: calc(1000px+2rem);
 }
 
 /* Text-based Web Browser ONLY */
@@ -87,9 +96,27 @@ html {
 }
 
 /* tags */
+* {
+    text-spacing-trim: trim-start;
+}
+
+html {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 590px) {
+    html {
+        font-size: 14px;
+    }
+}
+
 hr {
     /* The hr tag in moyashim-25.com is for Text-based web browser only. */
     display: none;
+}
+
+p {
+    margin: 0.3rem 0;
 }
 
 ul,
@@ -103,7 +130,7 @@ dt * {
 }
 
 dd {
-    padding-left: 1.5em;
+    padding-left: 1.5rem;
 }
 
 b,
@@ -111,54 +138,87 @@ strong {
     font-weight: 700;
 }
 
-blockquote {
-    border-left: var(--Gray-Gray) 5px solid;
-    background-color: var(--Gray-backGray);
-    padding: 0.8em;
+em {
+    text-decoration: underline;
 }
 
-blockquote cite {
+figure:has(blockquote) {
+    border-left: var(--Gray-Gray) 5px solid;
+    background-color: var(--Gray-backGray);
+    padding: 0.8rem;
+}
+
+figure>blockquote+figcaption {
+    margin: 0;
+}
+
+figure>blockquote+figcaption cite {
     display: block;
     text-align: right;
     font-size: 0.8rem;
 }
 
+table {
+    margin: 1rem auto;
+    border-collapse: collapse;
+    border-top: 1px solid var(--Gray-Black);
+    border-bottom: 1px solid var(--Gray-Black);
+
+    th {
+        font-weight: 700;
+    }
+
+    th,
+    td {
+        padding: 0 0.25rem;
+    }
+
+    thead {
+        border-bottom: 1px solid var(--Gray-Black);
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: var(--Gray-backGray);
+    }
+}
+
 pre {
-    font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemo", monospace;
+    font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemol", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-variation-settings: "wdth" 100;
 
-    padding: 1em;
-    font-size: 0.8em;
+    padding: 1rem;
+    font-size: 0.8rem;
     background-color: var(--Gray-Black);
-    border-radius: 0.5em;
+    border-radius: 0.5rem;
     color: var(--Gray-White);
     overflow-x: auto;
+    scrollbar-width: thin;
 
     & * {
-        font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemo", monospace;
+        font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemol", monospace;
         color: var(--Gray-White);
     }
 }
 
 p code {
-    font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemo", monospace;
-    font-size: 0.8em;
+    font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemol", monospace;
+    font-size: 0.8rem;
     background-color: var(--Gray-Black);
     color: var(--Gray-White);
-    padding: 0 0.5em;
-    border-radius: 0.5em;
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
 }
 
 figure {
-    margin: 1em 0;
+    margin: 1rem 0;
 }
 
 figure>figcaption {
     text-align: center;
-    margin: 0.5em;
+    margin: 0.5rem;
 }
 
 figure.center {
@@ -167,15 +227,21 @@ figure.center {
 }
 
 figure.fullwidth {
-    margin: auto;
+    margin: 1rem auto;
     text-align: center;
     display: block;
     max-width: 700px;
 
     img {
+        display: block;
+        margin: auto;
         width: 100%;
         max-width: max-content;
     }
+}
+
+small {
+    font-size: 0.8rem;
 }
 
 
@@ -183,9 +249,10 @@ figure.fullwidth {
 body
 ========== */
 body {
-    padding: 1em;
+    padding: 1rem;
     max-width: 1000px;
     margin: auto;
+    text-align: justify;
 }
 
 
@@ -211,22 +278,26 @@ body>header .document-info {
 
 body>header nav {
     font-size: 0.8rem;
-    margin: 0.5em 0;
+    margin: 0.5rem 0;
 }
 
 body>header nav ol {
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 body>header nav ol li {
-    display: inline;
+    display: block;
 }
 
-body>header nav ol li:not(:last-of-type)::after {
+body>header nav ol li:not(:first-of-type)::before {
     content: ">";
     user-select: none;
-    padding: 0 0.5em;
+    padding: 0 0.5rem;
 }
 
 
@@ -239,19 +310,15 @@ main {
     padding: 0 0.5rem;
 }
 
-p {
-    margin: 0.3em 0;
-}
-
 main h2 {
-    margin: 1em 0 0.5rem 0;
+    margin: 1rem 0 0.5rem 0;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--Gray-Black);
 }
 
 main h3 {
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0.8rem 0 0.5rem 0;
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--Gray-Black);

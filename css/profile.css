@@ -2,15 +2,16 @@
 
 /*
 profile.css
-last modified: 2024/04/21
+last modified: 2025/03/03
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
 
 .prof-grid {
     display: grid;
-    grid-template-columns: 10em 1fr;
-    gap: 16px 32px;
+    grid-template-columns: 160px 1fr;
+    gap: 1rem 2rem;
     justify-content: center;
     align-items: center;
 }
@@ -27,6 +28,11 @@ last modified: 2024/04/21
     display: block;
 }
 
+.prof-yokonaga {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
 .prof-main {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -38,9 +44,9 @@ last modified: 2024/04/21
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
-    gap: 1em 1.5rem;
+    gap: 1rem 1.5rem;
 }
 
 .prof-info {
@@ -49,32 +55,46 @@ last modified: 2024/04/21
 
 .prof-info div dt {
     border-bottom: 1px dotted var(--Gray-Gray);
+    font-size: 1.2rem;
 }
 
 .prof-info div dd {
     padding: 0;
 }
 
-blockquote {
+figure:has(blockquote) {
     border: none;
     background-color: unset;
+    padding: 0;
 }
 
-blockquote footer {
+figure>blockquote+figcaption {
     text-align: right;
     display: block;
     font-size: 0.8rem;
 }
 
-blockquote footer cite {
+figure>blockquote+figcaption cite {
     display: inline;
     font-style: normal;
 }
 
-@media screen and (max-width: 500px) {
+span.mincho {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
+}
+
+.zhong-wen {
+    font-family: "Noto Sans SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media screen and (max-width: 590px) {
     .prof-grid {
         display: flex;
-        gap: 16px 0;
+        gap: 1rem 0;
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: center;

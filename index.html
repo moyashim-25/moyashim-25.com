@@ -18,11 +18,29 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
     <!-- icon, css -->
-    <link rel="icon" href="/img/favicon.ico">
     <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/top.css">
+    <!-- script -->
+    <script src="/js/homecomment.js" defer></script>
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://moyashim-25.com/",
+                        "name": "ホーム"
+                    }
+                }
+            ]
+        }
+    </script>
 </head>
 
 <body>
@@ -45,61 +63,143 @@
         <header>
             <h2>もやしくん.comへようこそ！</h2>
             <figure class="fullwidth">
-                <img src="/img/topimg.webp" alt="もやしくん.comのホームページのバナー">
+                <img src="/img/topimage.webp" alt="もやしくん.comのホームページのバナー">
             </figure>
             <p>
-                もやしくん.comには、もやしくんのあんなことやそんなこと、興味のあるものについて記されています。<a href="#top-nav">各ページへの案内</a>からコンテンツにアクセスしてみましょう！
+                <span id="time-comment"></span>もやしくん.comには、もやしくんのあんなことやそんなこと、興味のあるものについて記されています。
             </p>
         </header>
         <h2 id="top-nav">各ページへの案内</h2>
         <nav>
             <ul>
                 <li>
-                    <a href="/music/">
-                        <div>
-                            <h3>いま何きいてる？</h3>
-                            <p>もやしくんのきいている曲を見てみよう！</p>
-                        </div>
+                    <a href="/article/">
+                        <dl>
+                            <dt>記事一覧</dt>
+                            <dd>もやしくんの執筆した記事の一覧</dd>
+                        </dl>
                     </a>
                 </li>
                 <li>
                     <a href="/library/">
-                        <div>
-                            <h3>本棚</h3>
-                            <p>もやしくんの所有する図書を見れます</p>
-                        </div>
+                        <dl>
+                            <dt>本棚</dt>
+                            <dd>もやしくんの所有する図書の一覧</dd>
+                        </dl>
                     </a>
                 </li>
                 <li>
                     <a href="/links/">
-                        <div>
-                            <h3>リンク集</h3>
-                            <p>もやしくんの各種リンクにアクセスできます</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="/about/">
-                        <div>
-                            <h3>サイトについて</h3>
-                            <p>もやしくん.comに関する情報を見れます</p>
-                        </div>
+                        <dl>
+                            <dt>リンク集</dt>
+                            <dd>もやしくんの各種リンクの一覧</dd>
+                        </dl>
                     </a>
                 </li>
                 <li>
                     <a href="/sitemap.html">
-                        <div>
-                            <h3>サイトマップ</h3>
-                            <p>もやしくん.comのサイトマップです</p>
-                        </div>
+                        <dl>
+                            <dt>サイトマップ</dt>
+                            <dd>もやしくん.comのページ一覧</dd>
+                        </dl>
+                    </a>
+                </li>
+                <li>
+                    <a href="/music/">
+                        <dl>
+                            <dt>いま何きいてる？</dt>
+                            <dd>Spotifyできいている曲がみれる</dd>
+                        </dl>
+                    </a>
+                </li>
+                <li>
+                    <a href="/about/profile/">
+                        <dl>
+                            <dt>もやしくんについて</dt>
+                            <dd>もやしくんって誰？</dd>
+                        </dl>
+                    </a>
+                </li>
+                <li>
+                    <a href="/moyashitel/">
+                        <dl>
+                            <dt>moyashitelについて</dt>
+                            <dd>もやしくんの管理する電話交換局</dd>
+                        </dl>
+                    </a>
+                </li>
+                <li>
+                    <a href="/about/">
+                        <dl>
+                            <dt>サイトについて</dt>
+                            <dd>もやしくん.comに関する情報</dd>
+                        </dl>
                     </a>
                 </li>
             </ul>
         </nav>
+
+        <h2>主要リンク</h2>
+        <ul id="link">
+            <li><a href="https://x.com/moyashiM_25" target="_blank">X (@moyashiM_25)</a></li>
+            <li><a href="https://www.instagram.com/moyashim_25/" target="_blank">Instagram (moyashim_25)</a></li>
+            <li><a href="https://github.com/moyashim-25" target="_blank">GitHub (moyashim-25)</a></li>
+        </ul>
+        <p>その他のリンクは<a href="/links/">リンク集</a>へ</p>
+        <iframe
+            src="https://script.google.com/macros/s/AKfycbxMrcEwnsXylwDhkcdc5QQ2ip-5_nVuWiAodXE37w_aBukEU6NgwelRFb3OnaS54dJd/exec"
+            style="width: 100%; height: 379px; overflow: hidden; border: 0;" loading="lazy"
+            title="もやしくんがSpotifyで最近再生"></iframe>
+
+        <div id="banner">
+            <ul>
+                <li>
+                    <a href="https://108jiminy.jp/">
+                        <picture>
+                            <img src="img/banner/fav/108jiminy.jp.png" alt="108jiminy.jp" width="117" height="30"
+                                loading="lazy" decoding="async">
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://kusaremkn.com/">
+                        <picture>
+                            <img src="img/banner/fav/kusaremkn.com.webp" alt="KusaReMKN.com" width="88" height="31"
+                                loading="lazy" decoding="async">
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://sasakulab.com/">
+                        <picture>
+                            <img src="img/banner/fav/sasakulab.com.png" alt="Sasakulab" width="117" height="30"
+                                loading="lazy" decoding="async">
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.yude.jp/">
+                        <picture>
+                            <img src="img/banner/fav/www.yude.jp.png" alt="www.yude.jp" width="117" height="30"
+                                loading="lazy" decoding="async">
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://moyashim-25.com/">
+                        <picture>
+                            <source srcset="/img/banner/banner_234_60_.webp" type="image/webp" width="117" height="30">
+                            <img src="/img/banner/banner_234_60_.gif" alt="もやしくん.com" width="117" height="30"
+                                loading="lazy" decoding="async">
+                        </picture>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </main>
     <hr>
     <footer>
-        <p><small>&copy; 2024 もやしくん</small></p>
+        <p><small>&copy; 2024&ndash;2025 もやしくん</small></p>
     </footer>
 </body>
 

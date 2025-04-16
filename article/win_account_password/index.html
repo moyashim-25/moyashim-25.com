@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <!-- basic meta -->
+    <meta charset="UTF-8">
+    <title>Windowsユーザーのパスワードを変更する - もやしくん.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="もやしくん">
+    <meta name="description" content="Windows上のユーザーのパスワードをコマンドプロンプトを用いて変更する方法を紹介します。">
+    <!-- ogp -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@moyashiM_25">
+    <meta property="og:title" content="Windowsユーザーのパスワードを変更する">
+    <meta property="og:site_name" content="もやしくん.com">
+    <meta property="og:url" content="https://moyashim-25.com/article/win_account_password/">
+    <meta property="og:description" content="Windows上のユーザーのパスワードをコマンドプロンプトを用いて変更する方法を紹介します。">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
+    <!-- icon, css -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://moyashim-25.com/",
+                        "name": "ホーム"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://moyashim-25.com/article/",
+                        "name": "記事一覧"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://moyashim-25.com/article/win_account_password",
+                        "name": "Windowsユーザーのパスワードを変更する"
+                    }
+                }
+            ]
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <ul class="twbonly">
+            <li><a href="#main">メインコンテンツへジャンプ</a></li>
+        </ul>
+        <h1>Windowsユーザーのパスワードを変更する</h1>
+        <div class="document-info">もやしくん</div>
+        <div class="document-info">
+            公開: <time datetime="2025-04-12">2025/04/12</time>, 最終更新: <time datetime="2025-04-12">2025/04/12</time>
+        </div>
+        <nav>
+            <h2 class="twbonly">パンくずリスト</h2>
+            <ol>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/article/">記事一覧</a></li>
+                <li>Windowsユーザーのパスワードを変更する</li>
+            </ol>
+        </nav>
+    </header>
+    <hr id="main">
+    <main>
+        <article>
+            <h2>嗚呼、困った！</h2>
+            <p>嗚呼、どうしたらいいのだろう！</p>
+            <ol>
+                <li>私は<strong>回復環境でない管理者権限を持ったコマンドプロンプト</strong>を操作できる環境があります</li>
+                <li>Windows上にユーザーアカウントがあります</li>
+                <li>私はそのユーザーのパスワードを変更したいです</li>
+            </ol>
+            <p>普通このような状況に陥ることはないですが、例えば、</p>
+            <ul>
+                <li>研究室のパソコンに先輩のユーザーアカウントが残っているけど、パスワードが解除できずにアクセスできない</li>
+                <li>随分前に設定したユーザーアカウントのパスワードを忘れてしまった</li>
+            </ul>
+            <p>なんてときに使えるでしょう。</p>
+            <h2>なんだ、簡単じゃないか</h2>
+            <p>まず、管理者権限を持ったコマンドプロンプトで</p>
+            <pre><code>net user</code></pre>
+            <p>と入力して、ユーザーアカウントの一覧を表示し、対象のユーザーが存在することを確認します。</p>
+            <p>次に、</p>
+            <pre><code>net user ユーザー名 新しいパスワード</code></pre>
+            <p>と入力します。これで、対象のユーザーのパスワードを変更することができました！</p>
+            <p>これらの操作の後、実際にパスワードが変更されているか、対象のユーザーにログインして確認してみましょう。</p>
+            <h2>私は回復環境でない管理者権限を持ったコマンドプロンプトを操作する環境がありません！</h2>
+            <p>「<a
+                    href="/article/win_active_admin/">WindowsのAdministratorを有効にする</a>」を参考に、Administratorを有効にすることで必要な権限を得ることができますよ。
+            </p>
+        </article>
+    </main>
+    <hr>
+    <footer>
+        <p><small>&copy; 2025 もやしくん</small></p>
+    </footer>
+</body>
+
+</html>

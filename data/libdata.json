@@ -1,6 +1,6 @@
 {
     "databaseName": "MyLibrary",
-    "lastModified": "2024-05-04T23:21+09:00",
+    "lastModified": "2025-03-14T20:46+09:00",
     "category": [
         {
             "categoryName": "数学",
@@ -293,6 +293,17 @@
                     "numberOfPages": 102,
                     "ISBN": "978-4-8425-0385-1",
                     "comment": false
+                },
+                {
+                    "title": "社員が努力して、働けば働くほど報われる仕組み",
+                    "author": "釣谷宏行",
+                    "series": false,
+                    "publisher": "ダイヤモンド・ビジネス企画",
+                    "edition": "第1刷",
+                    "year": 2023,
+                    "numberOfPages": 308,
+                    "ISBN": "978-4-478-08500-4",
+                    "comment": "株式会社CKサンエツからの講義内配布による蔵書、内容は[企業/経営者]"
                 }
             ]
         },
@@ -467,6 +478,17 @@
                     "comment": false
                 },
                 {
+                    "title": "バーチャルリアリティ学",
+                    "author": "日本バーチャルリアリティ学会",
+                    "series": false,
+                    "publisher": "特定非営利活動法人 日本バーチャルリアリティ学会",
+                    "edition": "初版",
+                    "year": 2011,
+                    "numberOfPages": 384,
+                    "ISBN": "978-4-904490-05-1",
+                    "comment": false
+                },
+                {
                     "title": "令和06年 イメージ＆クレバー方式でよくわかる かやのき先生の基本情報技術者教室",
                     "author": "栢木厚",
                     "series": "情報処理技術者試験シリーズ",
@@ -524,14 +546,14 @@
             "data": [
                 {
                     "title": "［改訂第8版］LaTeX2ε美文書作成入門",
-                    "author": "奥村晴彦，黒木裕介",
+                    "author": "奥村晴彦, 黒木裕介",
                     "series": false,
                     "publisher": "技術評論社",
                     "edition": "第8版",
                     "year": 2020,
                     "numberOfPages": 448,
                     "ISBN": "978-4-297-11712-2",
-                    "comment": "皆も美文書になろう。身内からのお下がり"
+                    "comment": "皆も美文書になろう。🍊の本棚から"
                 }
             ]
         },
@@ -588,7 +610,13 @@
                     "numberOfPages": 408,
                     "ISBN": "978-4-7503-4966-4",
                     "comment": false
-                },
+                }
+            ]
+        },
+        {
+            "categoryName": "社会",
+            "categoryID": "social",
+            "data": [
                 {
                     "title": "はじまりの社会学――問いつづけるためのレッスン",
                     "author": "奥村隆",
@@ -598,6 +626,17 @@
                     "year": 2018,
                     "numberOfPages": 306,
                     "ISBN": "978-4-623-08141-7",
+                    "comment": false
+                },
+                {
+                    "title": "18歳から考えるワークルール",
+                    "author": "道幸哲也, 加藤智章, 國武英生",
+                    "series": "From 18",
+                    "publisher": "法律文化社",
+                    "edition": "第2版",
+                    "year": 2018,
+                    "numberOfPages": 112,
+                    "ISBN": "978-4-589-03882-1",
                     "comment": false
                 }
             ]
@@ -616,6 +655,17 @@
                     "numberOfPages": 189,
                     "ISBN": "978-4-8330-2239-2",
                     "comment": false
+                },
+                {
+                    "title": "新幹線50年の技術史",
+                    "author": "曽根悟",
+                    "series": "ブルーバックス",
+                    "publisher": "講談社",
+                    "edition": "初版",
+                    "year": 2014,
+                    "numberOfPages": 240,
+                    "ISBN": "978-4-06-257863-9",
+                    "comment": "通巻番号1863"
                 }
             ]
         },
@@ -807,6 +857,17 @@
                     "comment": false
                 },
                 {
+                    "title": "新明解国語辞典",
+                    "author": "山田忠雄 他",
+                    "series": "新明解",
+                    "publisher": "三省堂",
+                    "edition": "第8版小型版",
+                    "year": 2020,
+                    "numberOfPages": 1792,
+                    "ISBN": "978-4-385-13080-4",
+                    "comment": "身内からのお上がり"
+                },
+                {
                     "title": "全訳・漢辞海",
                     "author": "戸川芳郎 他",
                     "series": "漢辞海",
@@ -838,6 +899,39 @@
                     "numberOfPages": 2000,
                     "ISBN": "978-4-469-04175-0",
                     "comment": false
+                },
+                {
+                    "title": "行ってみよう!中国語への旅――世界遺産へようこそ",
+                    "author": "山下輝彦, 黄漢青",
+                    "series": false,
+                    "publisher": "朝日出版社",
+                    "edition": "第1版",
+                    "year": 2020,
+                    "numberOfPages": 99,
+                    "ISBN": "978-4-255-45332-3",
+                    "comment": "CD 1枚 (12cm)が付属"
+                },
+                {
+                    "title": "TOEICテスト公式問題集――新形式問題対応編",
+                    "author": "Educational Testing Service",
+                    "series": false,
+                    "publisher": "国際ビジネスコミュニケーション協会",
+                    "edition": "第1版",
+                    "year": 2016,
+                    "numberOfPages": 119,
+                    "ISBN": "978-4-906033-48-5",
+                    "comment": "録音ディスク(2枚 12cm)、解答・解説(176p)が付属"
+                },
+                {
+                    "title": "TOEIC L&Rテスト究極の模試600問+",
+                    "author": "ヒロ前田",
+                    "series": false,
+                    "publisher": "アルク",
+                    "edition": "初版",
+                    "year": 2020,
+                    "numberOfPages": 382,
+                    "ISBN": "978-4-7574-3396-0",
+                    "comment": "模擬試験1(43p)、模擬試験2(43p)、模擬試験3(43p)、模擬試験4(43p)が付属"
                 }
             ]
         },
@@ -899,6 +993,305 @@
                     "numberOfPages": 138,
                     "ISBN": false,
                     "comment": "IDEA magazine 352 ビデオ・ゲーム・グラフィック"
+                },
+                {
+                    "title": "芸術工学研究 vol. 20",
+                    "author": "九州大学大学院芸術工学研究院紀要『芸術工学研究』編集委員会",
+                    "series": "九州大学大学院芸術工学研究院 紀要",
+                    "publisher": "九州大学大学院芸術工学研究院",
+                    "edition": "vol. 20",
+                    "year": 2014,
+                    "numberOfPages": 44,
+                    "ISBN": false,
+                    "comment": false
+                },
+                {
+                    "title": "芸術工学研究 vol. 21",
+                    "author": "九州大学大学院芸術工学研究院紀要『芸術工学研究』編集委員会",
+                    "series": "九州大学大学院芸術工学研究院 紀要",
+                    "publisher": "九州大学大学院芸術工学研究院",
+                    "edition": "vol. 21",
+                    "year": 2014,
+                    "numberOfPages": 68,
+                    "ISBN": false,
+                    "comment": false
+                }
+            ]
+        },
+        {
+            "categoryName": "教育",
+            "categoryID": "education",
+            "data": [
+                {
+                    "title": "大学生の学び・入門――大学での勉強は役に立つ！",
+                    "author": "溝上慎一",
+                    "series": "有斐閣アルマ",
+                    "publisher": "有斐閣",
+                    "edition": "初版",
+                    "year": 2006,
+                    "numberOfPages": 186,
+                    "ISBN": "4-641-12282-2",
+                    "comment": "本当か？ 教科書として購入"
+                }
+            ]
+        },
+        {
+            "categoryName": "哲学",
+            "categoryID": "philosophy",
+            "data": [
+                {
+                    "title": "プチ哲学",
+                    "author": "佐藤雅彦",
+                    "series": false,
+                    "publisher": "中央公論新社",
+                    "edition": "21刷",
+                    "year": 2018,
+                    "numberOfPages": 154,
+                    "ISBN": "978-4-12-204344-2",
+                    "comment": "故友を顧みたまに読みたい"
+                }
+            ]
+        },
+        {
+            "categoryName": "日本文学",
+            "categoryID": "japanese-literature",
+            "data": [
+                {
+                    "title": "給食のおにいさん",
+                    "author": "遠藤彩見",
+                    "series": "給食のおにいさん",
+                    "publisher": "幻冬舎",
+                    "edition": "13版",
+                    "year": 2015,
+                    "numberOfPages": 347,
+                    "ISBN": "978-4-344-42089-2",
+                    "comment": "スフレ"
+                },
+                {
+                    "title": "給食のおにいさん 進級",
+                    "author": "遠藤彩見",
+                    "series": "給食のおにいさん",
+                    "publisher": "幻冬舎",
+                    "edition": "3版",
+                    "year": 2014,
+                    "numberOfPages": 285,
+                    "ISBN": "978-4-344-42176-9",
+                    "comment": false
+                },
+                {
+                    "title": "失はれる物語",
+                    "author": "乙一",
+                    "series": false,
+                    "publisher": "角川書店",
+                    "edition": "26版",
+                    "year": 2011,
+                    "numberOfPages": 381,
+                    "ISBN": "978-4-04-425306-6",
+                    "comment": "短編8作、水に濡れたような表紙がいい"
+                },
+                {
+                    "title": "か「」く「」し「」ご「」と「",
+                    "author": "住野よる",
+                    "series": false,
+                    "publisher": "新潮社",
+                    "edition": "初版",
+                    "year": 2020,
+                    "numberOfPages": 330,
+                    "ISBN": "978-4-10-102351-9",
+                    "comment": false
+                },
+                {
+                    "title": "この気持ちもいつか忘れる",
+                    "author": "住野よる",
+                    "series": false,
+                    "publisher": "新潮社",
+                    "edition": "初版",
+                    "year": 2020,
+                    "numberOfPages": 369,
+                    "ISBN": "978-4-10-350832-8",
+                    "comment": "CD付先行限定版、友達に買ってもらってます"
+                },
+                {
+                    "title": "また、同じ夢を見ていた",
+                    "author": "住野よる",
+                    "series": false,
+                    "publisher": "双葉社",
+                    "edition": "第10刷",
+                    "year": 2020,
+                    "numberOfPages": 300,
+                    "ISBN": "978-4-575-52125-2",
+                    "comment": "「人生はプリンみたいなものってことね」"
+                },
+                {
+                    "title": "プラチナデータ",
+                    "author": "東野圭吾",
+                    "series": false,
+                    "publisher": "幻冬舎",
+                    "edition": "18版",
+                    "year": 2013,
+                    "numberOfPages": 493,
+                    "ISBN": "978-4-344-41884-4",
+                    "comment": "いつかの春に買ってそう"
+                },
+                {
+                    "title": "レンタルチルドレン",
+                    "author": "山田悠介",
+                    "series": false,
+                    "publisher": "幻冬舎",
+                    "edition": "28版",
+                    "year": 2016,
+                    "numberOfPages": 261,
+                    "ISBN": "978-4-344-41123-4",
+                    "comment": false
+                },
+                {
+                    "title": "特別法第001条DUST〈ダスト〉",
+                    "author": "山田悠介",
+                    "series": false,
+                    "publisher": "幻冬舎",
+                    "edition": "22版",
+                    "year": 2017,
+                    "numberOfPages": 509,
+                    "ISBN": "978-4-344-41297-2",
+                    "comment": "私も危うく島流し"
+                }
+            ]
+        },
+        {
+            "categoryName": "漫画",
+            "categoryID": "comics",
+            "data": [
+                {
+                    "title": "かくしごと 1",
+                    "author": "久米田康治",
+                    "series": "かくしごと",
+                    "publisher": "講談社",
+                    "edition": "第6刷",
+                    "year": 2020,
+                    "numberOfPages": 183,
+                    "ISBN": "978-4-06-377485-6",
+                    "comment": false
+                },
+                {
+                    "title": "かくしごと 2",
+                    "author": "久米田康治",
+                    "series": "かくしごと",
+                    "publisher": "講談社",
+                    "edition": "第2刷",
+                    "year": 2020,
+                    "numberOfPages": 163,
+                    "ISBN": "978-4-06-393029-0",
+                    "comment": false
+                },
+                {
+                    "title": "かくしごと 3",
+                    "author": "久米田康治",
+                    "series": "かくしごと",
+                    "publisher": "講談社",
+                    "edition": "第3刷",
+                    "year": 2020,
+                    "numberOfPages": 147,
+                    "ISBN": "978-4-06-393148-8",
+                    "comment": false
+                },
+                {
+                    "title": "かくしごと 4",
+                    "author": "久米田康治",
+                    "series": "かくしごと",
+                    "publisher": "講談社",
+                    "edition": "第3刷",
+                    "year": 2020,
+                    "numberOfPages": 147,
+                    "ISBN": "978-4-06-393209-6",
+                    "comment": false
+                },
+                {
+                    "title": "かくしごと 5",
+                    "author": "久米田康治",
+                    "series": "かくしごと",
+                    "publisher": "講談社",
+                    "edition": "第3刷",
+                    "year": 2020,
+                    "numberOfPages": 155,
+                    "ISBN": "978-4-06-510463-7",
+                    "comment": false
+                },
+                {
+                    "title": "かくしごと 6",
+                    "author": "久米田康治",
+                    "series": "かくしごと",
+                    "publisher": "講談社",
+                    "edition": "第3刷",
+                    "year": 2020,
+                    "numberOfPages": 131,
+                    "ISBN": "978-4-06-511492-6",
+                    "comment": false
+                },
+                {
+                    "title": "かくしごと 7",
+                    "author": "久米田康治",
+                    "series": "かくしごと",
+                    "publisher": "講談社",
+                    "edition": "第3刷",
+                    "year": 2020,
+                    "numberOfPages": 147,
+                    "ISBN": "978-4-06-513406-1",
+                    "comment": false
+                },
+                {
+                    "title": "かくしごと 8",
+                    "author": "久米田康治",
+                    "series": "かくしごと",
+                    "publisher": "講談社",
+                    "edition": "第2刷",
+                    "year": 2020,
+                    "numberOfPages": 147,
+                    "ISBN": "978-4-06-515253-9",
+                    "comment": false
+                },
+                {
+                    "title": "かくしごと 9",
+                    "author": "久米田康治",
+                    "series": "かくしごと",
+                    "publisher": "講談社",
+                    "edition": "第1刷",
+                    "year": 2019,
+                    "numberOfPages": 147,
+                    "ISBN": "978-4-06-517104-2",
+                    "comment": "1冊だけ中古だってバレたらどーする？"
+                },
+                {
+                    "title": "かくしごと 10",
+                    "author": "久米田康治",
+                    "series": "かくしごと",
+                    "publisher": "講談社",
+                    "edition": "第3刷",
+                    "year": 2020,
+                    "numberOfPages": 147,
+                    "ISBN": "978-4-06-517631-3",
+                    "comment": false
+                },
+                {
+                    "title": "かくしごと 11",
+                    "author": "久米田康治",
+                    "series": "かくしごと",
+                    "publisher": "講談社",
+                    "edition": "第1刷",
+                    "year": 2020,
+                    "numberOfPages": 147,
+                    "ISBN": "978-4-06-518694-7",
+                    "comment": false
+                },
+                {
+                    "title": "かくしごと 12",
+                    "author": "久米田康治",
+                    "series": "かくしごと",
+                    "publisher": "講談社",
+                    "edition": "第3刷",
+                    "year": 2020,
+                    "numberOfPages": 159,
+                    "ISBN": "978-4-06-519981-7",
+                    "comment": false
                 }
             ]
         }

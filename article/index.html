@@ -19,9 +19,34 @@
     <meta property="og:image" content="https://moyashim-25.com/img/cardimg.png">
     <!-- icon, css -->
     <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/style.css">
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://moyashim-25.com/",
+                        "name": "ホーム"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://moyashim-25.com/article/",
+                        "name": "記事一覧"
+                    }
+                }
+            ]
+        }
+    </script>
 </head>
 
 <body>
@@ -32,12 +57,13 @@
         <h1>記事一覧</h1>
         <div class="document-info">もやしくん</div>
         <div class="document-info">
-            公開: <time datetime="2023-08-20">2023/08/06</time>, 最終更新: <time datetime="2024-04-21">2024/04/21</time>
+            公開: <time datetime="2023-08-20">2023/08/06</time>, 最終更新: <time datetime="2025-04-12">2025/04/12</time>
         </div>
         <nav>
             <h2 class="twbonly">パンくずリスト</h2>
             <ol>
-                <li><a href="/">ホーム</a></li><li>記事一覧</li>
+                <li><a href="/">ホーム</a></li>
+                <li>記事一覧</li>
             </ol>
         </nav>
     </header>
@@ -47,15 +73,39 @@
             <header>
                 <p>もやしくんの執筆した記事の一覧です。</p>
             </header>
+            <h2>Zenn</h2>
+            <p>Zennのプロフィールは<a href="https://zenn.dev/moyashim_25">こちら</a></p>
+            <ul>
+                <li><a href="https://zenn.dev/moyashim_25/articles/f0baafc7bd5a04">Windows の OpenSSH SSH Server と ConnectBot で鍵認証接続する</a></li>
+            </ul>
             <h2>もやしくん.com</h2>
             <ul>
-                <li><a href="/article/markupdoc/">マークアップ文書のすすめ</a></li>
+                <li><a href="/article/win_account_password/">Windowsユーザーのパスワードを変更する</a></li>
+                <li><a href="/article/win_active_admin/">WindowsのAdministratorを有効にする</a></li>
+                <li><a href="/article/kapuri/">かぷり</a></li>
+                <li><a href="/article/neiro/">「ねいろ」か「おんしょく」か</a></li>
+                <li><a href="/article/spotify-webapi/">Spotify Web APIを使うときに読むやつ</a></li>
+                <li><a href="/article/template/">もやしくん.comの記事テンプレート</a></li>
+            </ul>
+            <h2>Electoneで遊ぶ</h2>
+            <p>Bloggerで作成</p>
+            <ul>
+                <li>
+                    <a href="https://electone-asobu.blogspot.com/">Electoneで遊ぶ</a>
+                    <ul>
+                        <li><a href="https://electone-asobu.blogspot.com/2021/12/environment.html">作業環境・参考ページ、資料</a>
+                        </li>
+                        <li><a
+                                href="https://electone-asobu.blogspot.com/2021/12/blog-post.html">エレクトーンのデータはどうやって保存されてる?</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </article>
     </main>
     <hr>
     <footer>
-        <p><small>&copy; 2024 もやしくん</small></p>
+        <p><small>&copy; 2024&ndash;2025 もやしくん</small></p>
     </footer>
 </body>
 
