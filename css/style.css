@@ -1,18 +1,22 @@
 @charset "UTF-8";
 
-/* ##########
-style.css
-(c) 2024 もやしくん
-last modified: 2025/03/25
-########## */
+/*####################
+ style.css
+ (C) 2024 もやしくん
+ 
+ もやしくん.com の標準 CSS
+ 最終更新: 2025-04-20
+ ####################*/
 
-/* ==========
-general
-========== */
-/* font */
+
+/*****************************************
+フォントのインポートとローカルフォントの設定
+*****************************************/
+/* Noto Sans JP と Noto Sans Mono を Google Fonts からインポートする */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
 
+/* ローカルの Noto フォントを利用できるように設定する */
 @font-face {
     font-family: "PC Noto";
     src: local("Noto Sans JP"),
@@ -43,17 +47,94 @@ general
     font-weight: 400;
 }
 
-* {
-    font-family: "Noto Sans JP", "PC Noto", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5em;
-    color: var(--Gray-text-Black);
+
+/*****************************************
+変数宣言
+*****************************************/
+:root {
+    /* フォント */
+    --Noto-sans: "Noto Sans JP", "PC Noto", sans-serif;
+    --Noto-Mono: "Noto Sans Mono", "PC Noto Mono", "PC plemol", monospace;
+
+    /* 基本色 */
+    --Gray-text-Black: rgb(65, 65, 65);
+    --Gray-backGray: rgb(248, 248, 248);
+    --costum-backBlue: rgb(230, 241, 255);
+    /* 下のカラーセットは CUDO のページ [https://cudo.jp/?page_id=1565] に基づく */
+    --BaseColor-Cream: rgb(255, 255, 128);
+    --BaseColor-Green: rgb(119, 217, 168);
+    --accent-Green: rgb(3, 175, 122);
+    --accent-Blue: rgb(0, 90, 255);
+    --accent-Purple: rgb(153, 0, 153);
+    --Gray-White: rgb(255, 255, 255);
+    --Gray-LightGray: rgb(200, 200, 203);
+    --Gray-Gray: rgb(132, 145, 158);
+    --Gray-Black: rgb(0, 0, 0);
 }
 
+
+/*****************************************
+既存のスタイルのリセット
+*****************************************/
+* {
+    /* マージンとパディングを無くす */
+    margin: 0;
+    padding: 0;
+
+    /* フォント関係 */
+    /* 基本フォント */
+    font-family: var(--Noto-sans);
+    /* フォントのサイズによって表示を最適化する */
+    font-optical-sizing: auto;
+    /* 通常体にする */
+    font-style: normal;
+    /* 文字の太さを標準にする */
+    font-weight: 400;
+    /* 行の高さをその文字の 1.5 字分にする */
+    line-height: 1.5em;
+    /* 両端揃えにする */
+    text-align: justify;
+    /* フォントカラー */
+    color: var(--Gray-text-Black);
+    /* 開始用約物文字が行頭にきた場合空白をトリムする */
+    text-spacing-trim: trim-start;
+}
+
+/* ベースのフォントサイズ */
 html {
     font-size: 16px;
+}
+
+/* 小さいスクリーンサイズのときにフォントサイズを縮小 */
+@media screen and (max-width: 590px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+
+/*****************************************
+テキストベースウェブブラウザのための設定
+*****************************************/
+/* このクラスを指定すると、スタイルの適用されないテキストベースウェブブラウザのみに表示される */
+.twbonly {
+    display: none;
+}
+
+/* hrタグはテキストベースウェブブラウザのために用いる */
+hr {
+    display: none;
+}
+
+
+/*****************************************
+各タグのスタイル
+*****************************************/
+/*====================
+基本テキストタグ
+====================*/
+p {
+    margin: 0.3rem 0;
 }
 
 a {
@@ -65,60 +146,49 @@ a:visited {
     color: var(--accent-Purple);
 }
 
-/* color */
-html {
-    --Gray-text-Black: rgb(65, 65, 65);
-    --Gray-backGray: rgb(248, 248, 248);
-    --costum-backBlue: rgb(230, 241, 255);
-    /* These color set are based by the page [https://cudo.jp/?page_id=1565] written by CUDO.*/
-    --BaseColor-Cream: rgb(255, 255, 128);
-    --BaseColor-Green: rgb(119, 217, 168);
-    --accent-Green: rgb(3, 175, 122);
-    --accent-Blue: rgb(0, 90, 255);
-    --accent-Purple: rgb(153, 0, 153);
-    --Gray-White: rgb(255, 255, 255);
-    --Gray-LightGray: rgb(200, 200, 203);
-    --Gray-Gray: rgb(132, 145, 158);
-    --Gray-Black: rgb(0, 0, 0);
-
-    --screen: calc(1000px+2rem);
+small {
+    font-size: 0.8rem;
 }
 
-/* Text-based Web Browser ONLY */
-.twbonly {
-    display: none;
+
+/*====================
+見出しタグ
+====================*/
+/* 見出しはとにかく太字で黒文字 */
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 700;
+    color: var(--Gray-Black);
 }
 
-/* space */
-* {
-    margin: 0;
-    padding: 0;
+/* h1 は body>header 内で用いられる */
+h1 {
+    margin-top: 1rem;
+    font-size: 2rem;
 }
 
-/* tags */
-* {
-    text-spacing-trim: trim-start;
+/* h2 以下はbody>main 内で用いられる */
+h2 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.5rem;
 }
 
-html {
-    font-size: 16px;
+h3 {
+    margin: 0.8rem 0 0.5rem 0;
+    font-size: 1.2rem;
 }
 
-@media screen and (max-width: 590px) {
-    html {
-        font-size: 14px;
-    }
+h4 {
+    margin: 0.5rem 0 0.5rem 0;
+    font-size: 1rem;
 }
 
-hr {
-    /* The hr tag in moyashim-25.com is for Text-based web browser only. */
-    display: none;
-}
 
-p {
-    margin: 0.3rem 0;
-}
-
+/*====================
+リスト系タグ
+====================*/
 ul,
 ol {
     padding-left: 1.5rem;
@@ -133,6 +203,10 @@ dd {
     padding-left: 1.5rem;
 }
 
+
+/*====================
+強調系タグ
+====================*/
 b,
 strong {
     font-weight: 700;
@@ -142,27 +216,118 @@ em {
     text-decoration: underline;
 }
 
+
+/*====================
+figure タグ
+figcaption タグ
+blockquote タグ (figure タグ内)
+====================*/
+/* あらゆる figure において上下に 1 文字分マージンを設ける */
+figure {
+    margin: 1rem 0;
+}
+
+/* 
+ * fullwidth クラスを指定すると
+ * - 100% の figure 領域
+ * - すべてが中央揃え
+ * - 最大の表示幅は 700px に制限
+ * 
+ * 特に画像を挿入する場合に使用する
+ */
+figure.fullwidth {
+    margin: 1rem auto;
+    text-align: center;
+    display: block;
+    max-width: 700px;
+
+    /* 特に画像の場合 */
+    img {
+        display: block;
+        margin: auto;
+        width: 100%;
+        /* 画像の最大サイズよりも大きくはならない */
+        max-width: max-content;
+    }
+}
+
+/* 一般的な figcaption は中央揃えで表示する */
+figure>figcaption {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+/* blockquote のための figure */
 figure:has(blockquote) {
     border-left: var(--Gray-Gray) 5px solid;
     background-color: var(--Gray-backGray);
     padding: 0.8rem;
 }
 
+/* blockquote のための figcaption */
 figure>blockquote+figcaption {
     margin: 0;
-}
-
-figure>blockquote+figcaption cite {
-    display: block;
     text-align: right;
     font-size: 0.8rem;
 }
 
+
+/*====================
+pre タグ
+code タグ
+====================*/
+pre {
+    /* フォント系 */
+    font-family: var(--Noto-Mono);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+    color: var(--Gray-White);
+    /* 余白と背景、角丸 */
+    padding: 1rem;
+    background-color: var(--Gray-Black);
+    border-radius: 0.5rem;
+    /* スクロールバーとオーバーフロー */
+    overflow-x: auto;
+    scrollbar-width: thin;
+
+    * {
+        /* code が子のことが多いとおもう */
+        /* pre の中はとにかく Noto Mono で白文字にする */
+        font-family: var(--Noto-Mono);
+        color: var(--Gray-White);
+    }
+}
+
+p code {
+    /* フォント系 */
+    font-family: var(--Noto-Mono);
+    font-size: 0.8rem;
+    color: var(--Gray-White);
+    /* 余白と背景、角丸 */
+    background-color: var(--Gray-Black);
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+}
+
+
+/*====================
+table タグ
+====================*/
 table {
     margin: 1rem auto;
     border-collapse: collapse;
     border-top: 1px solid var(--Gray-Black);
     border-bottom: 1px solid var(--Gray-Black);
+
+    thead {
+        border-bottom: 1px solid var(--Gray-Black);
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: var(--Gray-backGray);
+    }
 
     th {
         font-weight: 700;
@@ -172,89 +337,21 @@ table {
     td {
         padding: 0 0.25rem;
     }
-
-    thead {
-        border-bottom: 1px solid var(--Gray-Black);
-    }
-
-    tbody tr:nth-child(odd) {
-        background-color: var(--Gray-backGray);
-    }
-}
-
-pre {
-    font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemol", monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-
-    padding: 1rem;
-    font-size: 0.8rem;
-    background-color: var(--Gray-Black);
-    border-radius: 0.5rem;
-    color: var(--Gray-White);
-    overflow-x: auto;
-    scrollbar-width: thin;
-
-    & * {
-        font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemol", monospace;
-        color: var(--Gray-White);
-    }
-}
-
-p code {
-    font-family: "Noto Sans Mono", "PC Noto Mono", "PC plemol", monospace;
-    font-size: 0.8rem;
-    background-color: var(--Gray-Black);
-    color: var(--Gray-White);
-    padding: 0 0.5rem;
-    border-radius: 0.5rem;
-}
-
-figure {
-    margin: 1rem 0;
-}
-
-figure>figcaption {
-    text-align: center;
-    margin: 0.5rem;
-}
-
-figure.center {
-    text-align: center;
-    display: block;
-}
-
-figure.fullwidth {
-    margin: 1rem auto;
-    text-align: center;
-    display: block;
-    max-width: 700px;
-
-    img {
-        display: block;
-        margin: auto;
-        width: 100%;
-        max-width: max-content;
-    }
-}
-
-small {
-    font-size: 0.8rem;
 }
 
 
+/*****************************************
+セクションの設定
+*****************************************/
 /* ==========
 body
 ========== */
+/* すべてのドキュメントの表示領域 */
 body {
     padding: 1rem;
     max-width: 1000px;
     margin: auto;
-    text-align: justify;
 }
-
 
 /* ==========
 header
@@ -264,18 +361,13 @@ body>header {
     border-bottom: dashed 1px var(--Gray-Gray);
 }
 
-body>header h1 {
-    margin-top: 1rem;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--Gray-Black);
-}
-
+/* 著者と更新日などを示す領域 */
 body>header .document-info {
     text-align: right;
     font-size: 0.8rem;
 }
 
+/* パンくずリスト */
 body>header nav {
     font-size: 0.8rem;
     margin: 0.5rem 0;
@@ -288,18 +380,18 @@ body>header nav ol {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-}
 
-body>header nav ol li {
-    display: block;
-}
+    li {
+        display: block;
+    }
 
-body>header nav ol li:not(:first-of-type)::before {
-    content: ">";
-    user-select: none;
-    padding: 0 0.5rem;
+    /* はじめ以外の li の前に '>' を入れる */
+    li:not(:first-of-type)::before {
+        content: ">";
+        user-select: none;
+        padding: 0 0.5rem;
+    }
 }
-
 
 /* ==========
 main
@@ -310,28 +402,6 @@ main {
     padding: 0 0.5rem;
 }
 
-main h2 {
-    margin: 1rem 0 0.5rem 0;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--Gray-Black);
-}
-
-main h3 {
-    margin: 0.8rem 0 0.5rem 0;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--Gray-Black);
-}
-
-main h4 {
-    margin: 0.5rem 0 0.5rem 0;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--Gray-Black);
-}
-
-
 /* ==========
 footer
 ========== */
@@ -340,6 +410,7 @@ body>footer {
     border-top: dashed 1px var(--Gray-Gray);
 }
 
+/* 普通著作権表示に用いられる */
 body>footer p {
     text-align: center;
 }

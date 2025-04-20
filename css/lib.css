@@ -1,17 +1,29 @@
 @charset "UTF-8";
 
-/*
-lib.css
-last modified: 2025/02/18
+/*####################
+ lib.css
+ (C) 2023 もやしくん
+ 
+ もやしくん.com の本棚ページのための CSS
+ 最終更新: 2025-04-20
+ ####################*/
+
+/* 
+この CSS に含まれる変数は style.css で宣言されています
 */
 
-nav #libindex {
+
+/*****************************************
+カテゴリリストの設定
+*****************************************/
+ul#libindex {
+    padding: 0;
+    /* flex の設定 */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 0.5rem 1.3rem;
-    padding: 0;
 
     li {
         list-style: none;
@@ -23,7 +35,7 @@ nav #libindex {
             padding: 0.5rem;
             font-weight: 700;
             text-decoration: none;
-            color: black;
+            color: var(--Gray-Black);
         }
 
         a:hover {
@@ -33,49 +45,59 @@ nav #libindex {
 
 }
 
-article section {
+/*****************************************
+図書リストの設定
+*****************************************/
+/* 各 section はカテゴリのまとまり */
+div#dataarea>section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 0 2rem;
+
+    /* カテゴリの見出し */
+    h3 {
+        margin-top: 1rem;
+        padding: 0.3rem 0.5rem;
+        border-left: var(--accent-Blue) 5px solid;
+        background-color: var(--costum-backBlue);
+
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+
+    /* 書名 */
+    h4 {
+        margin-bottom: 0;
+        padding-left: 0.5rem;
+        border-bottom: 1px gray solid;
+        font-size: 1.4rem;
+    }
+
+    /* div は各本のまとまり */
+    div dl {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0 1.5rem;
+        align-items: start;
+    }
+
+    div dl dt {
+        text-align: right;
+        font-weight: 400;
+    }
+
+    div dl dd {
+        padding: 0;
+    }
 }
 
-article h3 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    margin-top: 1rem;
-    border-left: var(--accent-Blue) 5px solid;
-    background-color: var(--costum-backBlue);
-    padding: 0.3rem 0.5rem;
-}
-
-article h4 {
-    border-bottom: 1px gray solid;
-    padding-left: 0.5rem;
-    margin-bottom: 0;
-    font-size: 1.4rem;
-}
-
-article section div dl {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0 1.5rem;
-    align-items: start;
-}
-
-article section div dl dt {
-    text-align: right;
-    font-weight: 400;
-}
-
-article section div dl dd {
-    padding: 0;
-}
-
+/* 小さいスクリーンでは flex をやめる */
 @media screen and (max-width: 590px) {
-    article section {
+    div#dataarea>section {
         display: block;
     }
 }

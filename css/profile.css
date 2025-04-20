@@ -1,13 +1,46 @@
 @charset "UTF-8";
 
-/*
-profile.css
-last modified: 2025/03/03
+/*####################
+ profile.css
+ (C) 2024 もやしくん
+ 
+ もやしくん.com の profile ページのための CSS
+ 最終更新: 2025-04-20
+ ####################*/
+
+/* 
+この CSS に含まれる変数は style.css で宣言されています
 */
 
+
+/*****************************************
+フォントのインポートと設定
+*****************************************/
+/* Noto Serif JP と Noto Sans CS を Google Fonts からインポートする */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
 
+/* 明朝体にするクラス */
+.mincho {
+    font-family: 'Noto Serif JP', serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 簡化字にするクラス */
+.zhong-wen {
+    font-family: "Noto Sans SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*****************************************
+プロファイルのスタイル
+*****************************************/
+/* ページは全体が grid で構成される */
 .prof-grid {
     display: grid;
     grid-template-columns: 160px 1fr;
@@ -16,6 +49,26 @@ last modified: 2025/03/03
     align-items: center;
 }
 
+/* 小さいスクリーンでは flex で構成される */
+@media screen and (max-width: 590px) {
+    .prof-grid {
+        display: flex;
+        gap: 1rem 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+
+    figure {
+        /* figure だけ flex-start ではなく center */
+        align-self: center;
+    }
+}
+
+/*====================
+左に画像、右に説明の構成
+====================*/
+/* 画像部分 */
 .prof-fig {
     margin: 0;
     grid-column-start: 1;
@@ -28,79 +81,47 @@ last modified: 2025/03/03
     display: block;
 }
 
-.prof-yokonaga {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
+/* 説明部分 */
 .prof-main {
     grid-column-start: 2;
     grid-column-end: 3;
 }
 
-.prof-info {
+/*====================
+幅いっぱいの説明の構成
+====================*/
+.prof-yokonaga {
     grid-column-start: 1;
     grid-column-end: 3;
+}
+
+/*====================
+プロフィール詳細の構成
+====================*/
+.prof-info {
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* 中は flex で構成 */
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
     gap: 1rem 1.5rem;
-}
 
-.prof-info {
-    margin: 0;
-}
-
-.prof-info div dt {
-    border-bottom: 1px dotted var(--Gray-Gray);
-    font-size: 1.2rem;
-}
-
-.prof-info div dd {
-    padding: 0;
-}
-
-figure:has(blockquote) {
-    border: none;
-    background-color: unset;
-    padding: 0;
-}
-
-figure>blockquote+figcaption {
-    text-align: right;
-    display: block;
-    font-size: 0.8rem;
-}
-
-figure>blockquote+figcaption cite {
-    display: inline;
-    font-style: normal;
-}
-
-span.mincho {
-    font-family: 'Noto Serif JP', serif;
-    font-weight: 400;
-}
-
-.zhong-wen {
-    font-family: "Noto Sans SC", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-@media screen and (max-width: 590px) {
-    .prof-grid {
-        display: flex;
-        gap: 1rem 0;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
+    div dt {
+        border-bottom: 1px dotted var(--Gray-Gray);
+        font-size: 1.2rem;
     }
 
-    h2 {
-        align-self: flex-start;
+    div dd {
+        padding: 0;
+    }
+
+    figure:has(blockquote) {
+        border: none;
+        background-color: unset;
+        padding: 0;
     }
 }
