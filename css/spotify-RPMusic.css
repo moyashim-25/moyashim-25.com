@@ -71,8 +71,17 @@ div#spotifyarea {
 
     div.song {
         display: grid;
-        grid-template-columns: 3rem auto;
+        grid-template-columns: 48px auto;
         gap: 1rem;
+    }
+
+    @media screen and (max-width: 590px) {
+        div.song {
+            grid-template-columns: 42px auto;
+        }
+        img {
+            height: 42px;
+        }
     }
 
     div.linkBox {
