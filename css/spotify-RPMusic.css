@@ -9,9 +9,6 @@
  ####################*/
 
 /* 
-GAS からの移植なのでそのまま
-*/
-/* 
 この CSS に含まれる変数は style.css で宣言されています
 */
 
@@ -67,6 +64,9 @@ div#spotifyarea {
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
         -webkit-transform: translateY(-50%) translateX(-50%);
+        height: 48px;
+        width: 48px;
+        object-fit: contain;
     }
 
     div.song {
@@ -79,8 +79,10 @@ div#spotifyarea {
         div.song {
             grid-template-columns: 42px auto;
         }
+
         img {
             height: 42px;
+            width: 42px;
         }
     }
 
