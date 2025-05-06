@@ -1,0 +1,91 @@
+/*####################
+ spotify-RPMusic.css
+ (C) 2025 もやしくん
+ 
+ もやしくん.com の ホームページの
+ 「もやしくんがSpotifyで最近再生」を
+ 表示するための CSS
+ 最終更新: 2025-05-06
+ ####################*/
+
+/* 
+GAS からの移植なのでそのまま
+*/
+/* 
+この CSS に含まれる変数は style.css で宣言されています
+*/
+
+div#spotifyarea {
+    margin: 1rem 0;
+
+    * {
+        font-family: "Noto Sans JP", "PC Noto", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5em;
+        color: var(--Gray-text-Black);
+        text-decoration: none;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        user-select: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    dt.title {
+        font-size: 1.2rem;
+    }
+
+    dd.artist {
+        font-size: 0.8rem;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        display: inline;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    div.image {
+        position: relative;
+    }
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        -webkit-transform: translateY(-50%) translateX(-50%);
+    }
+
+    div.song {
+        display: grid;
+        grid-template-columns: 3rem auto;
+        gap: 1rem;
+    }
+
+    div.linkBox {
+        border-top: 1px solid var(--Gray-Gray);
+        padding: 0.5rem 0;
+    }
+
+    div.linkBox:first-of-type {
+        border: none;
+    }
+
+    small,
+    small * {
+        color: var(--Gray-Gray);
+    }
+}
