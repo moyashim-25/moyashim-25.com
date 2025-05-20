@@ -5,7 +5,7 @@
  (C) 2024 もやしくん
  
  もやしくん.com の profile ページのための CSS
- 最終更新: 2025-04-20
+ 最終更新: 2025-05-21
  ####################*/
 
 /* 
@@ -106,7 +106,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     gap: 1rem 1.5rem;
 
