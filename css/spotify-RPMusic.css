@@ -5,7 +5,7 @@
  もやしくん.com の ホームページの
  「もやしくんがSpotifyで最近再生」を
  表示するための CSS
- 最終更新: 2025-05-06
+ 最終更新: 2025-06-13
  ####################*/
 
 /* 
@@ -56,17 +56,11 @@ div#spotifyarea {
 
     div.image {
         position: relative;
-    }
-
-    img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        -webkit-transform: translateY(-50%) translateX(-50%);
         height: 48px;
         width: 48px;
-        object-fit: contain;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     div.song {
@@ -80,7 +74,7 @@ div#spotifyarea {
             grid-template-columns: 42px auto;
         }
 
-        img {
+        div.image {
             height: 42px;
             width: 42px;
         }

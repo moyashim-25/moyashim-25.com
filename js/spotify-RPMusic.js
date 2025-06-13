@@ -1,5 +1,5 @@
 /* 
-last modified: 2025-05-06
+last modified: 2025-06-13
 */
 
 // JSONデータの取得・表示関数の実行
@@ -23,7 +23,10 @@ function populateMusic(songData) {
 
     songData.items.slice(0, songData.limit).forEach(item => {
         const clone = template.content.cloneNode(true);
-        clone.querySelector("img").src = item.songIMG;
+
+        const imageDiv = clone.querySelector(".image");
+        imageDiv.style.backgroundImage = `url(${item.songIMG})`;
+
         const link = clone.querySelector("a");
         link.href = item.songURL;
         link.textContent = item.songName;
