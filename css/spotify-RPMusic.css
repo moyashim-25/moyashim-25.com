@@ -5,7 +5,7 @@
  もやしくん.com の ホームページの
  「もやしくんがSpotifyで最近再生」を
  表示するための CSS
- 最終更新: 2025-06-13
+ 最終更新: 2025-07-05
  ####################*/
 
 /* 
@@ -52,6 +52,7 @@ div#spotifyarea {
 
     h2 {
         font-size: 1rem;
+        border-bottom: none;
     }
 
     div.image {

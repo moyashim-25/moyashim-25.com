@@ -5,7 +5,7 @@
  (C) 2024 もやしくん
  
  もやしくん.com の標準 CSS
- 最終更新: 2025-04-20
+ 最終更新: 2025-07-05
  ####################*/
 
 
@@ -171,17 +171,18 @@ h1 {
 
 /* h2 以下はbody>main 内で用いられる */
 h2 {
-    margin: 1rem 0 0.5rem 0;
+    margin: 1rem 0 1rem 0;
     font-size: 1.5rem;
+    border-bottom: var(--Gray-LightGray) dotted 1px;
 }
 
 h3 {
-    margin: 0.8rem 0 0.5rem 0;
+    margin: 1.5rem 0 0.5rem 0;
     font-size: 1.2rem;
 }
 
 h4 {
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 1rem 0 0.5rem 0;
     font-size: 1rem;
 }
 
