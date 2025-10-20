@@ -1,6 +1,6 @@
 {
     "databaseName": "MyLibrary",
-    "lastModified": "2025-03-14T20:46+09:00",
+    "lastModified": "2025-10-20T17:23+09:00",
     "category": [
         {
             "categoryName": "数学",
@@ -1015,6 +1015,17 @@
                     "numberOfPages": 68,
                     "ISBN": false,
                     "comment": false
+                },
+                {
+                    "title": "AnfANg vol. 6",
+                    "author": "富山県立大学 文芸サークル",
+                    "series": "AnfANg",
+                    "publisher": "富山県立大学 文芸サークル",
+                    "edition": "vol. 6",
+                    "year": "2025",
+                    "numberOfPages": 31,
+                    "ISBN": false,
+                    "comment": "文芸サークル (@tpu_bungei), 表紙が@penVcilR_02"
                 }
             ]
         },
