@@ -1,9 +1,12 @@
 {
-    "$schema": "https://tkytel.github.io/mantela/mantela.schema.json",
-    "version": "0.0.0",
+    "$schema": "https://tkytel.github.io/mantela/0.1.x/mantela.schema.json",
+    "version": "0.1.x",
     "aboutMe": {
         "name": "moyashitel",
-        "preferredPrefix": "0113",
+        "preferredPrefix": [
+            "0113",
+            "113"
+        ],
         "identifier": "e5e9120a-1b58-4eb7-b2c8-efe5b452c910"
     },
     "extensions": [
@@ -11,31 +14,43 @@
             "name": "ivory",
             "extension": "200",
             "type": "dialphone",
-            "identifier": "36f94d6c-6c11-4962-930f-af4ca3b9699c"
+            "identifier": "36f94d6c-6c11-4962-930f-af4ca3b9699c",
+            "model": "601-A2; YAMAHA RT57i"
         },
         {
             "name": "laptop",
             "extension": "201",
             "type": "phone",
-            "identifier": "3ebf464c-7e1d-4fde-8d36-9c1877073b8a"
+            "identifier": "3ebf464c-7e1d-4fde-8d36-9c1877073b8a",
+            "model": "Lenovo IdeaPad 5-14ITL05; Linphone"
         },
         {
             "name": "pixel",
             "extension": "202",
             "type": "smartphone",
-            "identifier": "5e2b055a-5304-4eeb-80fc-81f3a1c2ad5b"
+            "identifier": "5e2b055a-5304-4eeb-80fc-81f3a1c2ad5b",
+            "model": "Google Pixel 9; Linphone"
         },
         {
             "name": "mobile phone",
             "extension": "203",
             "type": "smartphone",
-            "identifier": "0319601f-7c4d-4733-8e2c-32e9a85e174a"
+            "identifier": "0319601f-7c4d-4733-8e2c-32e9a85e174a",
+            "model": "SO-01L; 電話"
         },
         {
             "name": "DATA/FAX",
             "extension": "210",
             "type": "modem",
-            "identifier": "161a8a9b-3cf1-4574-b7b1-0bdf0aeac659"
+            "identifier": "161a8a9b-3cf1-4574-b7b1-0bdf0aeac659",
+            "model": "MR560E5 for まいと～く; YAMAHA RT57i"
+        },
+        {
+            "name": "UX610",
+            "extension": "212",
+            "type": "fax",
+            "identifier": "12ee09a0-cc8f-4143-b760-66bdce6ad1ea",
+            "model": "SHARP UX610; YAMAHA RT57i"
         },
         {
             "name": "main",
@@ -45,6 +60,7 @@
             "transferTo": [
                 "36f94d6c-6c11-4962-930f-af4ca3b9699c",
                 "5e2b055a-5304-4eeb-80fc-81f3a1c2ad5b",
+                "12ee09a0-cc8f-4143-b760-66bdce6ad1ea",
                 "0319601f-7c4d-4733-8e2c-32e9a85e174a"
             ]
         }
