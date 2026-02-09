@@ -5,7 +5,7 @@
  (C) 2024 もやしくん
  
  もやしくん.com の標準 CSS
- 最終更新: 2025-07-05
+ 最終更新: 2026-02-09
  ####################*/
 
 
@@ -13,8 +13,10 @@
 フォントのインポートとローカルフォントの設定
 *****************************************/
 /* Noto Sans JP と Noto Sans Mono を Google Fonts からインポートする */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700&display=swap');
 
 /* ローカルの Noto フォントを利用できるように設定する */
 @font-face {
@@ -53,7 +55,7 @@
 *****************************************/
 :root {
     /* フォント */
-    --Noto-sans: "Noto Sans JP", "PC Noto", sans-serif;
+    --Noto-sans: "LINE Seed JP", "Noto Sans JP", "PC Noto", sans-serif;
     --Noto-Mono: "Noto Sans Mono", "PC Noto Mono", "PC plemol", monospace;
 
     /* 基本色 */

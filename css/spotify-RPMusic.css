@@ -5,7 +5,7 @@
  もやしくん.com の ホームページの
  「もやしくんがSpotifyで最近再生」を
  表示するための CSS
- 最終更新: 2025-07-05
+ 最終更新: 2026-02-09
  ####################*/
 
 /* 
@@ -16,7 +16,7 @@ div#spotifyarea {
     margin: 1rem 0;
 
     * {
-        font-family: "Noto Sans JP", "PC Noto", sans-serif;
+        font-family: var(--Noto-sans);
         font-optical-sizing: auto;
         font-style: normal;
         font-weight: 400;
