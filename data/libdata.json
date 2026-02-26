@@ -1,6 +1,6 @@
 {
     "databaseName": "MyLibrary",
-    "lastModified": "2025-10-20T17:23+09:00",
+    "lastModified": "2026-02-27T00:09+09:00",
     "category": [
         {
             "categoryName": "数学",
@@ -502,7 +502,7 @@
             ]
         },
         {
-            "categoryName": "科学教育・技術教育",
+            "categoryName": "科学教育・技術教育・社会科学教育",
             "categoryID": "technical-education",
             "data": [
                 {
@@ -537,6 +537,17 @@
                     "numberOfPages": 254,
                     "ISBN": "978-4-621-30016-9",
                     "comment": false
+                },
+                {
+                    "title": "イッキに内定！ SPIスピード解法[一問一答]",
+                    "author": "尾藤健",
+                    "series": false,
+                    "publisher": "高橋書店",
+                    "edition": "'24年度版",
+                    "year": 2024,
+                    "numberOfPages": 255,
+                    "ISBN": "978-4-12-100624-0",
+                    "comment": "お前は何年卒なんだ？　友人からのお譲り"
                 }
             ]
         },
