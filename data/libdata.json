@@ -1,6 +1,6 @@
 {
     "databaseName": "MyLibrary",
-    "lastModified": "2026-02-27T00:09+09:00",
+    "lastModified": "2026-03-03T15:38+09:00",
     "category": [
         {
             "categoryName": "数学",
@@ -1176,6 +1176,17 @@
                     "numberOfPages": 509,
                     "ISBN": "978-4-344-41297-2",
                     "comment": "私も危うく島流し"
+                },
+                {
+                    "title": "僕はロボットごしの君に恋をする",
+                    "author": "山田悠介",
+                    "series": false,
+                    "publisher": "河出書房新社",
+                    "edition": "初版",
+                    "year": 2020,
+                    "numberOfPages": 509,
+                    "ISBN": "978-4-309-41742-4",
+                    "comment": "見覚えがあったので新幹線のお供に買った"
                 }
             ]
         },
