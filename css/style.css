@@ -5,7 +5,7 @@
  (C) 2024 もやしくん
  
  もやしくん.com の標準 CSS
- 最終更新: 2026-02-09
+ 最終更新: 2026-04-26
  ####################*/
 
 
@@ -324,21 +324,59 @@ table {
     border-top: 1px solid var(--Gray-Black);
     border-bottom: 1px solid var(--Gray-Black);
 
+    caption {
+        text-align: center;
+        margin: 0.5rem;
+    }
+
     thead {
+        border-top: 3px double var(--Gray-Black);
         border-bottom: 1px solid var(--Gray-Black);
-    }
-
-    tbody tr:nth-child(odd) {
         background-color: var(--Gray-backGray);
+
+        tr:first-child {
+            border-top: 3px double var(--Gray-Black);
+        }
+
+        tr:last-child {
+            border-bottom: 1px solid var(--Gray-Black);
+        }
     }
 
-    th {
+    th,
+    th * {
         font-weight: 700;
+    }
+
+    tr {
+        border-top: 1px solid var(--Gray-LightGray);
     }
 
     th,
     td {
         padding: 0 0.25rem;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    tbody {
+        tr:last-child {
+            border-bottom: 1px solid var(--Gray-Black);
+        }
+    }
+
+    tfoot {
+        background-color: var(--Gray-backGray);
+        border-top: 1px solid var(--Gray-Black);
+        border-bottom: 1px solid var(--Gray-Black);
+
+        tr:first-child {
+            border-top: 1px solid var(--Gray-Black);
+        }
+
+        tr:last-child {
+            border-bottom: 1px solid var(--Gray-Black);
+        }
     }
 }
 
