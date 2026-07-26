@@ -1,5 +1,5 @@
 /* 
-last modified: 2025-06-13
+last modified: 2026-05-05
 */
 
 // JSONデータの取得・表示関数の実行
@@ -21,7 +21,7 @@ function populateMusic(songData) {
     h2Title.textContent = "もやしくんが最近再生";
     container.appendChild(h2Title);
 
-    songData.items.slice(0, songData.limit).forEach(item => {
+    songData.items.slice(0, songData.trackN).forEach(item => {
         const clone = template.content.cloneNode(true);
 
         const imageDiv = clone.querySelector(".image");
