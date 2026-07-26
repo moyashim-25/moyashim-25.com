@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/*####################
+ spotify-CPTrack.css
+ (C) 2026 もやしくん
+ 
+ もやしくん.com の いま何きいてる？の
+ 「Spotifyで再生中」を
+ 表示するための CSS
+ 最終更新: 2026-07-26
+ ####################*/
+
+/* 
+この CSS に含まれる変数は style.css で宣言されています
+*/
+
+div#spotifyarea {
+
+    * {
+        font-family: var(--Noto-sans);
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5em;
+        color: var(--Gray-text-Black);
+        text-decoration: none;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        user-select: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    dt.title {
+        font-size: 1.2rem;
+    }
+
+    dd.artist {
+        font-size: 0.8rem;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        display: inline;
+    }
+
+    h2 {
+        font-weight: 700;
+        color: var(--Gray-Black);
+        margin: 1rem 0 1rem 0;
+        font-size: 1.5rem;
+        border-bottom: var(--Gray-LightGray) dotted 1px;
+    }
+
+    div.image {
+        position: relative;
+        height: 48px;
+        width: 48px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    div.song {
+        display: grid;
+        grid-template-columns: 48px auto;
+        gap: 1rem;
+    }
+
+    @media screen and (max-width: 590px) {
+        div.song {
+            grid-template-columns: 42px auto;
+        }
+
+        div.image {
+            height: 42px;
+            width: 42px;
+        }
+    }
+
+    div.linkBox {
+        border-top: 1px solid var(--Gray-Gray);
+        padding: 0.5rem 0;
+    }
+
+    div.linkBox:first-of-type {
+        border: none;
+    }
+
+    small,
+    small * {
+        color: var(--Gray-Gray);
+    }
+}
