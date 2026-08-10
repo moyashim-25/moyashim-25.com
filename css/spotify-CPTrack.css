@@ -7,7 +7,7 @@
  もやしくん.com の いま何きいてる？の
  「Spotifyで再生中」を
  表示するための CSS
- 最終更新: 2026-07-26
+ 最終更新: 2026-08-10
  ####################*/
 
 /* 
@@ -35,11 +35,11 @@ div#spotifyarea {
     }
 
     dt.title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     dd.artist {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     * {
