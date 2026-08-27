@@ -32,13 +32,6 @@
             "model": "Google Pixel 9; Linphone"
         },
         {
-            "name": "mobile phone",
-            "extension": "203",
-            "type": "smartphone",
-            "identifier": "0319601f-7c4d-4733-8e2c-32e9a85e174a",
-            "model": "SO-01L; 電話"
-        },
-        {
             "name": "DATA/FAX",
             "extension": "210",
             "type": "modem",
@@ -60,8 +53,7 @@
             "transferTo": [
                 "36f94d6c-6c11-4962-930f-af4ca3b9699c",
                 "5e2b055a-5304-4eeb-80fc-81f3a1c2ad5b",
-                "12ee09a0-cc8f-4143-b760-66bdce6ad1ea",
-                "0319601f-7c4d-4733-8e2c-32e9a85e174a"
+                "12ee09a0-cc8f-4143-b760-66bdce6ad1ea"
             ]
         }
     ],
@@ -87,7 +79,7 @@
         {
             "identifier": "d8405294-3ea4-40c4-8809-23dd6d917d38",
             "name": "private",
-            "prefix": "",
+            "prefix": "0229",
             "mantela": "https://unstable.kusaremkn.com/.well-known/priv-mantela.json"
         }
     ]
