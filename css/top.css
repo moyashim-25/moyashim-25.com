@@ -5,7 +5,7 @@
  (C) 2024 もやしくん
  
  もやしくん.com のトップページのための CSS
- 最終更新: 2025-05-16
+ 最終更新: 2026-11-13
  ####################*/
 
 /* 
@@ -118,6 +118,34 @@ main div#banner {
 
         li {
             list-style: none;
+
+            a {
+                text-decoration: none;
+
+                div>span {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+
+                div.full {
+                    border: solid black 1px;
+                    width: 234px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    padding-inline: 5px;
+                }
+
+                div.half {
+                    border: solid black 1px;
+                    width: 117px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    padding-inline: 5px;
+                }
+            }
         }
     }
 
